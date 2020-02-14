@@ -6,12 +6,21 @@
 - Juan Mardikian
 ​
 ​
+​
+
 ## Project Description
 Implementation of Booking.com given UXDI's specifications. 
 ​
 ## Wireframes
 ​
-Display the mockups for your project as designed by your UX team
+![1](https://gottshall.dev/1.png)
+![2](https://gottshall.dev/2.png)
+![3](https://gottshall.dev/3.png)
+![4](https://gottshall.dev/4.png)
+![5](https://gottshall.dev/5.png)
+![6](https://gottshall.dev/6.png)
+![7](https://gottshall.dev/7.png)
+![8](https://gottshall.dev/8.png)
 ​
 ## MVP
 ​
@@ -35,84 +44,95 @@ Display the mockups for your project as designed by your UX team
 ​
 ## ERD Diagram
 ​
-Render a diagram of your database showing how your tables relate to each other, what their specific attributes will be, as well as their expected datatypes
+![ERD](https://gottshall.dev/erd.jpg)
 ​
 ## Endpoints
+* getLocations - returns five random locations
+	* GET /api/locations
+* getLocation - gets information on current location
+	* GET /api/location/:id
+* getFlights, getCars, getVolunteers, getHotels - gets booking information based on current location
+	* GET /api/location/:id/flights
+	* GET /api/location/:id/
+	* GET /api/location/:id/volunteers
+	* GET /api/locatoin/:id/hotels
+* getUser - after user signs in, will display their information in dashboard
+	* GET /api/user/:id
+* createUser, updateUser, deleteUser - create, update or delete user information
+	* POST /api/user
+	* PUT /api/user/:id
+	* DELETE /api/user/:id
+* getTrip, createTrip, updateTrip, deleteTrip - manage trip details
+	* GET /api/trip/:id
+	* POST /api/trip
+	* PUT /api/trip/:id
+	* DELETE /api/trip/:id
 ​
-- Locations
-- Location (Hotels, Flights, Car Rental, Volunteer)
-- User
-- Hotel
-- Flight
-- Car Rental
-- Volunteer
+Sample JSON from GET `/api/user`
 ​
-​
-#### ENDPOINTS EXAMPLE:
-​
-- GET `/api/users`
-	- Index route returning an array of all Users and nested 'Likes'
-- GET `/api/users/:id`
-	- Show route for a user requested by ID
-- POST `/api/users`
-	- Create route for a new user
-​
-Sample JSON from GET `/api/users`
-​
-  ```
-  [
-    {
-      "name": "Erinn",
-      "email": "erinn@erinn.erinn",
-      "likes": [
-        {
-          "name": "Frank"
-        }
-      ]
-    },
-    {
-      "name": "Frank",
-      "email": "frank@erinn.erinn",
-      "likes": [
-        {
-          "name": "Erinn"
-        }
-      ]
-    }
-  ]
-  ```
-​
-​
+				
+				
+			[
+			    {
+			        “username” : “mikeeip”,
+			        “passwordHash” : “o87hoH*Oho8hof7fguagf4”,
+			        “email” : “mike@mikeip.com”,
+			        “homeCountry” : “USA”,
+			        “recentViewew” : “Barcelona”,
+			        “upcomingTrips : [
+			            {   
+			                “tripId” : “398234”
+			            },
+			            {
+			                “tripId” : “478924” 
+			            }
+			        ]
+			    }
+			]
+	
+
+
 ## React Component Hierarchy
 ​
-APP
-HEADER
-FOOTER
-NAV
-HAMBURGER_MENU
-HELP_CENTER
-CONTACT
-VOLUNTEER
-USERINFO
-RECENT
-CARRENTAL
-FLIGHT
-HOTEL
+​
+​![Component Hierachy](https://gottshall.dev/ch.jpg)
+​
+
 ​
 ## Components
 ​
 Breakdown the initial logic defined in the previous sections into stateful and stateless components
 ​
-| Component | Description | 
-| --- | :--- |
-| App | This component will render the Header, Footer and Main Routes. It will be a class component that uses state to store user info. |
-| Profile | This class component will serve as a route for a logged in user's profile, and will track state for user "likes."  |
-| Header | This functional component will house a nav bar.  | 
-| Footer | This functional component will render basic footer info. |
+## ​Routes
+
+| Components | Description                                                                                                              | Type       | State                      |
+|------------|--------------------------------------------------------------------------------------------------------------------------|------------|----------------------------|
+| App        | This component will render the Header, Footer and Routes.                                                                | Functional | User Session, Trip Details |
+| Login      | This component allows a user to authenticate themselves, to allow them to keep recent trips and planned trips in the db. | Functional | Username, Password         |
+| Nav        | Container for Nav icons and Nav links.                                                                                   | Functional | Not Applicable             |
+| Nav Icons  | Sticky icon navigation bar                                                                                               | Functional | Not Applicable             |
+| Nav Links  | List of links. Hides when the user scrolls down.                                                                         | Functional | Not Applicable             |
+| Hambuger   | as the Nav Icons it will be a nav by its own                                                                             | Functional | Not Applicable             |
+| Footer     | This component contains links including contact us.                                                                      | Functional | Not Applicable             |
+| Header     | This component contains two seperate Nav sections for the icons and link portions.                                       | Functional | Not Applicable             |
+| Search     | This component show the search fields and queryies the API                                                               | Functional | Search Query               |
+| Form       | Shows fields                                                                                                             | Functional | Query                      |
+
+## Shared
+| Components  | Description                                                                            | Type       | State                    |
+|-------------|----------------------------------------------------------------------------------------|------------|--------------------------|
+| Help Center | Where the customer can find links and phone number for more information                | Functional | Not Applicable           |
+| Contact     | Where the user actually can call or contact the company                                | Functional | Current countries number |
+| Volunteer   | Section where people can get info about volunteering                                   | Functional | Volunteer Data           |
+| User Info   | A display of the user data                                                             | Functional | User Data                |
+| Recent      | A display of the recents user searches or selected                                     | Functional | User's recents etc.      |
+| Car Rental  | Display and search car rental information for specified location. Functional component | Functional | Rental Data              |
+| Flight      | Information about the flight the user could look at                                    | Functional | Flight Data              |
+| Hotel       | Information about the hotel the user could stay at                                     | Functional | Hotel Data               |
 ​
 ## Priority Matrix
 ​
-Render your project priority matrix here
+​![Component Hierachy](https://gottshall.dev/pm.jpg)
 ​
 ## Timeframes
 ​
@@ -128,28 +148,40 @@ Estimate the amount of time your team expects to spend on each area of your app
 _Be sure to document the actual time spent as you progress_
 ​
 ## Additional Libraries
- Use this section to list all supporting libraries and thier role in the project, such as `react-router-dom`, `axios`, `nodemon` and others
+### Back-End
+* express
+* morgan
+* body-parser
+* cors
+* passport
+* passport-jwt
+* passport-local
+* bcrypt
+* jsonwebtoken
+* nodemon
+* pg
+* sequelize
+* faker (For Development Use)
+
+### Front-End
+* react
+* react-router-dom
+* axios
 ​
 ## Expected Issues
-List any major issues you expect to face and how you plan to handle them
+
+### Expected backend issues
+
+There might be issues with getting google and facebook authentication working - although those are in post-MVP, However, basic authentication should not present any problems
+
+
+### ​Expected frontend issues
 ​
+​There may be some challenge with the way some components will conditionally render. However the shared components could change based on passed props.
+​​
 ## Issues and Resolutions
- Use this section to list of all major issues encountered and their resolutions
-​
-#### ISSUES AND RESOLUTIONS EXAMPLE:
-**ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier                                
-**RESOLUTION**: Missing comma after first object in sources {} object
-​
+
 ## Code Snippet
-​
-Use this section to include a brief code snippet of functionality that you are proud of an a brief description  
-​
-```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
-```
 ​
 ## Change Log
 ​
-Update as neccessary with any changes or directional adjustments made throughout the project week
