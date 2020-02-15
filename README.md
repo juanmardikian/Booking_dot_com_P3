@@ -53,9 +53,10 @@ Implementation of Booking.com given UXDI's specifications.
 	* GET /api/location/:id
 * getFlights, getCars, getVolunteers, getHotels - gets booking information based on current location
 	* GET /api/location/:id/flights
-	* GET /api/location/:id/
 	* GET /api/location/:id/volunteers
 	* GET /api/locatoin/:id/hotels
+	* GET /api/locatoin/:id/cars
+
 * getUser - after user signs in, will display their information in dashboard
 	* GET /api/user/:id
 * createUser, updateUser, deleteUser - create, update or delete user information
@@ -136,16 +137,17 @@ Breakdown the initial logic defined in the previous sections into stateful and s
 ​
 ## Timeframes
 ​
-Estimate the amount of time your team expects to spend on each area of your app
-​
-| Component | Estimated Time | Actual Time |
-| --- | :---: | :---: |
-| Sequelize Queries | 3hrs | 3.5hrs |
-| Server | 4hrs | 2.5hrs |
-| Front-End Routing | 2.5hrs | 5hrs |
-| Total | 9.5hrs | 11hrs |
-​
-_Be sure to document the actual time spent as you progress_
+| Component                | Estimated Time | Actual Time |
+|--------------------------|----------------|-------------|
+| Contact Us Functionality | 10 hrs         | 0           |
+| Homepage Views           | 12 hrs         | 0           |
+| Help Center View16 hrs   | 12 hrs         | 0           |
+| Hamburger Menu           | 18 hrs         | 0           |
+| Nav Footer               | 8 hrs          | 0           |
+| Full CSS                 | 24 hrs         | 0           |
+| Full Backend CRUD        | 30 hrs         | 0           |
+| Volunteer View           | 12 hrs         | 0           |
+|                          | 126 Hours      | 0           |
 ​
 ## Additional Libraries
 ### Back-End
@@ -168,6 +170,7 @@ _Be sure to document the actual time spent as you progress_
 * react-router-dom
 * axios
 ​
+
 ## Expected Issues
 
 ### Expected backend issues
