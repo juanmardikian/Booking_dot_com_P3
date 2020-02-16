@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   VolunteerOp.associate = function(models) {
     // associations can be defined here
-    VolunteerOp.belongsTo(models.Location. {
+    VolunteerOp.belongsTo(models.Location, {
       foreignKey: 'locationId',
       onDelete: 'CASCADE'
     })

@@ -16,7 +16,7 @@ module.exports = {
         allowNull: false,
         type: Sequelize.INTEGER
       },
-      destination: {
+      locationId: {
         allowNull: false,
         type: Sequelize.INTEGER
       },

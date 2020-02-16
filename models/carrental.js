@@ -5,13 +5,13 @@ module.exports = (sequelize, DataTypes) => {
     companyName: DataTypes.STRING,
     carClass: DataTypes.STRING,
     numberOfDays: DataTypes.INTEGER,
-    pickUpCity: DataTypes.INTEGER,
+    locationId: DataTypes.INTEGER,
     dropOffCity: DataTypes.INTEGER
   }, {});
   CarRental.associate = function(models) {
     // associations can be defined here
-    CarRental.belongsTo(models.Location. {
-      foreignKey: 'pickUpCity',
+    CarRental.belongsTo(models.Location, {
+      foreignKey: 'locationId',
       onDelete: 'CASCADE'
     })
 

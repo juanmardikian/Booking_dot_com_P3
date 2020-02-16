@@ -23,7 +23,7 @@ module.exports = {
         allowNull: false,
         type: Sequelize.INTEGER
       },
-      pickUpCity: {
+      locationId: {
         allowNull: false,
         type: Sequelize.INTEGER
       },

@@ -7,7 +7,7 @@ const carRentals = [...Array(40)].map((rental)=>(
     companyName: faker.lorem.words(3),
     carClass: faker.lorem.words(1),
     numberOfDays: faker.random.number(20),
-    pickUpCity: faker.random.number(1000),
+    locationId: faker.random.number(40),
     dropOffCity: faker.random.number(1000),
     createdAt: new Date(),
     updatedAt: new Date()

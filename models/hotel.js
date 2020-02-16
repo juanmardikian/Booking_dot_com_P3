@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Hotel.associate = function(models) {
     // associations can be defined here
-    Hotel.belongsTo(models.Location. {
+    Hotel.belongsTo(models.Location, {
       foreignKey: 'locationId',
       onDelete: 'CASCADE'
     })
