@@ -149,6 +149,29 @@ const createUser = async (req, res) => {
   }
 }
 
+const updateUser = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const user = await User.findOne({
+      where: { id: id }
+    });
+    if (!user) {
+      return res.status(404).send('User does not exist');
+    }
+    const [updated] = await User.update(req.body, {
+      where: { id: id }
+    });
+    if (updated) {
+      const updatedUser = await User.findOne({ where: { id: id } });
+      return res.status(200).json({ user: updatedUser });
+    }
+    throw new Error('User not updated');
+
+  } catch (error) {
+    return res.status(500).send(error.message);
+  }
+}
+
 
 const updateTrip = async (req, res) => {
   try {
@@ -166,7 +189,7 @@ const updateTrip = async (req, res) => {
       const updatedTrip = await Trip.findOne({ where: { id: id } });
       return res.status(200).json({ trip: updatedTrip });
     }
-    throw new Error('User not updated');
+    throw new Error('Trip not updated');
 
   } catch (error) {
     return res.status(500).send(error.message);
@@ -210,6 +233,7 @@ module.exports = {
   deleteTrip,
   createTrip,
   deleteUser,
-  createUser
+  createUser,
+  updateUser
 }
 

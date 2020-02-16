@@ -11,6 +11,7 @@ router.get('/location/:id', controllers.getLocation);
 router.get('/user/:id', controllers.getUser);
 router.delete('/user/:id', controllers.deleteUser);
 router.post('/user', controllers.createUser);
+router.put('/user/:id', controllers.updateUser);
 
 router.get('/trip/:id', controllers.getTrip);
 router.post('/trip', controllers.createTrip);
