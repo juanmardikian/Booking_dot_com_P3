@@ -11,7 +11,10 @@ router.get('/location/:id', controllers.getLocation);
 
 router.get('/trip/:id', controllers.getTrip);
 router.get('/location/:id/flights', controllers.getFlights);
-router.get('/location/:id/cars', controllers.getCars)
+router.get('/location/:id/cars', controllers.getCars);
+router.get('/location/:id/hotels', controllers.getHotels);
+router.get('/location/:id/volunteers', controllers.getVolunteers);
+router.get('/user/:id', controllers.getUser);
 
 // router.post('/sign-up', controllers.signUp)
 // router.post('/sign-in', controllers.signIn)

@@ -1,6 +1,6 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const { Location, Trip, Flight, CarRental } = require('../models');
+const { Location, Trip, Flight, CarRental, Hotel, VolunteerOp, User } = require('../models');
 
 const SALT_ROUNDS = 11;
 const TOKEN_KEY = 'areallylonggoodkey';
@@ -52,7 +52,7 @@ const getCars = async (req, res) => {
       attributes: ['id', 'dateStart', 'companyName', 'carClass', 'numberOfDays', ['locationId','pickUpCity'], 'dropOffCity'],
       where: { locationId: id }
     })
-    if (cars) {
+    if (cars.length>0) {
       return res.status(200).json({ cars });
     }
     return res.status(404).send(`No cars at this location`);
@@ -60,6 +60,38 @@ const getCars = async (req, res) => {
     return res.status(500).send(error.message);
   }
 }
+
+const getHotels = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const hotels = await Hotel.findAll({
+      where: { locationId: id }
+    })
+    if (hotels.length>0) {
+      return res.status(200).json({ hotels });
+    }
+    return res.status(404).send(`No hotels at this location`);
+  } catch (error) {
+    return res.status(500).send(error.message);
+  }
+}
+
+const getVolunteers = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const volunteers = await VolunteerOp.findAll({
+      where: { locationId: id }
+    })
+    if (volunteers.length>0) {
+      return res.status(200).json({ volunteers });
+    }
+    return res.status(404).send(`No volunteer opportunities at this location`);
+  } catch (error) {
+    return res.status(500).send(error.message);
+  }
+}
+
+
 
 const getTrip = async (req, res) => {
   try {
@@ -77,11 +109,31 @@ const getTrip = async (req, res) => {
   }
 }
 
+const getUser = async (req, res) => {
+  try{
+    const {id} = req.params;
+    const user = await User.findOne({
+      where: {id : id}
+    })
+    if (user){
+      return res.status(200).json({user});
+    }
+    return res.status(404).send('User does not exist');
+
+  } catch (error) {
+    return res.status(500).send(error.message);
+  }
+}
+
+
 module.exports = {
   getLocations,
   getLocation,
   getTrip,
   getFlights,
-  getCars
+  getCars,
+  getHotels,
+  getVolunteers,
+  getUser
 }
 
