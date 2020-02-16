@@ -12,7 +12,7 @@ export default function Header() {
     <div><img className="iconProfile" alt='' src={iconProfile}></img></div>
     <div><img className="iconSearch" alt='' src={iconSearch}></img></div>
 </div>
-       
+ 
 
         </div>
     )

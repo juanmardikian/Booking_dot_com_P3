@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css?family=Baloo');
+@import url('https://fonts.googleapis.com/css?family=Helvetica');
 /*This applies from 0px to 600px --> MOBILE */
 
 * {
@@ -18,15 +19,17 @@ body {
   color: #141414;
 }
 
+/* ---------------------------------------------------------------- Where the header starts  */
+
 .header {
   display: flex;
   width: 100vw;
   justify-content: space-between;
-  height: 73px;
+  height: 60px;
   background-color: rgb(0, 53, 128);
 }
 
-.title{
+.title {
   margin: 10px 0 auto 9px;
 }
 
@@ -34,21 +37,20 @@ body {
   width: 68px;
   height: 28px;
   font-family: Baloo;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
   color: white;
- 
 }
 
 .com {
   width: 39px;
   height: 28px;
   font-family: Baloo;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -56,7 +58,6 @@ body {
   letter-spacing: normal;
   text-align: center;
   color: rgb(3, 159, 226);
-  
 }
 
 .icons {
@@ -82,6 +83,30 @@ body {
   width: 26px;
   height: 26px;
 }
+
+.headerLinks {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  background-color: rgb(0, 53, 128);
+  font-family: Helvetica;
+  font-size: 1.5vh;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: lighter;
+  line-height: normal;
+  letter-spacing: 0.05em;
+  text-align: center;
+  padding: 8px;
+  
+}
+
+.headerLinks, a {
+  text-decoration: none;
+  color: white;
+}
+
+/* ---------------------------------------------------------------- Where the header ends  */
 
 section {
   background: goldenrod;
