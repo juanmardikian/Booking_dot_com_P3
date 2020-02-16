@@ -148,6 +148,21 @@ const updateTrip = async (req,res) => {
   }
 }
 
+const deleteTrip = async (req,res) => {
+  try {
+    const { id } = req.params;
+    const deleted = await Trip.destroy({
+      where: {id:id}
+    });
+    if (deleted){
+      return res.status(204).send('Trip deleted');
+    }
+    throw new Error('Trip not found');
+  } catch (error){
+    return res.status(500).send(error.message);
+  }
+}
+
 module.exports = {
   getLocations,
   getLocation,
@@ -157,6 +172,7 @@ module.exports = {
   getHotels,
   getVolunteers,
   getUser,
-  updateTrip
+  updateTrip,
+  deleteTrip
 }
 

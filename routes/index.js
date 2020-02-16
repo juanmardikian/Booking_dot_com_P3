@@ -17,6 +17,7 @@ router.get('/location/:id/volunteers', controllers.getVolunteers);
 router.get('/user/:id', controllers.getUser);
 
 router.put('/trip/:id', controllers.updateTrip);
+router.delete('/trip/:id', controllers.deleteTrip);
 
 // router.post('/sign-up', controllers.signUp)
 // router.post('/sign-in', controllers.signIn)
