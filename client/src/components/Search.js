@@ -19,6 +19,7 @@ const Search = props => {
         <div>
             <p>This is my search component</p>
             <form onSubmit={formik.handleSubmit}>
+                <label htmlFor="location">Location</label>
                 <input
                     id='location'
                     name='location'
@@ -26,6 +27,7 @@ const Search = props => {
                     onChange={formik.handleChange}
                     value={formik.values.location}
                     />
+                <label htmlFor="checkIn">Check In</label>
                 <input
                     id='checkIn'
                     name='checkIn'
@@ -33,6 +35,7 @@ const Search = props => {
                     onChange={formik.handleChange}
                     value={formik.values.checkIn}
                     />
+                <label htmlFor="checkOut">Check Out</label>
                 <input
                     id='adults'
                     name='adults'
@@ -40,6 +43,7 @@ const Search = props => {
                     onChange={formik.handleChange}
                     value={formik.values.adults}
                     />
+                <label htmlFor="children">Children</label>
                 <input
                     id='children'
                     name='children'
@@ -47,6 +51,7 @@ const Search = props => {
                     onChange={formik.handleChange}
                     value={formik.values.children}
                     />
+                <label htmlFor="reason">Reason</label>
                 <input
                     id='reason'
                     name='reason'
