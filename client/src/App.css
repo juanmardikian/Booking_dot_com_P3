@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Baloo');
+/*This applies from 0px to 600px --> MOBILE */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html, body {
+  height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background: darksalmon;
+  font-family: 'Roboto', sans-serif;
+  color: #141414;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+
+.header {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: row;
+
+  width: 100%;
+  height: 73px;
+  background-color: rgb(0, 53, 128);
+}
+
+.Booking {
+  width: 68px;
+  height: 28px;
+  font-family: Baloo;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
   color: white;
+  margin: 8px 0 auto 6px;
 }
 
-.App-link {
-  color: #61dafb;
+.com {
+  width: 39px;
+  height: 28px;
+  font-family: Baloo;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: rgb(3, 159, 226);
+  margin: 8px 0 auto 0px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.icons {
+  display: flex;
+  float: right;
+  align-items: flex-end;
+  width: 34px;
+  height: 34px;
+  padding: 5px;
+  margin-top: 8px;
+}
+
+section {
+  background: goldenrod;
+  height: 60%;
+}
+
+aside {
+  background: #81cfe0;
+  height: 60%;
+}
+
+footer {
+  background: maroon;
+  height: 25%;
+}
+
+/* This applies from 600px onwards --> DESKTOP */
+
+@media (min-width: 600px) {
+  html, body {
+    background: yellow;
   }
-  to {
-    transform: rotate(360deg);
+  section, aside {
+    display: inline-block;
+    float: left;
+    height: 60%;
+  }
+  section {
+    width: 75%;
+  }
+  aside {
+    width: 25%;
+  }
+  footer {
+    clear: both;
   }
 }
