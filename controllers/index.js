@@ -33,7 +33,7 @@ const getFlights = async (req, res) => {
   try {
     const { id } = req.params;
     const flights = await Flight.findAll({
-      attributes: ['id', 'date', 'origin', ['locationId','destination'], 'airlineCode'],
+      attributes: ['id', 'date', 'origin', ['locationId', 'destination'], 'airlineCode'],
       where: { locationId: id }
     })
     if (flights) {
@@ -49,10 +49,10 @@ const getCars = async (req, res) => {
   try {
     const { id } = req.params;
     const cars = await CarRental.findAll({
-      attributes: ['id', 'dateStart', 'companyName', 'carClass', 'numberOfDays', ['locationId','pickUpCity'], 'dropOffCity'],
+      attributes: ['id', 'dateStart', 'companyName', 'carClass', 'numberOfDays', ['locationId', 'pickUpCity'], 'dropOffCity'],
       where: { locationId: id }
     })
-    if (cars.length>0) {
+    if (cars.length > 0) {
       return res.status(200).json({ cars });
     }
     return res.status(404).send(`No cars at this location`);
@@ -67,7 +67,7 @@ const getHotels = async (req, res) => {
     const hotels = await Hotel.findAll({
       where: { locationId: id }
     })
-    if (hotels.length>0) {
+    if (hotels.length > 0) {
       return res.status(200).json({ hotels });
     }
     return res.status(404).send(`No hotels at this location`);
@@ -82,7 +82,7 @@ const getVolunteers = async (req, res) => {
     const volunteers = await VolunteerOp.findAll({
       where: { locationId: id }
     })
-    if (volunteers.length>0) {
+    if (volunteers.length > 0) {
       return res.status(200).json({ volunteers });
     }
     return res.status(404).send(`No volunteer opportunities at this location`);
@@ -110,13 +110,13 @@ const getTrip = async (req, res) => {
 }
 
 const getUser = async (req, res) => {
-  try{
-    const {id} = req.params;
+  try {
+    const { id } = req.params;
     const user = await User.findOne({
-      where: {id : id}
+      where: { id: id }
     })
-    if (user){
-      return res.status(200).json({user});
+    if (user) {
+      return res.status(200).json({ user });
     }
     return res.status(404).send('User does not exist');
 
@@ -125,40 +125,49 @@ const getUser = async (req, res) => {
   }
 }
 
-const updateTrip = async (req,res) => {
+const updateTrip = async (req, res) => {
   try {
-    const {id} = req.params;
+    const { id } = req.params;
     const trip = await Trip.findOne({
-      where: {id : id}
+      where: { id: id }
     });
-    if (!trip){
+    if (!trip) {
       return res.status(404).send('Trip does not exist');
     }
     const [updated] = await Trip.update(req.body, {
-      where: {id:id}
+      where: { id: id }
     });
     if (updated) {
-      const updatedUser = await Trip.findOne({ where: { id: id } });
-      return res.status(200).json({ user: updatedUser });
+      const updatedTrip = await Trip.findOne({ where: { id: id } });
+      return res.status(200).json({ trip: updatedTrip });
     }
     throw new Error('User not updated');
 
-  } catch (error){
+  } catch (error) {
     return res.status(500).send(error.message);
   }
 }
 
-const deleteTrip = async (req,res) => {
+const deleteTrip = async (req, res) => {
   try {
     const { id } = req.params;
     const deleted = await Trip.destroy({
-      where: {id:id}
+      where: { id: id }
     });
-    if (deleted){
+    if (deleted) {
       return res.status(204).send('Trip deleted');
     }
     throw new Error('Trip not found');
-  } catch (error){
+  } catch (error) {
+    return res.status(500).send(error.message);
+  }
+}
+
+const createTrip = async (req, res) => {
+  try {
+    const user = await Trip.create(req.body);
+    return res.status(201).json({ user });
+  } catch (error) {
     return res.status(500).send(error.message);
   }
 }
@@ -173,6 +182,7 @@ module.exports = {
   getVolunteers,
   getUser,
   updateTrip,
-  deleteTrip
+  deleteTrip,
+  createTrip
 }
 
