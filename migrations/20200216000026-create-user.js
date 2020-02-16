@@ -39,11 +39,11 @@ module.exports = {
       },
       recentViewed: {
         allowNull: true,
-        type: Sequelize.ARRAY(Sequelize.STRING)
+        type: Sequelize.STRING
       },
       upcomingTrips: {
         allowNull: true,
-        type: Sequelize.ARRAY(Sequelize.STRING)
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,

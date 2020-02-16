@@ -10,8 +10,8 @@ const users = [...Array(20)].map((user) => (
     lastName: faker.name.lastName(),
     middleInit: faker.name.firstName(1),
     homeCountry: faker.address.country(),
-    recentViewed: [faker.address.city(),faker.address.city()],
-    upcomingTrips: [faker.random.number(99999999),faker.random.number(99999999)],
+    recentViewed: faker.address.city(),
+    upcomingTrips: faker.random.number(99999999),
     createdAt: new Date(),
     updatedAt: new Date()
   }

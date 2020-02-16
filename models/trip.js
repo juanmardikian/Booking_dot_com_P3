@@ -12,6 +12,10 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Trip.associate = function(models) {
     // associations can be defined here
+    Trip.belongsTo(models.User, {
+      foreignKey: 'userId',
+      onDelete: 'CASCADE'
+    })
   };
   return Trip;
 };

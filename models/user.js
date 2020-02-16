@@ -8,11 +8,15 @@ module.exports = (sequelize, DataTypes) => {
     lastName: DataTypes.STRING,
     middleInit: DataTypes.STRING,
     homeCountry: DataTypes.STRING,
-    recentViewed: DataTypes.ARRAY(DataTypes.STRING),
-    upcomingTrips: DataTypes.ARRAY(DataTypes.STRING)
+    recentViewed: DataTypes.STRING,
+    upcomingTrips: DataTypes.STRING
   }, {});
   User.associate = function(models) {
     // associations can be defined here
+    User.hasMany(models.Trip,{
+      foreignKey: 'userId',
+      onDelete: 'CASCADE'
+    })
   };
   return User;
 };
