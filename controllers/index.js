@@ -125,6 +125,28 @@ const getUser = async (req, res) => {
   }
 }
 
+const updateTrip = async (req,res) => {
+  try {
+    const {id} = req.params;
+    const trip = await Trip.findOne({
+      where: {id : id}
+    });
+    if (!trip){
+      return res.status(404).send('Trip does not exist');
+    }
+    const [updated] = await Trip.update(req.body, {
+      where: {id:id}
+    });
+    if (updated) {
+      const updatedUser = await Trip.findOne({ where: { id: id } });
+      return res.status(200).json({ user: updatedUser });
+    }
+    throw new Error('User not updated');
+
+  } catch (error){
+    return res.status(500).send(error.message);
+  }
+}
 
 module.exports = {
   getLocations,
@@ -134,6 +156,7 @@ module.exports = {
   getCars,
   getHotels,
   getVolunteers,
-  getUser
+  getUser,
+  updateTrip
 }
 
