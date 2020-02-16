@@ -125,6 +125,31 @@ const getUser = async (req, res) => {
   }
 }
 
+const deleteUser = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const deleted = await User.destroy({
+      where: { id: id }
+    });
+    if (deleted) {
+      return res.status(204).send('User deleted');
+    }
+    throw new Error('User not found');
+  } catch (error) {
+    return res.status(500).send(error.message);
+  }
+}
+
+const createUser = async (req, res) => {
+  try {
+    const user = await User.create(req.body);
+    return res.status(201).json({ user });
+  } catch (error) {
+    return res.status(500).send(error.message);
+  }
+}
+
+
 const updateTrip = async (req, res) => {
   try {
     const { id } = req.params;
@@ -165,8 +190,8 @@ const deleteTrip = async (req, res) => {
 
 const createTrip = async (req, res) => {
   try {
-    const user = await Trip.create(req.body);
-    return res.status(201).json({ user });
+    const trip = await Trip.create(req.body);
+    return res.status(201).json({ trip });
   } catch (error) {
     return res.status(500).send(error.message);
   }
@@ -183,6 +208,8 @@ module.exports = {
   getUser,
   updateTrip,
   deleteTrip,
-  createTrip
+  createTrip,
+  deleteUser,
+  createUser
 }
 
