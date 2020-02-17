@@ -1,21 +1,21 @@
 import React from 'react';
 import { Route } from 'react-router-dom'
 import './App.css';
-import Header from './components/Header'
+import Header from './components/Header/Header'
 
-import HeaderLinks from './components/HeaderLinks'
-import Contact from './components/IconNav/Contact'
-import Profile from './components/IconNav/Profile'
-import Search from './components/IconNav/Search'
-import Menu from './components/IconNav/Menu'
+import HeaderLinks from './components/Header/HeaderLinks'
+import Contact from './components/Header/IconNav/Contact'
+import Profile from './components/Header/IconNav/Profile'
+import Search from './components/Header/IconNav/Search'
+import Menu from './components/Header/IconNav/Menu'
 
-import Accommodations from './components/LinksNav/Accommodations'
-import Flights from './components/LinksNav/Flights'
-import Packages from './components/LinksNav/Packages'
-import RentalCar from './components/LinksNav/RentalCar'
-import ToursActivities from './components/LinksNav/ToursActivities'
-import AirportTaxis from './components/LinksNav/AirportTaxis'
-import VolunteerSupport from './components/LinksNav/VolunteerSupport'
+import Accommodations from './components/Header/LinksNav/Accommodations'
+import Flights from './components/Header/LinksNav/Flights'
+import Packages from './components/Header/LinksNav/Packages'
+import RentalCar from './components/Header/LinksNav/RentalCar'
+import ToursActivities from './components/Header/LinksNav/ToursActivities'
+import AirportTaxis from './components/Header/LinksNav/AirportTaxis'
+import VolunteerSupport from './components/Header/LinksNav/VolunteerSupport'
 
 function App() {
   return (

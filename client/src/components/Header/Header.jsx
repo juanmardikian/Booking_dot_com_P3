@@ -1,15 +1,14 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
-import iconPhone from '../images/iconPhone.png'
-import iconProfile from '../images/iconProfile.png'
-import iconSearch from '../images/iconSearch.png'
-import hamburger from '../images/hamburger.png'
-import arrowBack from '../images/arrowBack.png'
+import iconPhone from '../../images/iconPhone.png'
+import iconProfile from '../../images/iconProfile.png'
+import iconSearch from '../../images/iconSearch.png'
+import hamburger from '../../images/hamburger.png'
 
-export default function Header2() {
+export default function Header() {
     return (
         <div className="header">
-            <NavLink exact to="/"><div><img  className='arrowBack' alt='' src={arrowBack}></img></div></NavLink>
+            <div className='title'><span className='Booking'>Booking</span><span className='com'>.com</span></div>
             <div className="icons">
                 <NavLink exact to="/contact"> <div><img className="iconPhone" alt='' src={iconPhone}></img></div></NavLink>
                 <NavLink exact to="/profile"><div><img className="iconProfile" alt='' src={iconProfile}></img></div></NavLink>
