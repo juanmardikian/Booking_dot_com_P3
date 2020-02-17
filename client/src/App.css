@@ -60,6 +60,12 @@ body {
   color: rgb(3, 159, 226);
 }
 
+.arrowBack {
+  margin: 15px;
+  width: 26px;
+  height: 26px;
+}
+
 .icons {
   display: flex;
   margin-top: 8px;
@@ -84,6 +90,17 @@ body {
   height: 26px;
 }
 
+/* ---------------------------------------------------------------- Where the hamburger starts  */
+
+
+
+.hamburger {
+  width: 30px;
+  height: 25px;
+}
+
+/* ---------------------------------------------------------------- Where the hamburger ends  */
+
 .headerLinks {
   display: flex;
   justify-content: space-between;
@@ -98,7 +115,6 @@ body {
   letter-spacing: 0.05em;
   text-align: center;
   padding: 8px;
-  
 }
 
 .headerLinks, a {
