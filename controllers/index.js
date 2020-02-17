@@ -7,12 +7,12 @@ const SALT_ROUNDS = 11;
 const TOKEN_KEY = 'notallkeysopenalldoors';
 
 const signUp = async (req, res) => {
-  try{
+  try {
     const { username, email, password } = req.body;
     const passwordDigest = await bcrypt.hash(password, SALT_ROUNDS);
     const user = await User.create({
-      userName:username, 
-      email:email, 
+      userName: username,
+      email: email,
       passwordHash: passwordDigest
     })
     const payload = {
@@ -21,7 +21,7 @@ const signUp = async (req, res) => {
       email: user.email
     }
     const token = jwt.sign(payload, TOKEN_KEY);
-    return res.status(201).json({ user, token})
+    return res.status(201).json({ user, token })
   } catch (error) {
     console.log("Error signing up");
     return res.status(400).json({ error: error.message });
@@ -30,7 +30,6 @@ const signUp = async (req, res) => {
 
 const signIn = async (req, res) => {
   try {
-    console.log(req.body);
     const { username, password } = req.body;
     const user = await User.findOne({
       where: { userName: username }
@@ -53,6 +52,30 @@ const signIn = async (req, res) => {
   }
 }
 
+const changePassword = async (req, res) => {
+  try {
+    const { username, password } = req.body;
+    const passwordDigest = await bcrypt.hash(password, SALT_ROUNDS);
+    const user = await User.findOne({
+      where: { userName: username }
+    })
+    if (!user) {
+      return res.status(404).send('User does not exist');
+    }
+    
+    user.passwordHash = passwordDigest;
+    console.log(user.passwordHash);
+    console.log(passwordDigest);
+    await user.save();
+   
+      const updatedUser = await User.findOne({ where: { userName: username}});
+      return res.status(200).json({ user: updatedUser})
+    
+
+  } catch (error) {
+    return res.status(500).json({ error: error.message });
+  }
+}
 
 
 const getLocations = async (req, res) => {
@@ -291,6 +314,7 @@ module.exports = {
   createUser,
   updateUser,
   signIn,
-  signUp
+  signUp,
+  changePassword
 }
 
