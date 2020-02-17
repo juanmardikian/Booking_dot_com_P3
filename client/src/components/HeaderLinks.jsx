@@ -5,11 +5,15 @@ export default function HeaderLinks() {
     return (
        
             <div className='headerLinks'>
-                <NavLink exact to="/accommodations"><h4>Accommodations</h4></NavLink>
-                <NavLink exact to="/accommodations"><h4>Flights</h4></NavLink>
-                <NavLink exact to="/accommodations"><h4>Packages</h4></NavLink>
-                <NavLink exact to="/accommodations"><h4>Rental Car</h4></NavLink>
-                <NavLink exact to="/accommodations"><h4>Tours & Activities</h4></NavLink>
+                <NavLink exact to="/accommodations"><span>Accommodations</span></NavLink>
+                <NavLink exact to="/flights"><span>Flights</span></NavLink>
+                <NavLink exact to="/packages"><span>Packages</span></NavLink>
+                <NavLink exact to="/rental-car"><span>Rental Car</span></NavLink>
+                <NavLink exact to="/tours-activities"><span>Tours & Activities</span></NavLink>
+                <NavLink exact to="/airport-taxis"><span>Airport Taxis</span></NavLink>
+                <NavLink exact to="/volunteer-support"><span>Volunteer & Support</span></NavLink>
+                
+            
             
             </div>
             )

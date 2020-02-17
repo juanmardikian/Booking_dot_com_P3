@@ -1,6 +1,6 @@
 import React from 'react'
-import Header2 from './Header2'
-export default function Menu() {
+import Header2 from '../Header2'
+export default function Search() {
     return (
         <div>
             <Header2/>
