@@ -1,6 +1,7 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const { Location, Trip, Flight, CarRental, Hotel, VolunteerOp, User } = require('../models');
+const Sequelize = require('sequelize');
 
 const SALT_ROUNDS = 11;
 const TOKEN_KEY = 'notallkeysopenalldoors';
@@ -56,7 +57,11 @@ const signIn = async (req, res) => {
 
 const getLocations = async (req, res) => {
   try {
-    const locations = await Location.findAll();
+    // returns 5 random locations
+    const locations = await Location.findAll({
+      order: Sequelize.literal('random()'),
+      limit: 5
+    });
     return res.status(200).json({ locations });
   } catch (error) {
     return res.status(500).send(error.message);
