@@ -1,9 +1,9 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
-import iconPhone from '../../images/iconPhone.png'
-import iconProfile from '../../images/iconProfile.png'
-import iconSearch from '../../images/iconSearch.png'
-import hamburger from '../../images/hamburger.png'
+import iconPhone from './imagesHeader/iconPhone.png'
+import iconProfile from './imagesHeader/iconProfile.png'
+import iconSearch from './imagesHeader/iconSearch.png'
+import hamburger from './imagesHeader/hamburger.png'
 
 export default function Header() {
     return (
