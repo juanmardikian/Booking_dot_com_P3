@@ -22,11 +22,11 @@ module.exports = {
         type: Sequelize.STRING
       },
       firstName: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.STRING
       },
       lastName: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.STRING
       },
       middleInit: {
@@ -34,7 +34,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       homeCountry: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.STRING
       },
       recentViewed: {

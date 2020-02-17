@@ -1,9 +1,9 @@
-const { Router } = require('express')
-const controllers = require('../controllers')
-const router = Router()
-// const restrict = require('../helpers')
+const { Router } = require('express');
+const controllers = require('../controllers');
+const router = Router();
+const restrict = require('../helper');
 
-router.get('/', (req, res) => res.send('This is root!'))
+router.get('/', (req, res) => res.send('This is root!'));
 
 router.get('/locations', controllers.getLocations);
 router.get('/location/:id', controllers.getLocation);
@@ -23,12 +23,10 @@ router.get('/location/:id/cars', controllers.getCars);
 router.get('/location/:id/hotels', controllers.getHotels);
 router.get('/location/:id/volunteers', controllers.getVolunteers);
 
-// router.post('/sign-up', controllers.signUp)
-// router.post('/sign-in', controllers.signIn)
+router.post('/sign-up', controllers.signUp)
+router.post('/sign-in', controllers.signIn)
 // router.post('/change-password', controllers.changePassword)
 
-// router.get('/items', controllers.getAllItems)
-// router.get('/items/:id', controllers.getItemById)
 // router.post('/items', restrict, controllers.createItem)
 // router.put('/items/:id', restrict, controllers.updateItem)
 // router.delete('/items/:id', restrict, controllers.deleteItem)

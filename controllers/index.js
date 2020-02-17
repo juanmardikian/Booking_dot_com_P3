@@ -3,7 +3,56 @@ const jwt = require('jsonwebtoken');
 const { Location, Trip, Flight, CarRental, Hotel, VolunteerOp, User } = require('../models');
 
 const SALT_ROUNDS = 11;
-const TOKEN_KEY = 'areallylonggoodkey';
+const TOKEN_KEY = 'notallkeysopenalldoors';
+
+const signUp = async (req, res) => {
+  try{
+    const { username, email, password } = req.body;
+    const passwordDigest = await bcrypt.hash(password, SALT_ROUNDS);
+    const user = await User.create({
+      userName:username, 
+      email:email, 
+      passwordHash: passwordDigest
+    })
+    const payload = {
+      id: user.id,
+      username: user.username,
+      email: user.email
+    }
+    const token = jwt.sign(payload, TOKEN_KEY);
+    return res.status(201).json({ user, token})
+  } catch (error) {
+    console.log("Error signing up");
+    return res.status(400).json({ error: error.message });
+  }
+}
+
+const signIn = async (req, res) => {
+  try {
+    console.log(req.body);
+    const { username, password } = req.body;
+    const user = await User.findOne({
+      where: { userName: username }
+    })
+    if (await bcrypt.compare(password, user.dataValues.passwordHash)) {
+      const payload = {
+        id: user.id,
+        username: user.userName,
+        email: user.email
+      }
+      const token = jwt.sign(payload, TOKEN_KEY);
+      return res.status(201).json({ user, token });
+    } else {
+      res.status(401).send('Invalid Credentials');
+    }
+
+  } catch (error) {
+    console.log("Error logging in");
+    return res.status(500).json({ error: error.message });
+  }
+}
+
+
 
 const getLocations = async (req, res) => {
   try {
@@ -39,7 +88,7 @@ const getFlights = async (req, res) => {
     if (flights) {
       return res.status(200).json({ flights });
     }
-    return res.status(404).send(`Location has no flights`);
+    return res.status(404).send(`Location has no flights available`);
   } catch (error) {
     return res.status(500).send(error.message);
   }
@@ -70,7 +119,7 @@ const getHotels = async (req, res) => {
     if (hotels.length > 0) {
       return res.status(200).json({ hotels });
     }
-    return res.status(404).send(`No hotels at this location`);
+    return res.status(404).send(`No hotels available at this location`);
   } catch (error) {
     return res.status(500).send(error.message);
   }
@@ -142,6 +191,7 @@ const deleteUser = async (req, res) => {
 
 const createUser = async (req, res) => {
   try {
+    console.log("WTF:", req.body);
     const user = await User.create(req.body);
     return res.status(201).json({ user });
   } catch (error) {
@@ -234,6 +284,8 @@ module.exports = {
   createTrip,
   deleteUser,
   createUser,
-  updateUser
+  updateUser,
+  signIn,
+  signUp
 }
 
