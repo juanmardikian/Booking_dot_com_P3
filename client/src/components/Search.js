@@ -1,21 +1,39 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useFormik } from 'formik';
 import axios from 'axios';
-const apiUrl = 'http://localhost:3001/api';
-
-async function retrieveData (cityName){
-    try{
-        let response = await axios.get(`${apiUrl}/locations/${cityName}`)
-        console.log(response.data);
-        return response.data;
-
-    } catch (error) {
-        console.log(error);
-    }
-
-}
+const apiUrl = 'http://bookingdotcom.herokuapp.com/api';
 
 const Search = props => {
+
+    const [cityId, setCityId] = useState(null);
+    const [cityData, setCityData] = useState('');
+
+    const retrieveData = async (cityName) => {
+        try {
+            let response = await axios.get(`${apiUrl}/locations/${cityName}`)
+            console.log(response.data.cityId);
+            setCityId(response.data.cityId);
+            return response.data;
+
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    useEffect(()=>{
+        
+        const getCityData = async () => {
+            try{
+                let response = await axios.get(`${apiUrl}/location/${cityId}`)
+                setCityData(response.data.location);
+                console.log(response.data.location);
+            } catch (error) {
+                console.log(error);
+            }
+        }
+        getCityData();
+
+    },[cityId]);
 
     const formik = useFormik({
         initialValues: {
@@ -28,9 +46,9 @@ const Search = props => {
             purpose: ''
         },
         onSubmit: values => {
-            let temp = retrieveData(values.location);
-            console.log(values)
-            console.log(temp);
+            retrieveData(values.location);
+            // console.log(values);
+            console.log(cityId);
         }
     })
 
