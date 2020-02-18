@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "description": "- Michael Ip - Brandon Gottshall - Juan Mardikian ​ ​ ​",
   "engines": {
-    "node": "12.13.0"
+    "node": "13.2.0"
   },
   "main": "server.js",
   "scripts": {
