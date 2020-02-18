@@ -4,7 +4,7 @@
   "description": "- Michael Ip - Brandon Gottshall - Juan Mardikian ​ ​ ​",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "node server.js",
     "db:reset": "npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all"
   },
   "repository": {
