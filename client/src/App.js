@@ -1,13 +1,15 @@
 import React from 'react';
 import { Route } from 'react-router-dom'
 import './App.css';
+
 import Header from './components/Header/Header'
 
-import HeaderLinks from './components/Header/HeaderLinks'
 import Contact from './components/Header/IconNav/Contact'
 import Profile from './components/Header/IconNav/Profile'
 import Search from './components/Header/IconNav/Search'
 import Menu from './components/Header/IconNav/Menu'
+
+import HeaderLinks from './components/Header/HeaderLinks'
 
 import Accommodations from './components/Header/LinksNav/Accommodations'
 import Flights from './components/Header/LinksNav/Flights'
@@ -17,12 +19,24 @@ import ToursActivities from './components/Header/LinksNav/ToursActivities'
 import AirportTaxis from './components/Header/LinksNav/AirportTaxis'
 import VolunteerSupport from './components/Header/LinksNav/VolunteerSupport'
 
+import Searcher from './components/Searcher/Searcher'
+
+import Main from './components/Main/Main'
+
+
+
+import Footer from './components/Footer/Footer'
+
 function App() {
   return (
     <div className="App">
+
       <Route exact path='/'>
         <Header />
         <HeaderLinks />
+        <Searcher />
+        <Main />
+        <Footer />
       </Route>
 
 
@@ -41,31 +55,31 @@ function App() {
 
       <Route exact path='/accommodations'>
         <Accommodations />
-        </Route>
+      </Route>
 
-        <Route exact path='/flights'>
+      <Route exact path='/flights'>
         <Flights />
-        </Route>
+      </Route>
 
-        <Route exact path='/packages'>
+      <Route exact path='/packages'>
         <Packages />
-        </Route>
+      </Route>
 
-        <Route exact path='/rental-car'>
+      <Route exact path='/rental-car'>
         <RentalCar />
-        </Route>
+      </Route>
 
-        <Route exact path='/tours-activities'>
+      <Route exact path='/tours-activities'>
         <ToursActivities />
-        </Route>
+      </Route>
 
-        <Route exact path='/airport-taxis'>
+      <Route exact path='/airport-taxis'>
         <AirportTaxis />
-        </Route>
+      </Route>
 
-        <Route exact path='/volunteer-support'>
+      <Route exact path='/volunteer-support'>
         <VolunteerSupport />
-        </Route>
+      </Route>
 
 
     </div>
