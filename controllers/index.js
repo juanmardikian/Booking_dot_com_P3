@@ -152,7 +152,7 @@ const getCars = async (req, res) => {
   try {
     const { id } = req.params;
     const cars = await CarRental.findAll({
-      attributes: ['id', 'companyName', 'carNum', ['locationId', 'pickUpCity']],
+      attributes: ['id', ['locationId', 'pickUpCity'], 'companyName', 'carNum'],
       where: { locationId: id }
     })
     if (cars.length > 0) {
