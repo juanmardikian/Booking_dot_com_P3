@@ -20,10 +20,10 @@ const Search = props => {
         }
     }
 
-    useEffect(()=>{
-        
+    useEffect(() => {
+
         const getCityData = async () => {
-            try{
+            try {
                 let response = await axios.get(`${apiUrl}/location/${cityId}`)
                 setCityData(response.data.location);
                 console.log(response.data.location);
@@ -31,9 +31,12 @@ const Search = props => {
                 console.log(error);
             }
         }
-        getCityData();
+        if (cityId != null) {
+            getCityData();
+        }
 
-    },[cityId]);
+
+    }, [cityId]);
 
     const formik = useFormik({
         initialValues: {
