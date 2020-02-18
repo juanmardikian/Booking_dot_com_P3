@@ -20,6 +20,8 @@ router.delete('/trip/:id', controllers.deleteTrip);
 
 router.get('/location/:id/flights', controllers.getFlights);
 router.get('/location/:id/cars', controllers.getCars);
+// get all cars for that location
+// router.get('/location/:id/cars/:carid', controllers.getAllCars);
 router.get('/location/:id/hotels', controllers.getHotels);
 router.get('/location/:id/volunteers', controllers.getVolunteers);
 
