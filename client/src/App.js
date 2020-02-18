@@ -40,7 +40,9 @@ function App() {
         <Footer />
       </Route>
 
-
+      <Route exact path='/menu'>
+        <Hamburger />
+      </Route>
       <Route exact path='/contact'>
         <Contact />
       </Route>
@@ -50,9 +52,7 @@ function App() {
       <Route exact path='/search'>
         <Search />
       </Route>
-      <Route exact path='/menu'>
-        <Hamburger />
-      </Route>
+
 
       <Route exact path='/accommodations'>
         <Accommodations />

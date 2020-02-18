@@ -45,7 +45,7 @@ export default function Hamburger() {
             width: '30px',
             height: '30xp',
             objectFit: 'contain',
-            margin: '-10px 3px 0 0',
+            margin: '-5px 3px 0 0',
 
         },
         StillLooking: {
