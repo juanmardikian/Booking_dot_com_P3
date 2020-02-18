@@ -7,7 +7,7 @@ import Header from './components/Header/Header'
 import Contact from './components/Header/IconNav/Contact'
 import Profile from './components/Header/IconNav/Profile'
 import Search from './components/Header/IconNav/Search'
-import Menu from './components/Header/IconNav/Menu'
+
 
 import HeaderLinks from './components/Header/HeaderLinks'
 
@@ -26,6 +26,7 @@ import Main from './components/Main/Main'
 
 
 import Footer from './components/Footer/Footer'
+import Hamburger from './components/Routes/Hamburger';
 
 function App() {
   return (
@@ -50,7 +51,7 @@ function App() {
         <Search />
       </Route>
       <Route exact path='/menu'>
-        <Menu />
+        <Hamburger />
       </Route>
 
       <Route exact path='/accommodations'>

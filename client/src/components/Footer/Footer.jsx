@@ -6,11 +6,11 @@ import FooterLinks from './FooterLinks'
 export default function Footer() {
     return (
         <div className='footer'>
-          <Subscribe/>
-         <ListYourProperty/>
-         <ContactFooter/>
-         <FooterLinks/>
-        
+            <Subscribe />
+            <ListYourProperty />
+            <ContactFooter />
+            <FooterLinks />
+
         </div>
     )
 }
