@@ -5,8 +5,9 @@ const volunteerOps = [...Array(40)].map((op)=>(
   {
     name: faker.lorem.words(3),
     type: faker.lorem.words(2),
-    locationId: faker.random.number(1000),
+    locationId: faker.random.number({min: 1, max: 40}),
     pictureUrl: faker.image.imageUrl(),
+    description: faker.lorem.words(10),
     createdAt: new Date(),
     updatedAt: new Date()
 }

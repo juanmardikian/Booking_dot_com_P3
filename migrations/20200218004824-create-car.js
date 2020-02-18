@@ -1,37 +1,40 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('Hotels', {
+    return queryInterface.createTable('Cars', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      name: {
+      dateStart: {
         allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.DATE
       },
-      locationId: {
+      carRentalId: {
         allowNull: false,
         type: Sequelize.INTEGER
       },
-      city: {
+      carClass: {
+        type: Sequelize.STRING
+      },
+      numberOfDays: {
+        allowNull: false,
+        type: Sequelize.INTEGER
+      },
+      pickUpCity: {
         allowNull: false,
         type: Sequelize.STRING
       },
-      contactNumber: {
+      dropOffCity: {
+        type: Sequelize.STRING
+      },
+      isAvailable: {
         allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.BOOLEAN
       },
-      address: {
-        allowNull: false,
-        type: Sequelize.STRING
-      },
-      pictureUrl: {
-        type: Sequelize.STRING
-      },
-      availableRooms: {
+      dailyRate: {
         type: Sequelize.INTEGER
       },
       createdAt: {
@@ -45,6 +48,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Hotels');
+    return queryInterface.dropTable('Cars');
   }
 };

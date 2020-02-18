@@ -3,12 +3,9 @@ const faker = require('faker');
 
 const carRentals = [...Array(40)].map((rental)=>(
   {
-    dateStart: faker.date.future(),
     companyName: faker.lorem.words(3),
-    carClass: faker.lorem.words(1),
-    numberOfDays: faker.random.number(20),
-    locationId: faker.random.number(40),
-    dropOffCity: faker.random.number(1000),
+    carNum: faker.random.number(200),
+    locationId: faker.random.number({min: 1, max: 40}),
     createdAt: new Date(),
     updatedAt: new Date()
 }

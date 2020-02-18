@@ -8,26 +8,15 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      dateStart: {
-        allowNull: false,
-        type: Sequelize.DATE
-      },
       companyName: {
         allowNull: false,
         type: Sequelize.STRING
       },
-      carClass: {
-        type: Sequelize.STRING
-      },
-      numberOfDays: {
-        allowNull: false,
+      carNum: {
         type: Sequelize.INTEGER
       },
       locationId: {
         allowNull: false,
-        type: Sequelize.INTEGER
-      },
-      dropOffCity: {
         type: Sequelize.INTEGER
       },
       createdAt: {

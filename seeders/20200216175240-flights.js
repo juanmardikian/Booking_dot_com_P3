@@ -5,7 +5,7 @@ const flights = [...Array(40)].map((flight)=>(
   {
     date: faker.date.future(),
     origin: faker.random.number(1000),
-    locationId: faker.random.number(40),
+    locationId: faker.random.number({min: 1, max: 40}),
     airlineCode: faker.lorem.words(2),
     createdAt: new Date(),
     updatedAt: new Date()
