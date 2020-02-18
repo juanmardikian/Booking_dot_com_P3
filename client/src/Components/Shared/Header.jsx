@@ -1,13 +1,21 @@
 import React from 'react'
 import WebFont from 'webfontloader'
+import NavLinks from './NavLinks'
+import NavIcons from './NavIcons'
 WebFont.load({
-  google: {
-    families: ['Baloo', 'sans-serif']
-  }
+    google: {
+        families: ['Baloo', 'sans-serif']
+    }
 })
 
 const style = {
-    header: {},
+    header: {
+        display: 'flex',
+        width: '100vw',
+        justifyContent: 'space-between',
+        height: '60px',
+        backgroundColor: 'rgb(0, 53, 128)'
+    },
     title: {
         margin: '10px 0 auto 9px'
     },
@@ -37,15 +45,21 @@ const style = {
         color: 'rgb(3, 159, 226)'
     }
 }
+
 export default function Header() {
-    return (<div className="header">
-
-        <div style={style.title}>
-            <span style={style.booking}>Booking</span>//use
-            <div style="exampleStyleSeeAbove">
-                <span className='com'>.com</span>//use
-                <div style="exampleStyleSeeAbove"></div>
-
+    return (
+        <div>
+            <div style={style.header}>
+                <div style={style.title}>
+                    <div>
+                        <span style={style.booking}>Booking</span>
+                        <span style={style.com}>.com</span>
+                    </div>
+                </div>
                 <NavIcons/>
             </div>
-            }
+
+            <NavLinks/>
+        </div>
+        )
+    }

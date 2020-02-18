@@ -1,12 +1,6 @@
 import React from 'react';
 import { Route } from 'react-router-dom'
-import {
-        Hotels,
-        Login,
-        Dashboard,
-        Contact,
-        Volunteer, CarRental, Flights
-        } from './Components/Routes'
+import Hotels from './Components/Routes/Hotels'
 import logo from './logo.svg';
 import './App.css';
 
@@ -25,7 +19,6 @@ function App() {
 
   return (
     <div className="App">
-        //Routes
           <Route exact path='/' >
               <Hotels />
           </Route>
