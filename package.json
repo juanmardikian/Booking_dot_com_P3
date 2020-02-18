@@ -5,7 +5,7 @@
   "engines": {
     "node": "12.13.0"
   },
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "db:reset": "npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all"
