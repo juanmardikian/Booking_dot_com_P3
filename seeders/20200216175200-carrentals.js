@@ -1,7 +1,45 @@
 'use strict';
 const faker = require('faker');
 
-const carRentals = [...Array(40)].map((rental)=>(
+const realCarRentals = [
+  {
+    companyName: "Sixt",
+    carNum: 37,
+    locationId: 1,
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+  {
+    companyName: "EuropCar",
+    carNum: 25,
+    locationId: 2,
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+  {
+    companyName: "Enterprise",
+    carNum: 52,
+    locationId: 3,
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+  {
+    companyName: "Hertz",
+    carNum: 33,
+    locationId: 4,
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+  {
+    companyName: "Alamo",
+    carNum: 43,
+    locationId: 5,
+    createdAt: new Date(),
+    updatedAt: new Date()
+  }
+]
+
+let carRentals = [...Array(40)].map((rental)=>(
   {
     companyName: faker.lorem.words(3),
     carNum: faker.random.number(200),
@@ -11,6 +49,8 @@ const carRentals = [...Array(40)].map((rental)=>(
 }
 )
 )
+
+carRentals = [...realCarRentals,...carRentals];
 
 module.exports = {
   up: (queryInterface, Sequelize) => {

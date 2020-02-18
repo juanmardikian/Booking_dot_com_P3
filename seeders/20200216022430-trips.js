@@ -13,7 +13,6 @@ const trips = [...Array(40)].map((trip)=>(
     volunteerOp: faker.lorem.words(5),
     createdAt: new Date(),
     updatedAt: new Date()
-
 }
 )
 )
