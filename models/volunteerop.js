@@ -4,7 +4,8 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING,
     type: DataTypes.STRING,
     locationId: DataTypes.INTEGER,
-    pictureUrl: DataTypes.STRING
+    pictureUrl: DataTypes.STRING,
+    description: DataTypes.STRING
   }, {});
   VolunteerOp.associate = function(models) {
     // associations can be defined here

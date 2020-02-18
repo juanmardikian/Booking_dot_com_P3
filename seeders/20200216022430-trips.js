@@ -3,7 +3,7 @@ const faker = require('faker');
 
 const trips = [...Array(40)].map((trip)=>(
   {
-    userId: faker.random.number(20),
+    userId: faker.random.number({min: 1, max: 40}),
     dateStart: faker.date.past(),
     dateComplete: faker.date.future(),
     destination: faker.random.number(1000),
@@ -13,7 +13,6 @@ const trips = [...Array(40)].map((trip)=>(
     volunteerOp: faker.lorem.words(5),
     createdAt: new Date(),
     updatedAt: new Date()
-
 }
 )
 )

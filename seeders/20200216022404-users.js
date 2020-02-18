@@ -1,7 +1,7 @@
 'use strict';
 const faker = require('faker');
 
-const users = [...Array(20)].map((user) => (
+const users = [...Array(40)].map((user) => (
   {
     userName: faker.internet.userName(),
     passwordHash: faker.internet.password(),
