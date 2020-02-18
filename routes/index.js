@@ -6,6 +6,7 @@ const restrict = require('../helper');
 router.get('/', (req, res) => res.send('This is root!'));
 
 router.get('/locations', controllers.getLocations);
+router.get('/locations/:cityname', controllers.getLocationId);
 router.get('/location/:id', controllers.getLocation);
 
 router.get('/user/:id', controllers.getUser);

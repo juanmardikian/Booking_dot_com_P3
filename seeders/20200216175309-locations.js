@@ -25,7 +25,7 @@ const realLocations = [
   }, {
     name: "Lisbon, Portugal",
     country: "Portugal",
-    city: "Lisboa",
+    city: "Lisbon",
     propertiesNum: 2768,
     homeNum: 1345,
     contactNumber: "+351 211208095",
@@ -35,7 +35,7 @@ const realLocations = [
   }, {
     name: "Rome, Italy",
     country: "Italy",
-    city: "Roma",
+    city: "Rome",
     propertiesNum: 3456,
     homeNum: 2130,
     contactNumber: "+39 0683365733",
@@ -45,7 +45,7 @@ const realLocations = [
   }, {
     name: "New York City, USA",
     country: "United States of America",
-    city: "New York City",
+    city: "New York",
     propertiesNum: 1423,
     homeNum: 217,
     contactNumber: "+1 2125483599",

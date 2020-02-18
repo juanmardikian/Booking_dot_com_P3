@@ -62,15 +62,15 @@ const changePassword = async (req, res) => {
     if (!user) {
       return res.status(404).send('User does not exist');
     }
-    
+
     user.passwordHash = passwordDigest;
     console.log(user.passwordHash);
     console.log(passwordDigest);
     await user.save();
-   
-      const updatedUser = await User.findOne({ where: { userName: username}});
-      return res.status(200).json({ user: updatedUser})
-    
+
+    const updatedUser = await User.findOne({ where: { userName: username } });
+    return res.status(200).json({ user: updatedUser })
+
 
   } catch (error) {
     return res.status(500).json({ error: error.message });
@@ -101,6 +101,32 @@ const getLocation = async (req, res) => {
       return res.status(200).json({ location });
     }
     return res.status(404).send(`Location with id: ${id} does not exist`);
+  } catch (error) {
+    return res.status(500).send(error.message);
+  }
+}
+
+const getLocationId = async (req, res) => {
+  try {
+    let { cityname } = req.params;
+    let temp = cityname.split(" ");
+    cityname = temp.map((word)=>{
+      let tempCity = word.split("");
+      tempCity[0] = tempCity[0].toUpperCase();
+      tempCity = tempCity.join("");
+      return tempCity;
+    });
+    if (cityname.length>1){
+      cityname = cityname.join(" ");
+    }
+
+    const location = await Location.findOne({
+      where: { city: cityname }
+    })
+    if (location) {
+      return res.status(200).json({ cityId: location.id })
+    }
+    return res.status(404).send(`No id associated with ${cityname}`)
   } catch (error) {
     return res.status(500).send(error.message);
   }
@@ -315,6 +341,7 @@ module.exports = {
   updateUser,
   signIn,
   signUp,
-  changePassword
+  changePassword,
+  getLocationId
 }
 
