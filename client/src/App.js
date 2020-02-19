@@ -1,4 +1,5 @@
 import React from 'react';
+import Search from './components/Routes/Search'
 import { Route } from 'react-router-dom'
 import Hotels from './Components/Routes/Hotels'
 import logo from './logo.svg';
