@@ -1,38 +1,238 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Baloo');
+@import url('https://fonts.googleapis.com/css?family=Helvetica');
+/*This applies from 0px to 600px --> MOBILE */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html, body {
+  height: 700px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background: darksalmon;
+  font-family: 'Roboto', sans-serif;
+  color: #141414;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* ---------------------------------------------------------------- Where the header starts  */
+
+.header {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 100vw;
+  justify-content: space-between;
+  height: 60px;
+  background-color: rgb(0, 53, 128);
+}
+
+.title {
+  margin: 10px 0 auto 9px;
+}
+
+.Booking {
+  width: 68px;
+  height: 28px;
+  font-family: Baloo;
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.com {
+  width: 39px;
+  height: 28px;
+  font-family: Baloo;
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: rgb(3, 159, 226);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.arrowBack {
+  margin: 15px;
+  width: 26px;
+  height: 26px;
+}
+
+.icons {
+  display: flex;
+  margin-top: 8px;
+}
+
+.icons div, .left {
+  padding: 8px;
+}
+
+.iconPhone {
+  width: 26px;
+  height: 26px;
+}
+
+.iconProfile {
+  width: 26px;
+  height: 26px;
+}
+
+.iconSearch {
+  width: 26px;
+  height: 26px;
+}
+
+/* ---------------------------------------------------------------- Where the hamburger starts  */
+
+.hamburger {
+  width: 30px;
+  height: 25px;
+}
+
+/* ---------------------------------------------------------------- Where the hamburger ends  */
+
+.headerLinks {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  background-color: rgb(0, 53, 128);
+  font-family: Helvetica;
+  font-size: 1.5vh;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: lighter;
+  line-height: normal;
+  letter-spacing: 0.05em;
+  text-align: center;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.headerLinks, a {
+  text-decoration: none;
+  color: white;
+  padding: 4px;
+}
+
+/* ---------------------------------------------------------------- Where the header ends  */
+
+.searcher {
+  background: goldenrod;
+  height: 250px;
+}
+
+.main {
+  background: #81cfe0;
+  height: 250px;
+}
+
+/* ---------------------------------------------------------------- Where the footer starts  */
+
+.footer {
+  background-color: rgb(0, 53, 128);
+  height: 300px;
+}
+
+.subscribe {
+  background-color: #001b42;
+}
+
+.subscribeText {
+  height: 18px;
+  font-family: Helvetica;
+  color: white;
+  text-align: center;
+  padding: 8px;
+}
+
+.searchForm {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px;
+}
+
+.enterEmail {
+  padding: 8px;
+  width: 220px;
+  font-family: Helvetica;
+  font-style: italic;
+}
+
+.subscribeButton {
+  width: 100px;
+  height: 35px;
+  font-family: Baloo;
+  font-size: 15px;
+  border-radius: 7px;
+  text-align: center;
+  color: white;
+  background-color: rgb(3, 159, 226);
+  padding: 4px;
+  outline-style: none;
+  border-radius: 4px;
+  border: solid 2px rgb(3, 159, 226);
+}
+
+.LIST-YOUR-PROPERTY-DIV {
+  display: flex;
+  justify-content: center;
+  border-top: solid 1px rgb(3, 159, 226);
+  text-align: center;
+  padding: 10px;
+}
+
+.LIST-YOUR-PROPERTY-Button {
+  width: 140px;
+  height: 26px;
+  font-family: Baloo;
+  font-size: 12px;
+  text-align: center;
+  color: rgb(3, 159, 226);
+  background-color: azure;
+  outline-style: none;
+  border-radius: 4px;
+  border: solid 1px rgb(3, 159, 226);
+}
+
+.FOOTER-LINKS-1 {
+  border-top: solid 1px rgb(3, 159, 226);
+  text-align: center;
+  padding: 5px;
+  text-decoration: underline;
+}
+
+.FOOTER-LINKS-2 {
+  text-align: center;
+  text-decoration: underline;
+  padding: 10px;
+}
+
+/* This applies from 600px onwards --> DESKTOP */
+
+@media (min-width: 600px) {
+  html, body {
+    background: yellow;
   }
-  to {
-    transform: rotate(360deg);
+  .searcher, main {
+    display: inline-block;
+    float: left;
+    height: 25%;
+  }
+  .searcher {
+    width: 75%;
+  }
+  .main {
+    width: 25%;
+  }
+  .footer {
+    clear: both;
   }
 }
