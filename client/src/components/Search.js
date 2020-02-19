@@ -10,7 +10,8 @@ const Search = props => {
     const [hotelData, setHotelData] = useState('');
     const [volunteerData, setVolunteerData] = useState('');
     const [flightData, setFlightData] = useState('');
-    const [carData, setCarData] = useState('');
+    const [carRentalData, setCarRentalData] = useState('');
+    const [carData,setCarData] = useState('');
 
     // retrieveData returns a cityId for searched city
     const retrieveData = async (cityName) => {
@@ -32,7 +33,7 @@ const Search = props => {
             try {
                 let response = await axios.get(`${apiUrl}/location/${cityId}`)
                 setCityData(response.data.location);
-                console.log(response.data.location);
+                // console.log(response.data.location);
             } catch (error) {
                 console.log(error);
             }
@@ -65,10 +66,22 @@ const Search = props => {
             }
         }
 
-        const getCars = async () => {
+        const getCarRentals = async () => {
             try {
                 let response = await axios.get(`${apiUrl}/location/${cityId}/cars`);
-                setCarData(response.data.cars);
+                setCarRentalData(response.data.cars);
+            } catch (error) {
+                console.log(error);
+            }
+        }
+
+        const getCars = async () => {
+            try {
+                // console.log(carRentalData)
+                let response = await axios.get(`${apiUrl}/location/${cityId}/cars/${carRentalData[0].id}`)
+                console.log(response.data);
+                setCarData(response.data);
+
             } catch (error) {
                 console.log(error);
             }
@@ -79,7 +92,7 @@ const Search = props => {
             getHotels();
             getVolunteerOps();
             getFlights();
-            getCars();
+            getCarRentals();
         }
 
 
@@ -98,7 +111,7 @@ const Search = props => {
         },
         onSubmit: values => {
             retrieveData(values.location);
-            console.log(cityId);
+            // console.log(cityId);
         }
     })
 
