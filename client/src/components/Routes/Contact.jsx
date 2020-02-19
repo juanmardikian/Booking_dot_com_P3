@@ -3,7 +3,7 @@ import Header2 from '../Header/Header2'
 import Footer from '../Footer/Footer'
 import contact from '../../images/contact.png'
 export default function Contact() {
-
+    window.scrollTo(0, 0)
 
     const style = {
         parentContainer: {

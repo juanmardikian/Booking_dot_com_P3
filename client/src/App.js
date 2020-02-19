@@ -27,6 +27,7 @@ import Main from './components/Main/Main'
 
 import Footer from './components/Footer/Footer'
 import Hamburger from './components/Routes/Hamburger';
+import HelpCenter from './components/Routes/HelpCenter';
 
 function App() {
   return (
@@ -51,6 +52,10 @@ function App() {
       </Route>
       <Route exact path='/search'>
         <Search />
+      </Route>
+
+      <Route exact path='/helpCenter'>
+        <HelpCenter />
       </Route>
 
 

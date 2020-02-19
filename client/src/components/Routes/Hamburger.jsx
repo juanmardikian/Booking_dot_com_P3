@@ -18,6 +18,7 @@ import press from '../../images/press.png'
 import affiliate from '../../images/affiliate.png'
 import iphone from '../../images/iphone.png'
 import Footer from '../Footer/Footer'
+import { Link } from 'react-router-dom'
 
 export default function Hamburger() {
 
@@ -64,7 +65,8 @@ export default function Hamburger() {
         listItem: {
             padding: '10px 0 0 0',
             marginTop: '14px',
-            fontWeight: 'normal'
+            fontWeight: 'normal',
+            color:'black'
         }
     }
 
@@ -99,7 +101,7 @@ export default function Hamburger() {
             <div style={style.subHeading}>
                 USEFUL LINKS
                 <ul>
-                    <li style={style.listItem}>Customer Service Help<img src={customerService} style={style.image} /></li>
+                    <li style={style.listItem}><Link to='/helpCenter' style={style.listItem}>Customer Service Help<img src={customerService} style={style.image} /> </Link></li>
                     <li style={style.listItem}>Safety Resource Center <img src={safety} style={style.image} /></li>
                     <li style={style.listItem}>Home<img src={hosts} style={style.image} /></li>
                     <li style={style.listItem}>Careers<img src={careers} style={style.image} /></li>
