@@ -8,17 +8,25 @@ export default function UserLogin(props) {
     const [password, setPassword] = useState('');
 
     const logIn = async (event) => {
-        event.preventDefault();
-        // console.log(username,password);
-        let response = await axios({
-            url: `${apiUrl}`,
-            method: 'POST',
-            data: { username: username, password: password }
-        })
-        console.log(response);
-        const tempUser = response.data.user.userName;
-        const token = `Bearer ${response.data.token}`
-        window.localStorage.setItem(tempUser,token);
+        try {
+            event.preventDefault();
+            // console.log(username,password);
+            let response = await axios({
+                url: `${apiUrl}`,
+                method: 'POST',
+                data: { username: username, password: password }
+            })
+            console.log(response);
+            const tempUser = response.data.user.userName;
+            const token = `Bearer ${response.data.token}`
+            window.localStorage.setItem(tempUser, token);
+            // redirect to ???
+
+        } catch (error) {
+            console.log(error);
+            console.log('Ivalid username or password');
+            // display invalid username or password
+        }
     }
 
     const updateUsername = (event) => {
