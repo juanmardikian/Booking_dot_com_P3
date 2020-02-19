@@ -4,7 +4,7 @@ import './App.css';
 
 import Header from './components/Header/Header'
 
-import Contact from './components/Header/IconNav/Contact'
+import Contact from './components/Routes/Contact'
 import Profile from './components/Header/IconNav/Profile'
 import Search from './components/Header/IconNav/Search'
 
