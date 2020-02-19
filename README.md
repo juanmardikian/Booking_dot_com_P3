@@ -9,7 +9,7 @@
 ​
 
 ## Project Description
-Implementation of Booking.com given UXDI's specifications. 
+Implementation of Booking.com given UXDI's specifications.
 ​
 ## Wireframes
 ​
@@ -25,13 +25,13 @@ Implementation of Booking.com given UXDI's specifications.
 ## MVP
 ​
 - Add contact us functionality so that the user can reach it easily and quickly
-- Add and implement a feature which gives the user the ability to volunteer in their visited city 
+- Add and implement a feature which gives the user the ability to volunteer in their visited city
 - Homepage, aditional views (as per UXDI wireframes)
 - Backend full crud
 - Hamburger menu
 - Nav bar, footer (shared)
 - "Help Center" view
-- Full CSS 
+- Full CSS
 ​
 ## Post-MVP
 ​
@@ -71,8 +71,8 @@ Implementation of Booking.com given UXDI's specifications.
 ​
 Sample JSON from GET `/api/user`
 ​
-				
-				
+
+
 			[
 			    {
 			        “username” : “mikeeip”,
@@ -85,12 +85,12 @@ Sample JSON from GET `/api/user`
 			                “tripId” : “398234”
 			            },
 			            {
-			                “tripId” : “478924” 
+			                “tripId” : “478924”
 			            }
 			        ]
 			    }
 			]
-	
+
 
 
 ## React Component Hierarchy
@@ -148,43 +148,53 @@ Breakdown the initial logic defined in the previous sections into stateful and s
 | Full Backend CRUD        | 30 hrs         | 0           |
 | Volunteer View           | 12 hrs         | 0           |
 |                          | 126 Hours      | 0           |
-​
-## Additional Libraries
-### Back-End
-* express
-* morgan
-* body-parser
-* cors
-* passport
-* passport-jwt
-* passport-local
-* bcrypt
-* jsonwebtoken
-* nodemon
-* pg
-* sequelize
-* faker (For Development Use)
 
-### Front-End
-* react
-* react-router-dom
-* axios
-​
+## Additional Libraries
+| Back-End         |Front-End  		|
+|------------------|----------------|
+| bcrypt		   |react      	    |
+| body-parser	   |react-router-dom|
+| cors		   	   |axios			|
+| express		   |formik			|
+| faker		   	   |				|
+| jsonwebtoken     |				|
+| morgan		   |				|
+| nodemon		   |				|
+| passport	   	   |				|
+| passport-jwt     |				|
+| passport-local   |				|
+| pg			   |				|
+| sequelize	   	   |				|
 
 ## Expected Issues
 
-### Expected backend issues
+#### Back-End
 
 There might be issues with getting google and facebook authentication working - although those are in post-MVP, However, basic authentication should not present any problems
 
 
-### ​Expected frontend issues
+#### Front-End
 ​
 ​There may be some challenge with the way some components will conditionally render. However the shared components could change based on passed props.
 ​​
 ## Issues and Resolutions
 
 ## Code Snippet
-​
+					const trips = [...Array(40)].map((trip)=>(
+					{
+					    userId: faker.random.number(20),
+					    dateStart: faker.date.past(),
+					    dateComplete: faker.date.future(),
+					    destination: faker.random.number(1000),
+					    hotel: faker.lorem.words(3),
+					    flight: faker.lorem.words(2),
+					    carRental: faker.lorem.words(2),
+					    volunteerOp: faker.lorem.words(5),
+					    createdAt: new Date(),
+					    updatedAt: new Date()
+					}
 ## Change Log
+
+	Feb 17
+	* Opted to use Formik to manage forms. Added to the Additional Libraries section.
 ​
