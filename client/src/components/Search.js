@@ -7,10 +7,15 @@ const Search = props => {
 
     const [cityId, setCityId] = useState(null);
     const [cityData, setCityData] = useState('');
+    const [hotelData, setHotelData] = useState('');
+    const [volunteerData, setVolunteerData] = useState('');
+    const [flightData, setFlightData] = useState('');
+    const [carData, setCarData] = useState('');
 
+    // retrieveData returns a cityId for searched city
     const retrieveData = async (cityName) => {
         try {
-            let response = await axios.get(`${apiUrl}/locations/${cityName}`)
+            let response = await axios.get(`${apiUrl}/locations/${cityName}`);
             console.log(response.data.cityId);
             setCityId(response.data.cityId);
             return response.data;
@@ -22,6 +27,7 @@ const Search = props => {
 
     useEffect(() => {
 
+        // retrieves city data for searched city
         const getCityData = async () => {
             try {
                 let response = await axios.get(`${apiUrl}/location/${cityId}`)
@@ -31,13 +37,55 @@ const Search = props => {
                 console.log(error);
             }
         }
+        // gets all hotels for city searched
+        const getHotels = async () => {
+            try {
+                let response = await axios.get(`${apiUrl}/location/${cityId}/hotels`);
+                setHotelData(response.data.hotels);
+            } catch (error) {
+                console.log(error);
+            }
+        }
+
+        const getVolunteerOps = async () => {
+            try {
+                let response = await axios.get(`${apiUrl}/location/${cityId}/volunteers`);
+                setVolunteerData(response.data.volunteers);
+            } catch (error) {
+                console.log(error);
+            }
+        }
+
+        const getFlights = async () => {
+            try {
+                let response = await axios.get(`${apiUrl}/location/${cityId}/flights`);
+                setFlightData(response.data.flights);
+            } catch (error) {
+                console.log(error);
+            }
+        }
+
+        const getCars = async () => {
+            try {
+                let response = await axios.get(`${apiUrl}/location/${cityId}/cars`);
+                setCarData(response.data.cars);
+            } catch (error) {
+                console.log(error);
+            }
+        }
+
         if (cityId != null) {
             getCityData();
+            getHotels();
+            getVolunteerOps();
+            getFlights();
+            getCars();
         }
 
 
     }, [cityId]);
 
+    // formik for forms
     const formik = useFormik({
         initialValues: {
             location: '',
@@ -50,7 +98,6 @@ const Search = props => {
         },
         onSubmit: values => {
             retrieveData(values.location);
-            // console.log(values);
             console.log(cityId);
         }
     })
