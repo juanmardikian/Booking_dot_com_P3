@@ -1,0 +1,33 @@
+{
+  "name": "booking-dot-com",
+  "version": "1.0.0",
+  "description": "- Michael Ip - Brandon Gottshall - Juan Mardikian ​ ​ ​",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "db:reset": "npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.generalassemb.ly/koden11/Booking_dot_com.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.8",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "faker": "^4.1.0",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.9.1",
+    "nodemon": "^2.0.2",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "pg": "^7.18.1",
+    "sequelize": "^5.21.4",
+    "webfontloader": "^1.6.28"
+  }
+}
