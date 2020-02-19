@@ -106,6 +106,32 @@ const getLocation = async (req, res) => {
   }
 }
 
+const getLocationId = async (req, res) => {
+  try {
+    let { cityname } = req.params;
+    let temp = cityname.split(" ");
+    cityname = temp.map((word) => {
+      let tempCity = word.split("");
+      tempCity[0] = tempCity[0].toUpperCase();
+      tempCity = tempCity.join("");
+      return tempCity;
+    });
+    if (cityname.length > 1) {
+      cityname = cityname.join(" ");
+    }
+
+    const location = await Location.findOne({
+      where: { city: cityname }
+    })
+    if (location) {
+      return res.status(200).json({ cityId: location.id })
+    }
+    return res.status(404).send(`No id associated with ${cityname}`)
+  } catch (error) {
+    return res.status(500).send(error.message);
+  }
+}
+
 const getFlights = async (req, res) => {
   try {
     const { id } = req.params;
@@ -126,7 +152,7 @@ const getCarRentals = async (req, res) => {
   try {
     const { id } = req.params;
     const cars = await CarRental.findAll({
-      attributes: ['id', 'companyName', 'carNum', ['locationId', 'pickUpCity']],
+      attributes: ['id', ['locationId', 'pickUpCity'], 'companyName', 'carNum'],
       where: { locationId: id }
     })
     if (cars.length > 0) {
@@ -138,13 +164,13 @@ const getCarRentals = async (req, res) => {
   }
 }
 
-const getCars = async (req, res) => {
+const getAllCars = async (req, res) => {
   try {
     const { carid } = req.params;
     const cars = await Car.findAll({
       where: { carRentalId: carid }
     })
-    if (cars.length> 0){
+    if (cars.length > 0) {
       return res.status(200).json({ cars })
     }
     return res.status(404).send('No cars available at this lcoation');
@@ -319,7 +345,7 @@ module.exports = {
   getTrip,
   getFlights,
   getCarRentals,
-  getCars,
+  getAllCars,
   getHotels,
   getVolunteers,
   getUser,
@@ -331,6 +357,7 @@ module.exports = {
   updateUser,
   signIn,
   signUp,
-  changePassword
+  changePassword,
+  getLocationId
 }
 
