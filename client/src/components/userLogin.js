@@ -24,13 +24,13 @@ export default function UserLogin(props) {
 
         } catch (error) {
             console.log(error);
-            console.log('Ivalid username or password');
+            console.log('Invalid username or password');
             // display invalid username or password
         }
     }
 
     const updateUsername = (event) => {
-        let temp = event.target.value;
+        let temp = event.target.value.toLowerCase();
         console.log(temp);
         setUsername(temp);
     }
@@ -46,7 +46,7 @@ export default function UserLogin(props) {
             <h2>Sign in</h2>
             <p>You can sign in using your Booking.com account to access our services.</p>
             <form>
-                <h4>Username</h4>
+                <h4>Email</h4>
                 <input type="text" onChange={updateUsername}></input>
                 <h4>Booking.com Password</h4>
                 <input type="password" onChange={updatePassword}></input>
