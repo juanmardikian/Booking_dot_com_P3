@@ -1,6 +1,6 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const { Location, Trip, Flight, CarRental, Hotel, VolunteerOp, User } = require('../models');
+const { Location, Trip, Flight, CarRental, Hotel, VolunteerOp, User, Car } = require('../models');
 const Sequelize = require('sequelize');
 
 const SALT_ROUNDS = 11;
@@ -110,13 +110,13 @@ const getLocationId = async (req, res) => {
   try {
     let { cityname } = req.params;
     let temp = cityname.split(" ");
-    cityname = temp.map((word)=>{
+    cityname = temp.map((word) => {
       let tempCity = word.split("");
       tempCity[0] = tempCity[0].toUpperCase();
       tempCity = tempCity.join("");
       return tempCity;
     });
-    if (cityname.length>1){
+    if (cityname.length > 1) {
       cityname = cityname.join(" ");
     }
 
@@ -148,17 +148,32 @@ const getFlights = async (req, res) => {
   }
 }
 
-const getCars = async (req, res) => {
+const getCarRentals = async (req, res) => {
   try {
     const { id } = req.params;
     const cars = await CarRental.findAll({
-      attributes: ['id', 'dateStart', 'companyName', 'carClass', 'numberOfDays', ['locationId', 'pickUpCity'], 'dropOffCity'],
+      attributes: ['id', ['locationId', 'pickUpCity'], 'companyName', 'carNum'],
       where: { locationId: id }
     })
     if (cars.length > 0) {
       return res.status(200).json({ cars });
     }
-    return res.status(404).send(`No cars at this location`);
+    return res.status(404).send(`No car rental services at this location`);
+  } catch (error) {
+    return res.status(500).send(error.message);
+  }
+}
+
+const getAllCars = async (req, res) => {
+  try {
+    const { carid } = req.params;
+    const cars = await Car.findAll({
+      where: { carRentalId: carid }
+    })
+    if (cars.length > 0) {
+      return res.status(200).json({ cars })
+    }
+    return res.status(404).send('No cars available at this lcoation');
   } catch (error) {
     return res.status(500).send(error.message);
   }
@@ -329,7 +344,8 @@ module.exports = {
   getLocation,
   getTrip,
   getFlights,
-  getCars,
+  getCarRentals,
+  getAllCars,
   getHotels,
   getVolunteers,
   getUser,
