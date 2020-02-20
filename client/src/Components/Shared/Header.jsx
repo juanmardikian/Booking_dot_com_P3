@@ -2,6 +2,8 @@ import React from 'react'
 import WebFont from 'webfontloader'
 import NavLinks from './NavLinks'
 import NavIcons from './NavIcons'
+import arrowBack from '../../Images/Header/arrowBack.png'
+import { NavLink } from 'react-router-dom'
 WebFont.load({
     google: {
         families: ['Baloo', 'sans-serif']
@@ -46,8 +48,12 @@ const style = {
     }
 }
 
-export default function Header() {
+
+export default function Header(props) {
+    // const { back } = props
+    const back = true
     return (
+        back ?
         <div>
             <div style={style.header}>
                 <div style={style.title}>
@@ -61,5 +67,19 @@ export default function Header() {
 
             <NavLinks/>
         </div>
-        )
-    }
+        :
+        <div>
+            <div style={style.header}>
+                <div style={style.title}>
+                    <div>
+                        <NavLink exact to="/"><div><img  className='arrowBack' alt='' src={arrowBack}></img></div></NavLink>
+                    </div>
+                </div>
+                <NavIcons/>
+            </div>
+
+            <NavLinks/>
+        </div>
+
+    )
+}

@@ -1,8 +1,9 @@
 import React from 'react';
 import { Route } from 'react-router-dom'
 import Hotels from './Components/Routes/Hotels'
-import Hamburger from './Components/Routes/Hamburger';
-
+import Hamburger from './Components/Routes/Hamburger'
+import CarRental from './Components/Routes/CarRental'
+import Flights from './Components/Routes/Flights'
 
 function App() {
 
@@ -10,13 +11,13 @@ function App() {
     // |                          |  YES  OR  NO  |  YES    OR   NO  |  YES      OR        NO  |
     // |--------------------------|---------------|------------------|-------------------------|
     // |Accomidations or "hotels" |  YES          |              NO  |                     NO  |
-    // |Hamburger                 |           NO  |              NO  |                     NO  |
+    // |Hamburger                 |  YES          |              NO  |                     NO  |
     // |Login                     |           NO  |              NO  |                     NO  |
     // |Dashboard                 |               |              NO  |                     NO  |
     // |Contact                   |               |              NO  |                     NO  |
     // |Volunteer                 |               |              NO  |                     NO  |
-    // |CarRental                 |               |              NO  |                     NO  |
-    // |Flights                   |               |              NO  |                     NO  |
+    // |CarRental                 |  YES          |  YES             |                     NO  |
+    // |Flights                   |  YES          |  YES             |                     NO  |
 
     return (
         <div className="App">
@@ -26,9 +27,18 @@ function App() {
             <Hotels/>
         </Route>
 
+        <Route exact="exact" path='/car'>
+            <CarRental/>
+        </Route>
+
+        <Route exact="exact" path='/flights'>
+            <Flights/>
+        </Route>
+
         <Route exact="exact" path='/menu'>
             <Hamburger/>
         </Route>
+
 
 
 
