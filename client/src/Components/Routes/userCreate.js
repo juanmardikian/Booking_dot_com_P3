@@ -21,7 +21,7 @@
 
   <meta name="viewport" content="width=device-width">
   
-  <title>Booking_dot_com/userLogin.js at userLogin · koden11/Booking_dot_com</title>
+  <title>Booking_dot_com/userCreate.js at userLogin · koden11/Booking_dot_com</title>
     <meta name="description" content="SEI-UXDI Collab. Contribute to koden11/Booking_dot_com development by creating an account on GitHub.">
     <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
   <link rel="fluid-icon" href="https://git.generalassemb.ly/fluidicon.png" title="GitHub">
@@ -31,10 +31,10 @@
     <meta property="og:image" content="https://avatars.git.generalassemb.ly/u/25136?s=400" /><meta property="og:site_name" content="GitHub Enterprise" /><meta property="og:type" content="object" /><meta property="og:title" content="koden11/Booking_dot_com" /><meta property="og:url" content="https://git.generalassemb.ly/koden11/Booking_dot_com" /><meta property="og:description" content="SEI-UXDI Collab. Contribute to koden11/Booking_dot_com development by creating an account on GitHub." />
 
   <link rel="assets" href="https://assets.git.generalassemb.ly/">
-  <link rel="web-socket" href="wss://git.generalassemb.ly/_sockets/VjI6NzgwMTg6Njg5YjJkOTQ4MTJjMTk1NmY2ZjUzOWMwNDFjNGNkZWVlZjg5ZTU5ODEzYjAxMmQ0MmRiZGIzN2U5NWFmMTUyMw==--cccd4505eff53224ecb6657422687663e993aa7a">
+  <link rel="web-socket" href="wss://git.generalassemb.ly/_sockets/VjI6NzgwMTg6ZWIzNDMwYmUzM2NmYzNlOGM4ZWI5NDRlYjEyMmU4NzY2MGZlOTM1NGE2MjIyNjM3YWQ5NGFhMGU3NzI5NTkyOA==--4ea195ffecc8f46f6bbbfda1cc327d2976a8784c">
   <meta name="pjax-timeout" content="1000">
   <link rel="sudo-modal" href="/sessions/sudo_modal">
-  <meta name="request-id" content="26bc226d-d7f7-419c-ad39-80e83f3b4638" data-pjax-transient>
+  <meta name="request-id" content="484709e4-5bed-4659-8fc2-01ed69c1d5f5" data-pjax-transient>
 
 
   
@@ -72,7 +72,7 @@
   
 
 
-    <link rel="canonical" href="https://git.generalassemb.ly/koden11/Booking_dot_com/blob/userLogin/client/src/components/userLogin.js" data-pjax-transient>
+    <link rel="canonical" href="https://git.generalassemb.ly/koden11/Booking_dot_com/blob/userLogin/client/src/components/userCreate.js" data-pjax-transient>
 
 
 
@@ -139,7 +139,7 @@
           aria-autocomplete="list"
           aria-controls="jump-to-results"
           aria-label="Search or jump to…"
-          data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations#csrf-token=s8viMbYBscM3HNduQPtk9q0pXB+Y5xGK2JT707X5Y6t+P5ZRA4KupxQEzl2DVQLvvESoGBhDjSLXIJQTzYVzjA=="
+          data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations#csrf-token=bHuQk0C7f+MoEdU3fYuU3kBk1Mj3wUax3JVYe1+RXOmhj+Tz9ThghwsJzAS+JfLHUQkgz3dl2hnTITe7J+1Mzg=="
           spellcheck="false"
           autocomplete="off"
           >
@@ -358,7 +358,7 @@
           <li><a role="menuitem" class="dropdown-item" href="https://help.github.com/enterprise/2.16/user" data-ga-click="Header, go to help, text:help">Help</a></li>
           <li><a role="menuitem" class="dropdown-item" href="/settings/profile" data-ga-click="Header, go to settings, icon:settings">Settings</a></li>
           <li>
-            <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="logout-form" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="zQzDnCzzeTaCTyQvy6ZbvopzgeLjLQu9slLP6p1LvbXzZJF0CcZ2H2RpSlS3igohJlB4gg0C4QDSuLDhbNN1jA==" />
+            <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="logout-form" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="SlWglm9zeGGm/JWy6tnppQDNAr2KFffLJoBlYfRfLqp0PfJ+SkZ3SEDa+8mW9bg6rO773WQ6HXZGahpqBcfmkw==" />
               
               <button type="submit" class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout" role="menuitem">
                 Sign out
@@ -372,7 +372,7 @@
 
 
 
-        <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="sr-only right-0" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="oGMszwL6nvvsj/d9qII8VzjApRjfKFUUA2mfMY5EiCCeC34nJ8+R0gqpmQbUrm3IlONceDEHv6ljg+A6f9xAGQ==" />
+        <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="sr-only right-0" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="+i7/Y8DcCyCjRoQSsNITMf/37yjUBj0RfkMp4Zta69fERq2L5ekECUVg6mnM/kKuU9QWSDop16weqVbqasIj7g==" />
           <button type="submit" class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout">
             Sign out
           </button>
@@ -409,7 +409,7 @@
 
       <ul class="pagehead-actions">
   <li>
-        <!-- '"` --><!-- </textarea></xmp> --></option></form><form data-remote="true" class="js-social-form js-social-container" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="ZVdH6M3UcbA1c/BCdY9O5EJbVIONGhNa4nAYBnfaqgZM6qMzCMWvh6LTvk6YEJLNWADk33Zhi0tpFAkY+DCrHQ==" />      <input type="hidden" name="repository_id" id="repository_id" value="385682" class="form-control" />
+        <!-- '"` --><!-- </textarea></xmp> --></option></form><form data-remote="true" class="js-social-form js-social-container" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="KF0rTib+HzdpXezw3AwfTxs/KiXU2Dk6kIc4f8UKRrsB4M+V4+/BAP79ovwxk8NmAWSaeS+joSsb4ylhSuBHoA==" />      <input type="hidden" name="repository_id" id="repository_id" value="385682" class="form-control" />
 
       <details class="details-reset details-overlay select-menu float-left">
         <summary class="btn btn-sm btn-with-count select-menu-button" data-ga-click="Repository, click Watch settings, action:blob#show">
@@ -483,7 +483,7 @@
 
   <li>
       <div class="js-toggler-container js-social-container starring-container ">
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="starred js-social-form" action="/koden11/Booking_dot_com/unstar" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="GbXXxpEOG4ZdyMZE8S9xVUbRCwSOvVBUhOdmqRUnGpS9LPxr1/OqZ/uxwHiTvlBWIENGzlYYoQb3amnZV5aL5g==" />
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="starred js-social-form" action="/koden11/Booking_dot_com/unstar" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="2zxMSPdkDOdmI5dlK/WII3cdcRmhBHmNIZ9vNTzGONR/pWflsZm9BsBakVlJZKkgEY8803mhiN9SEmBFfneppg==" />
       <input type="hidden" name="context" value="repository"></input>
       <button
         type="submit"
@@ -498,7 +498,7 @@
           0
         </a>
 </form>
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="unstarred js-social-form" action="/koden11/Booking_dot_com/star" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="JJwzWfdzol1WXEgSRQGCMxJnUVAXSqJ00dAXctkq4GvzoxR/GFVgdu7fFKRdyOxmTvPaKN1wtPECEGb7xYVGeg==" />
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="unstarred js-social-form" action="/koden11/Booking_dot_com/star" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="DExBZ6kuBupCt/B4OhrR/Dt/uJ25zgEUMDIkXkAlB5jbc2ZBRgjEwfo0rM4i07+pZ+sz5XP0F5Hj8lXXXIqhiQ==" />
       <input type="hidden" name="context" value="repository"></input>
       <button
         type="submit"
@@ -620,16 +620,16 @@
 
 
   
-    <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/koden11/Booking_dot_com/blob/5715187fd52d6a856e12ef16a19ac74bb8e2be7b/client/src/components/userLogin.js">Permalink</a>
+    <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/koden11/Booking_dot_com/blob/5715187fd52d6a856e12ef16a19ac74bb8e2be7b/client/src/components/userCreate.js">Permalink</a>
 
-    <!-- blob contrib key: blob_contributors:v21:faccbffd51324b7466d4c8a503b1528a -->
+    <!-- blob contrib key: blob_contributors:v21:f6cd2c45904539daf22d837971e9d53f -->
 
     
 
     <div class="file-navigation">
       
 <div class="select-menu branch-select-menu js-menu-container js-select-menu float-left js-load-contents"
-  data-contents-url="/koden11/Booking_dot_com/ref-list/userLogin/client/src/components/userLogin.js?source_action=show&amp;source_controller=blob">
+  data-contents-url="/koden11/Booking_dot_com/ref-list/userLogin/client/src/components/userCreate.js?source_action=show&amp;source_controller=blob">
   <button class="btn btn-sm select-menu-button js-menu-target css-truncate" data-hotkey="w"
     
     type="button" aria-label="Switch branches or tags" aria-expanded="false" aria-haspopup="true">
@@ -659,21 +659,49 @@
         </clipboard-copy>
       </div>
       <div id="blob-path" class="breadcrumb">
-        <span class="repo-root js-repo-root"><span class="js-path-segment"><a data-pjax="true" href="/koden11/Booking_dot_com/tree/userLogin"><span>Booking_dot_com</span></a></span></span><span class="separator">/</span><span class="js-path-segment"><a data-pjax="true" href="/koden11/Booking_dot_com/tree/userLogin/client"><span>client</span></a></span><span class="separator">/</span><span class="js-path-segment"><a data-pjax="true" href="/koden11/Booking_dot_com/tree/userLogin/client/src"><span>src</span></a></span><span class="separator">/</span><span class="js-path-segment"><a data-pjax="true" href="/koden11/Booking_dot_com/tree/userLogin/client/src/components"><span>components</span></a></span><span class="separator">/</span><strong class="final-path">userLogin.js</strong>
+        <span class="repo-root js-repo-root"><span class="js-path-segment"><a data-pjax="true" href="/koden11/Booking_dot_com/tree/userLogin"><span>Booking_dot_com</span></a></span></span><span class="separator">/</span><span class="js-path-segment"><a data-pjax="true" href="/koden11/Booking_dot_com/tree/userLogin/client"><span>client</span></a></span><span class="separator">/</span><span class="js-path-segment"><a data-pjax="true" href="/koden11/Booking_dot_com/tree/userLogin/client/src"><span>src</span></a></span><span class="separator">/</span><span class="js-path-segment"><a data-pjax="true" href="/koden11/Booking_dot_com/tree/userLogin/client/src/components"><span>components</span></a></span><span class="separator">/</span><strong class="final-path">userCreate.js</strong>
       </div>
     </div>
 
 
-    <include-fragment src="/koden11/Booking_dot_com/contributors/userLogin/client/src/components/userLogin.js" class="commit-tease commit-loader">
+    
+  <div class="commit-tease">
+      <span class="float-right">
+        <a class="commit-tease-sha" href="/koden11/Booking_dot_com/commit/5715187fd52d6a856e12ef16a19ac74bb8e2be7b" data-pjax>
+          5715187
+        </a>
+        <relative-time datetime="2020-02-20T18:44:40Z">Feb 20, 2020</relative-time>
+      </span>
       <div>
-        Fetching contributors&hellip;
+        <img class="avatar" width="20" height="20" alt="" src="https://assets.git.generalassemb.ly/images/gravatars/gravatar-user-420.png" />
+        <span class="user-mention">Michael Ip</span>
+          <a data-pjax="true" title="styled create and login" class="message" href="/koden11/Booking_dot_com/commit/5715187fd52d6a856e12ef16a19ac74bb8e2be7b">styled create and login</a>
       </div>
 
-      <div class="commit-tease-contributors">
-          <img alt="" class="loader-loading float-left" src="https://assets.git.generalassemb.ly/images/spinners/octocat-spinner-32-EAF2F5.gif" width="16" height="16" />
-        <span class="loader-error">Cannot retrieve contributors at this time</span>
-      </div>
-</include-fragment>
+    <div class="commit-tease-contributors">
+      
+<details class="details-reset details-overlay details-overlay-dark lh-default text-gray-dark float-left mr-2" id="blob_contributors_box">
+  <summary class="btn-link" aria-haspopup="dialog"  >
+    
+    <span><strong>0</strong> contributors</span>
+  </summary>
+  <details-dialog class="Box Box--overlay d-flex flex-column anim-fade-in fast " aria-label="Users who have contributed to this file">
+    <div class="Box-header">
+      <button class="Box-btn-octicon btn-octicon float-right" type="button" aria-label="Close dialog" data-close-dialog>
+        <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+      </button>
+      <h3 class="Box-title">Users who have contributed to this file</h3>
+    </div>
+    
+        <ul class="list-style-none overflow-auto">
+        </ul>
+
+  </details-dialog>
+</details>
+      
+    </div>
+  </div>
+
 
 
     <div class="file ">
@@ -684,25 +712,25 @@
 
 
     <div class="BtnGroup">
-      <a id="raw-url" class="btn btn-sm BtnGroup-item" href="/koden11/Booking_dot_com/raw/userLogin/client/src/components/userLogin.js">Raw</a>
-        <a class="btn btn-sm js-update-url-with-hash BtnGroup-item" data-hotkey="b" href="/koden11/Booking_dot_com/blame/userLogin/client/src/components/userLogin.js">Blame</a>
-      <a rel="nofollow" class="btn btn-sm BtnGroup-item" href="/koden11/Booking_dot_com/commits/userLogin/client/src/components/userLogin.js">History</a>
+      <a id="raw-url" class="btn btn-sm BtnGroup-item" href="/koden11/Booking_dot_com/raw/userLogin/client/src/components/userCreate.js">Raw</a>
+        <a class="btn btn-sm js-update-url-with-hash BtnGroup-item" data-hotkey="b" href="/koden11/Booking_dot_com/blame/userLogin/client/src/components/userCreate.js">Blame</a>
+      <a rel="nofollow" class="btn btn-sm BtnGroup-item" href="/koden11/Booking_dot_com/commits/userLogin/client/src/components/userCreate.js">History</a>
     </div>
 
         <a class="btn-octicon tooltipped tooltipped-nw"
-           href="x-github-client://openRepo/https://git.generalassemb.ly/koden11/Booking_dot_com?branch=userLogin&amp;filepath=client%2Fsrc%2Fcomponents%2FuserLogin.js"
+           href="x-github-client://openRepo/https://git.generalassemb.ly/koden11/Booking_dot_com?branch=userLogin&amp;filepath=client%2Fsrc%2Fcomponents%2FuserCreate.js"
            aria-label="Open this file in GitHub Desktop"
            data-ga-click="Repository, open with desktop, type:mac">
             <svg class="octicon octicon-device-desktop" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M15 2H1c-.55 0-1 .45-1 1v9c0 .55.45 1 1 1h5.34c-.25.61-.86 1.39-2.34 2h8c-1.48-.61-2.09-1.39-2.34-2H15c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm0 9H1V3h14v8z"/></svg>
         </a>
 
-          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form js-update-url-with-hash" action="/koden11/Booking_dot_com/edit/userLogin/client/src/components/userLogin.js" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="VJB3qk0Mvksv/j/D73cq56x7OMuE2wkk/8+u3JfqvHMUgKjUJbczhTDmJrnCJpXtoTJoAi3X2bBQgpNDQ4dxVg==" />
+          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form js-update-url-with-hash" action="/koden11/Booking_dot_com/edit/userLogin/client/src/components/userCreate.js" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="k/eADRxSQUxyuT6n4DPY6WLkkduC9t82XiQ4WzoDGaYP4eQq9ViY1fMkhv9jUMtngsrM6Lf2KLMQARQhc6jn2A==" />
             <button class="btn-octicon tooltipped tooltipped-nw" type="submit"
               aria-label="Edit this file" data-hotkey="e" data-disable-with>
               <svg class="octicon octicon-pencil" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M0 12v3h3l8-8-3-3-8 8zm3 2H1v-2h1v1h1v1zm10.3-9.3L12 6 9 3l1.3-1.3a.996.996 0 0 1 1.41 0l1.59 1.59c.39.39.39 1.02 0 1.41z"/></svg>
             </button>
 </form>
-        <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form" action="/koden11/Booking_dot_com/delete/userLogin/client/src/components/userLogin.js" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="VNcGybRiL46ACiaiU7mj6LMhZJjGHX+XkS8drtZo05q8km/V/32UtrmqsQNln2meEnmqcOSZsqCSRFWhDL4Oww==" />
+        <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form" action="/koden11/Booking_dot_com/delete/userLogin/client/src/components/userCreate.js" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="nqE0Ckh7dWLxah4Hjx+KYgrdlrtKyylm94u0bU7cIQ9sMbE7J490u5j0DgadIm3EttnKnSDC8KzwBVWTuxJXeA==" />
           <button class="btn-octicon btn-octicon-danger tooltipped tooltipped-nw" type="submit"
             aria-label="Delete this file" data-disable-with>
             <svg class="octicon octicon-trashcan" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z"/></svg>
@@ -710,9 +738,9 @@
 </form>  </div>
 
   <div class="file-info">
-      94 lines (84 sloc)
+      106 lines (94 sloc)
       <span class="file-info-divider"></span>
-    2.61 KB
+    3.02 KB
   </div>
 </div>
 
@@ -735,7 +763,7 @@
       </tr>
       <tr>
         <td id="L4" class="blob-num js-line-number" data-line-number="4"></td>
-        <td id="LC4" class="blob-code blob-code-inner js-file-line"><span class="pl-k">const</span> <span class="pl-c1">apiUrl</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&#39;</span>http://bookingdotcom.herokuapp.com/api/sign-in<span class="pl-pds">&#39;</span></span></td>
+        <td id="LC4" class="blob-code blob-code-inner js-file-line"><span class="pl-k">const</span> <span class="pl-c1">apiUrl</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&#39;</span>http://bookingdotcom.herokuapp.com/api/sign-up<span class="pl-pds">&#39;</span></span>;</td>
       </tr>
       <tr>
         <td id="L5" class="blob-num js-line-number" data-line-number="5"></td>
@@ -878,7 +906,7 @@
       </tr>
       <tr>
         <td id="L39" class="blob-num js-line-number" data-line-number="39"></td>
-        <td id="LC39" class="blob-code blob-code-inner js-file-line"><span class="pl-k">export</span> <span class="pl-c1">default</span> <span class="pl-k">function</span> <span class="pl-en">UserLogin</span>(<span class="pl-smi">props</span>) {</td>
+        <td id="LC39" class="blob-code blob-code-inner js-file-line"><span class="pl-k">export</span> <span class="pl-c1">default</span> <span class="pl-k">function</span> <span class="pl-en">UserCreate</span>(<span class="pl-smi">props</span>) {</td>
       </tr>
       <tr>
         <td id="L40" class="blob-num js-line-number" data-line-number="40"></td>
@@ -887,7 +915,7 @@
       </tr>
       <tr>
         <td id="L41" class="blob-num js-line-number" data-line-number="41"></td>
-        <td id="LC41" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">const</span> [<span class="pl-c1">username</span>, <span class="pl-c1">setUsername</span>] <span class="pl-k">=</span> <span class="pl-en">useState</span>(<span class="pl-s"><span class="pl-pds">&#39;</span><span class="pl-pds">&#39;</span></span>);</td>
+        <td id="LC41" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">const</span> [<span class="pl-c1">email</span>, <span class="pl-c1">setEmail</span>] <span class="pl-k">=</span> <span class="pl-en">useState</span>(<span class="pl-s"><span class="pl-pds">&#39;</span><span class="pl-pds">&#39;</span></span>);</td>
       </tr>
       <tr>
         <td id="L42" class="blob-num js-line-number" data-line-number="42"></td>
@@ -895,217 +923,267 @@
       </tr>
       <tr>
         <td id="L43" class="blob-num js-line-number" data-line-number="43"></td>
-        <td id="LC43" class="blob-code blob-code-inner js-file-line">
-</td>
+        <td id="LC43" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">const</span> [<span class="pl-c1">confirmPassword</span>,<span class="pl-c1">setConfirmPassword</span>] <span class="pl-k">=</span> <span class="pl-en">useState</span>(<span class="pl-s"><span class="pl-pds">&#39;</span><span class="pl-pds">&#39;</span></span>);</td>
       </tr>
       <tr>
         <td id="L44" class="blob-num js-line-number" data-line-number="44"></td>
-        <td id="LC44" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">const</span> <span class="pl-c1">logIn</span> <span class="pl-k">=</span> <span class="pl-k">async</span> (<span class="pl-c1">event</span>) <span class="pl-k">=&gt;</span> {</td>
+        <td id="LC44" class="blob-code blob-code-inner js-file-line">
+</td>
       </tr>
       <tr>
         <td id="L45" class="blob-num js-line-number" data-line-number="45"></td>
-        <td id="LC45" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">try</span> {</td>
+        <td id="LC45" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">const</span> <span class="pl-c1">createUser</span> <span class="pl-k">=</span> <span class="pl-k">async</span> (<span class="pl-c1">event</span>) <span class="pl-k">=&gt;</span> {</td>
       </tr>
       <tr>
         <td id="L46" class="blob-num js-line-number" data-line-number="46"></td>
-        <td id="LC46" class="blob-code blob-code-inner js-file-line">            <span class="pl-c1">event</span>.<span class="pl-c1">preventDefault</span>();</td>
+        <td id="LC46" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">try</span> {</td>
       </tr>
       <tr>
         <td id="L47" class="blob-num js-line-number" data-line-number="47"></td>
-        <td id="LC47" class="blob-code blob-code-inner js-file-line">            <span class="pl-c"><span class="pl-c">//</span> console.log(username,password);</span></td>
+        <td id="LC47" class="blob-code blob-code-inner js-file-line">            <span class="pl-k">if</span> (password<span class="pl-k">!==</span>confirmPassword){</td>
       </tr>
       <tr>
         <td id="L48" class="blob-num js-line-number" data-line-number="48"></td>
-        <td id="LC48" class="blob-code blob-code-inner js-file-line">            <span class="pl-k">let</span> response <span class="pl-k">=</span> <span class="pl-k">await</span> <span class="pl-en">axios</span>({</td>
+        <td id="LC48" class="blob-code blob-code-inner js-file-line">                <span class="pl-en">alert</span>(<span class="pl-s"><span class="pl-pds">&#39;</span>Passwords do not match<span class="pl-pds">&#39;</span></span>);</td>
       </tr>
       <tr>
         <td id="L49" class="blob-num js-line-number" data-line-number="49"></td>
-        <td id="LC49" class="blob-code blob-code-inner js-file-line">                url<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">`</span><span class="pl-s1"><span class="pl-pse">${</span>apiUrl<span class="pl-pse">}</span></span><span class="pl-pds">`</span></span>,</td>
+        <td id="LC49" class="blob-code blob-code-inner js-file-line">            }</td>
       </tr>
       <tr>
         <td id="L50" class="blob-num js-line-number" data-line-number="50"></td>
-        <td id="LC50" class="blob-code blob-code-inner js-file-line">                method<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&#39;</span>POST<span class="pl-pds">&#39;</span></span>,</td>
+        <td id="LC50" class="blob-code blob-code-inner js-file-line">            <span class="pl-c1">event</span>.<span class="pl-c1">preventDefault</span>();</td>
       </tr>
       <tr>
         <td id="L51" class="blob-num js-line-number" data-line-number="51"></td>
-        <td id="LC51" class="blob-code blob-code-inner js-file-line">                data<span class="pl-k">:</span> { username<span class="pl-k">:</span> username, password<span class="pl-k">:</span> password }</td>
+        <td id="LC51" class="blob-code blob-code-inner js-file-line">            <span class="pl-k">let</span> response <span class="pl-k">=</span> <span class="pl-k">await</span> <span class="pl-en">axios</span>({</td>
       </tr>
       <tr>
         <td id="L52" class="blob-num js-line-number" data-line-number="52"></td>
-        <td id="LC52" class="blob-code blob-code-inner js-file-line">            })</td>
+        <td id="LC52" class="blob-code blob-code-inner js-file-line">                url<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">`</span><span class="pl-s1"><span class="pl-pse">${</span>apiUrl<span class="pl-pse">}</span></span><span class="pl-pds">`</span></span>,</td>
       </tr>
       <tr>
         <td id="L53" class="blob-num js-line-number" data-line-number="53"></td>
-        <td id="LC53" class="blob-code blob-code-inner js-file-line">            <span class="pl-en">console</span>.<span class="pl-c1">log</span>(response);</td>
+        <td id="LC53" class="blob-code blob-code-inner js-file-line">                method<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&#39;</span>POST<span class="pl-pds">&#39;</span></span>,</td>
       </tr>
       <tr>
         <td id="L54" class="blob-num js-line-number" data-line-number="54"></td>
-        <td id="LC54" class="blob-code blob-code-inner js-file-line">            <span class="pl-k">const</span> <span class="pl-c1">tempUser</span> <span class="pl-k">=</span> <span class="pl-smi">response</span>.<span class="pl-c1">data</span>.<span class="pl-smi">user</span>.<span class="pl-smi">userName</span>;</td>
+        <td id="LC54" class="blob-code blob-code-inner js-file-line">                data<span class="pl-k">:</span> { email<span class="pl-k">:</span> email, password<span class="pl-k">:</span> password, username<span class="pl-k">:</span> email }</td>
       </tr>
       <tr>
         <td id="L55" class="blob-num js-line-number" data-line-number="55"></td>
-        <td id="LC55" class="blob-code blob-code-inner js-file-line">            <span class="pl-k">const</span> <span class="pl-c1">token</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">`</span>Bearer <span class="pl-s1"><span class="pl-pse">${</span><span class="pl-smi">response</span>.<span class="pl-c1">data</span>.<span class="pl-smi">token</span><span class="pl-pse">}</span></span><span class="pl-pds">`</span></span></td>
+        <td id="LC55" class="blob-code blob-code-inner js-file-line">            })</td>
       </tr>
       <tr>
         <td id="L56" class="blob-num js-line-number" data-line-number="56"></td>
-        <td id="LC56" class="blob-code blob-code-inner js-file-line">            <span class="pl-c1">window</span>.<span class="pl-smi">localStorage</span>.<span class="pl-c1">setItem</span>(tempUser, token);</td>
+        <td id="LC56" class="blob-code blob-code-inner js-file-line">            <span class="pl-en">console</span>.<span class="pl-c1">log</span>(response);</td>
       </tr>
       <tr>
         <td id="L57" class="blob-num js-line-number" data-line-number="57"></td>
-        <td id="LC57" class="blob-code blob-code-inner js-file-line">            <span class="pl-c"><span class="pl-c">//</span> redirect to &lt;UserDetails userId={response.data.user} /&gt;</span></td>
+        <td id="LC57" class="blob-code blob-code-inner js-file-line">            <span class="pl-k">const</span> <span class="pl-c1">tempUser</span> <span class="pl-k">=</span> <span class="pl-smi">response</span>.<span class="pl-c1">data</span>.<span class="pl-smi">user</span>.<span class="pl-smi">email</span>;</td>
       </tr>
       <tr>
         <td id="L58" class="blob-num js-line-number" data-line-number="58"></td>
-        <td id="LC58" class="blob-code blob-code-inner js-file-line">
-</td>
+        <td id="LC58" class="blob-code blob-code-inner js-file-line">            <span class="pl-k">const</span> <span class="pl-c1">token</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">`</span>Bearer <span class="pl-s1"><span class="pl-pse">${</span><span class="pl-smi">response</span>.<span class="pl-c1">data</span>.<span class="pl-smi">token</span><span class="pl-pse">}</span></span><span class="pl-pds">`</span></span></td>
       </tr>
       <tr>
         <td id="L59" class="blob-num js-line-number" data-line-number="59"></td>
-        <td id="LC59" class="blob-code blob-code-inner js-file-line">        } <span class="pl-k">catch</span> (error) {</td>
+        <td id="LC59" class="blob-code blob-code-inner js-file-line">            <span class="pl-c1">window</span>.<span class="pl-smi">localStorage</span>.<span class="pl-c1">setItem</span>(tempUser, token);</td>
       </tr>
       <tr>
         <td id="L60" class="blob-num js-line-number" data-line-number="60"></td>
-        <td id="LC60" class="blob-code blob-code-inner js-file-line">            <span class="pl-en">console</span>.<span class="pl-c1">log</span>(error);</td>
+        <td id="LC60" class="blob-code blob-code-inner js-file-line">            <span class="pl-c"><span class="pl-c">//</span> redirect to &lt;UserDetails userId={response.data.user} /&gt;</span></td>
       </tr>
       <tr>
         <td id="L61" class="blob-num js-line-number" data-line-number="61"></td>
-        <td id="LC61" class="blob-code blob-code-inner js-file-line">            <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">&#39;</span>Invalid username or password<span class="pl-pds">&#39;</span></span>);</td>
+        <td id="LC61" class="blob-code blob-code-inner js-file-line">
+</td>
       </tr>
       <tr>
         <td id="L62" class="blob-num js-line-number" data-line-number="62"></td>
-        <td id="LC62" class="blob-code blob-code-inner js-file-line">            <span class="pl-c"><span class="pl-c">//</span> display invalid username or password</span></td>
+        <td id="LC62" class="blob-code blob-code-inner js-file-line">        } <span class="pl-k">catch</span> (error) {</td>
       </tr>
       <tr>
         <td id="L63" class="blob-num js-line-number" data-line-number="63"></td>
-        <td id="LC63" class="blob-code blob-code-inner js-file-line">        }</td>
+        <td id="LC63" class="blob-code blob-code-inner js-file-line">            <span class="pl-en">console</span>.<span class="pl-c1">log</span>(error);</td>
       </tr>
       <tr>
         <td id="L64" class="blob-num js-line-number" data-line-number="64"></td>
-        <td id="LC64" class="blob-code blob-code-inner js-file-line">    }</td>
+        <td id="LC64" class="blob-code blob-code-inner js-file-line">            <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">&#39;</span>Invalid email or password<span class="pl-pds">&#39;</span></span>);</td>
       </tr>
       <tr>
         <td id="L65" class="blob-num js-line-number" data-line-number="65"></td>
-        <td id="LC65" class="blob-code blob-code-inner js-file-line">
-</td>
+        <td id="LC65" class="blob-code blob-code-inner js-file-line">            <span class="pl-c"><span class="pl-c">//</span> display invalid username or password</span></td>
       </tr>
       <tr>
         <td id="L66" class="blob-num js-line-number" data-line-number="66"></td>
-        <td id="LC66" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">const</span> <span class="pl-c1">updateUsername</span> <span class="pl-k">=</span> (<span class="pl-c1">event</span>) <span class="pl-k">=&gt;</span> {</td>
+        <td id="LC66" class="blob-code blob-code-inner js-file-line">        }</td>
       </tr>
       <tr>
         <td id="L67" class="blob-num js-line-number" data-line-number="67"></td>
-        <td id="LC67" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">let</span> temp <span class="pl-k">=</span> <span class="pl-c1">event</span>.<span class="pl-c1">target</span>.<span class="pl-c1">value</span>.<span class="pl-c1">toLowerCase</span>();</td>
+        <td id="LC67" class="blob-code blob-code-inner js-file-line">    }</td>
       </tr>
       <tr>
         <td id="L68" class="blob-num js-line-number" data-line-number="68"></td>
-        <td id="LC68" class="blob-code blob-code-inner js-file-line">        <span class="pl-en">console</span>.<span class="pl-c1">log</span>(temp);</td>
+        <td id="LC68" class="blob-code blob-code-inner js-file-line">
+</td>
       </tr>
       <tr>
         <td id="L69" class="blob-num js-line-number" data-line-number="69"></td>
-        <td id="LC69" class="blob-code blob-code-inner js-file-line">        <span class="pl-en">setUsername</span>(temp);</td>
+        <td id="LC69" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">const</span> <span class="pl-c1">updateEmail</span> <span class="pl-k">=</span> (<span class="pl-c1">event</span>) <span class="pl-k">=&gt;</span> {</td>
       </tr>
       <tr>
         <td id="L70" class="blob-num js-line-number" data-line-number="70"></td>
-        <td id="LC70" class="blob-code blob-code-inner js-file-line">    }</td>
+        <td id="LC70" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">let</span> temp <span class="pl-k">=</span> <span class="pl-c1">event</span>.<span class="pl-c1">target</span>.<span class="pl-c1">value</span>;</td>
       </tr>
       <tr>
         <td id="L71" class="blob-num js-line-number" data-line-number="71"></td>
-        <td id="LC71" class="blob-code blob-code-inner js-file-line">
-</td>
+        <td id="LC71" class="blob-code blob-code-inner js-file-line">        <span class="pl-en">console</span>.<span class="pl-c1">log</span>(temp);</td>
       </tr>
       <tr>
         <td id="L72" class="blob-num js-line-number" data-line-number="72"></td>
-        <td id="LC72" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">const</span> <span class="pl-c1">updatePassword</span> <span class="pl-k">=</span> (<span class="pl-c1">event</span>) <span class="pl-k">=&gt;</span> {</td>
+        <td id="LC72" class="blob-code blob-code-inner js-file-line">        <span class="pl-en">setEmail</span>(temp);</td>
       </tr>
       <tr>
         <td id="L73" class="blob-num js-line-number" data-line-number="73"></td>
-        <td id="LC73" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">let</span> temp <span class="pl-k">=</span> <span class="pl-c1">event</span>.<span class="pl-c1">target</span>.<span class="pl-c1">value</span>;</td>
+        <td id="LC73" class="blob-code blob-code-inner js-file-line">    }</td>
       </tr>
       <tr>
         <td id="L74" class="blob-num js-line-number" data-line-number="74"></td>
-        <td id="LC74" class="blob-code blob-code-inner js-file-line">        <span class="pl-en">console</span>.<span class="pl-c1">log</span>(temp)</td>
+        <td id="LC74" class="blob-code blob-code-inner js-file-line">
+</td>
       </tr>
       <tr>
         <td id="L75" class="blob-num js-line-number" data-line-number="75"></td>
-        <td id="LC75" class="blob-code blob-code-inner js-file-line">        <span class="pl-en">setPassword</span>(temp);</td>
+        <td id="LC75" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">const</span> <span class="pl-c1">updatePassword</span> <span class="pl-k">=</span> (<span class="pl-c1">event</span>) <span class="pl-k">=&gt;</span> {</td>
       </tr>
       <tr>
         <td id="L76" class="blob-num js-line-number" data-line-number="76"></td>
-        <td id="LC76" class="blob-code blob-code-inner js-file-line">    }</td>
+        <td id="LC76" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">let</span> temp <span class="pl-k">=</span> <span class="pl-c1">event</span>.<span class="pl-c1">target</span>.<span class="pl-c1">value</span>;</td>
       </tr>
       <tr>
         <td id="L77" class="blob-num js-line-number" data-line-number="77"></td>
-        <td id="LC77" class="blob-code blob-code-inner js-file-line">
-</td>
+        <td id="LC77" class="blob-code blob-code-inner js-file-line">        <span class="pl-en">console</span>.<span class="pl-c1">log</span>(temp)</td>
       </tr>
       <tr>
         <td id="L78" class="blob-num js-line-number" data-line-number="78"></td>
-        <td id="LC78" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">return</span> (</td>
+        <td id="LC78" class="blob-code blob-code-inner js-file-line">        <span class="pl-en">setPassword</span>(temp);</td>
       </tr>
       <tr>
         <td id="L79" class="blob-num js-line-number" data-line-number="79"></td>
-        <td id="LC79" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">&lt;</span>div style<span class="pl-k">=</span>{<span class="pl-smi">style</span>.<span class="pl-c1">body</span>}<span class="pl-k">&gt;</span></td>
+        <td id="LC79" class="blob-code blob-code-inner js-file-line">    }</td>
       </tr>
       <tr>
         <td id="L80" class="blob-num js-line-number" data-line-number="80"></td>
-        <td id="LC80" class="blob-code blob-code-inner js-file-line">            <span class="pl-k">&lt;</span>h2<span class="pl-k">&gt;</span>Sign <span class="pl-k">in</span><span class="pl-k">&lt;</span><span class="pl-k">/</span>h2<span class="pl-k">&gt;</span></td>
-      </tr>
-      <tr>
-        <td id="L81" class="blob-num js-line-number" data-line-number="81"></td>
-        <td id="LC81" class="blob-code blob-code-inner js-file-line">            <span class="pl-k">&lt;</span>p<span class="pl-k">&gt;</span>You can sign <span class="pl-k">in</span> using your <span class="pl-smi">Booking</span>.<span class="pl-smi">com</span> account to access our services.<span class="pl-k">&lt;</span><span class="pl-k">/</span>p<span class="pl-k">&gt;</span></td>
-      </tr>
-      <tr>
-        <td id="L82" class="blob-num js-line-number" data-line-number="82"></td>
-        <td id="LC82" class="blob-code blob-code-inner js-file-line">            <span class="pl-k">&lt;</span>form<span class="pl-k">&gt;</span></td>
-      </tr>
-      <tr>
-        <td id="L83" class="blob-num js-line-number" data-line-number="83"></td>
-        <td id="LC83" class="blob-code blob-code-inner js-file-line">                <span class="pl-k">&lt;</span>h4 style<span class="pl-k">=</span>{<span class="pl-smi">style</span>.<span class="pl-smi">h4</span>}<span class="pl-k">&gt;</span>Email<span class="pl-k">&lt;</span><span class="pl-k">/</span>h4<span class="pl-k">&gt;</span></td>
-      </tr>
-      <tr>
-        <td id="L84" class="blob-num js-line-number" data-line-number="84"></td>
-        <td id="LC84" class="blob-code blob-code-inner js-file-line">                <span class="pl-k">&lt;</span>input type<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">&quot;</span>text<span class="pl-pds">&quot;</span></span> onChange<span class="pl-k">=</span>{updateUsername} style<span class="pl-k">=</span>{<span class="pl-smi">style</span>.<span class="pl-c1">form</span>}<span class="pl-k">&gt;&lt;</span><span class="pl-k">/</span>input<span class="pl-k">&gt;</span></td>
-      </tr>
-      <tr>
-        <td id="L85" class="blob-num js-line-number" data-line-number="85"></td>
-        <td id="LC85" class="blob-code blob-code-inner js-file-line">                <span class="pl-k">&lt;</span>h4 style<span class="pl-k">=</span>{<span class="pl-smi">style</span>.<span class="pl-smi">h4</span>}<span class="pl-k">&gt;</span><span class="pl-smi">Booking</span>.<span class="pl-smi">com</span> Password<span class="pl-k">&lt;</span><span class="pl-k">/</span>h4<span class="pl-k">&gt;</span></td>
-      </tr>
-      <tr>
-        <td id="L86" class="blob-num js-line-number" data-line-number="86"></td>
-        <td id="LC86" class="blob-code blob-code-inner js-file-line">                <span class="pl-k">&lt;</span>input type<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">&quot;</span>password<span class="pl-pds">&quot;</span></span> onChange<span class="pl-k">=</span>{updatePassword} style<span class="pl-k">=</span>{<span class="pl-smi">style</span>.<span class="pl-c1">form</span>}<span class="pl-k">&gt;&lt;</span><span class="pl-k">/</span>input<span class="pl-k">&gt;</span></td>
-      </tr>
-      <tr>
-        <td id="L87" class="blob-num js-line-number" data-line-number="87"></td>
-        <td id="LC87" class="blob-code blob-code-inner js-file-line">                <span class="pl-k">&lt;</span>div<span class="pl-k">&gt;</span></td>
-      </tr>
-      <tr>
-        <td id="L88" class="blob-num js-line-number" data-line-number="88"></td>
-        <td id="LC88" class="blob-code blob-code-inner js-file-line">                    <span class="pl-k">&lt;</span>button type<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">&quot;</span>submit<span class="pl-pds">&quot;</span></span> onClick<span class="pl-k">=</span>{logIn} style<span class="pl-k">=</span>{<span class="pl-smi">style</span>.<span class="pl-smi">bigbluebutton</span>}<span class="pl-k">&gt;</span>Sign<span class="pl-k">-</span>In<span class="pl-k">&lt;</span><span class="pl-k">/</span>button<span class="pl-k">&gt;</span></td>
-      </tr>
-      <tr>
-        <td id="L89" class="blob-num js-line-number" data-line-number="89"></td>
-        <td id="LC89" class="blob-code blob-code-inner js-file-line">                <span class="pl-k">&lt;</span><span class="pl-k">/</span>div<span class="pl-k">&gt;</span></td>
-      </tr>
-      <tr>
-        <td id="L90" class="blob-num js-line-number" data-line-number="90"></td>
-        <td id="LC90" class="blob-code blob-code-inner js-file-line">
+        <td id="LC80" class="blob-code blob-code-inner js-file-line">
 </td>
       </tr>
       <tr>
+        <td id="L81" class="blob-num js-line-number" data-line-number="81"></td>
+        <td id="LC81" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">const</span> <span class="pl-c1">updateConfirmPassword</span> <span class="pl-k">=</span> (<span class="pl-c1">event</span>) <span class="pl-k">=&gt;</span> {</td>
+      </tr>
+      <tr>
+        <td id="L82" class="blob-num js-line-number" data-line-number="82"></td>
+        <td id="LC82" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">let</span> temp <span class="pl-k">=</span> <span class="pl-c1">event</span>.<span class="pl-c1">target</span>.<span class="pl-c1">value</span>;</td>
+      </tr>
+      <tr>
+        <td id="L83" class="blob-num js-line-number" data-line-number="83"></td>
+        <td id="LC83" class="blob-code blob-code-inner js-file-line">        <span class="pl-en">console</span>.<span class="pl-c1">log</span>(temp)</td>
+      </tr>
+      <tr>
+        <td id="L84" class="blob-num js-line-number" data-line-number="84"></td>
+        <td id="LC84" class="blob-code blob-code-inner js-file-line">        <span class="pl-en">setConfirmPassword</span>(temp);</td>
+      </tr>
+      <tr>
+        <td id="L85" class="blob-num js-line-number" data-line-number="85"></td>
+        <td id="LC85" class="blob-code blob-code-inner js-file-line">    }</td>
+      </tr>
+      <tr>
+        <td id="L86" class="blob-num js-line-number" data-line-number="86"></td>
+        <td id="LC86" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L87" class="blob-num js-line-number" data-line-number="87"></td>
+        <td id="LC87" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">return</span> (</td>
+      </tr>
+      <tr>
+        <td id="L88" class="blob-num js-line-number" data-line-number="88"></td>
+        <td id="LC88" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">&lt;</span>div style<span class="pl-k">=</span>{<span class="pl-smi">style</span>.<span class="pl-c1">body</span>}<span class="pl-k">&gt;</span></td>
+      </tr>
+      <tr>
+        <td id="L89" class="blob-num js-line-number" data-line-number="89"></td>
+        <td id="LC89" class="blob-code blob-code-inner js-file-line">            <span class="pl-k">&lt;</span>h2<span class="pl-k">&gt;</span>Create your account<span class="pl-k">&lt;</span><span class="pl-k">/</span>h2<span class="pl-k">&gt;</span></td>
+      </tr>
+      <tr>
+        <td id="L90" class="blob-num js-line-number" data-line-number="90"></td>
+        <td id="LC90" class="blob-code blob-code-inner js-file-line">            <span class="pl-k">&lt;</span>p<span class="pl-k">&gt;</span>Create an account to use <span class="pl-smi">Booking</span>.<span class="pl-smi">com</span> services easily.<span class="pl-k">&lt;</span><span class="pl-k">/</span>p<span class="pl-k">&gt;</span></td>
+      </tr>
+      <tr>
         <td id="L91" class="blob-num js-line-number" data-line-number="91"></td>
-        <td id="LC91" class="blob-code blob-code-inner js-file-line">            <span class="pl-k">&lt;</span><span class="pl-k">/</span>form<span class="pl-k">&gt;</span></td>
+        <td id="LC91" class="blob-code blob-code-inner js-file-line">            <span class="pl-k">&lt;</span>form<span class="pl-k">&gt;</span></td>
       </tr>
       <tr>
         <td id="L92" class="blob-num js-line-number" data-line-number="92"></td>
-        <td id="LC92" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">&lt;</span><span class="pl-k">/</span>div<span class="pl-k">&gt;</span></td>
+        <td id="LC92" class="blob-code blob-code-inner js-file-line">                <span class="pl-k">&lt;</span>h4 style<span class="pl-k">=</span>{<span class="pl-smi">style</span>.<span class="pl-smi">h4</span>}<span class="pl-k">&gt;</span>Email<span class="pl-k">&lt;</span><span class="pl-k">/</span>h4<span class="pl-k">&gt;</span></td>
       </tr>
       <tr>
         <td id="L93" class="blob-num js-line-number" data-line-number="93"></td>
-        <td id="LC93" class="blob-code blob-code-inner js-file-line">    )</td>
+        <td id="LC93" class="blob-code blob-code-inner js-file-line">                <span class="pl-k">&lt;</span>input type<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">&quot;</span>text<span class="pl-pds">&quot;</span></span> onChange<span class="pl-k">=</span>{updateEmail} style<span class="pl-k">=</span>{<span class="pl-smi">style</span>.<span class="pl-c1">form</span>}<span class="pl-k">&gt;&lt;</span><span class="pl-k">/</span>input<span class="pl-k">&gt;</span></td>
       </tr>
       <tr>
         <td id="L94" class="blob-num js-line-number" data-line-number="94"></td>
-        <td id="LC94" class="blob-code blob-code-inner js-file-line">}</td>
+        <td id="LC94" class="blob-code blob-code-inner js-file-line">                <span class="pl-k">&lt;</span>h4 style<span class="pl-k">=</span>{<span class="pl-smi">style</span>.<span class="pl-smi">h4</span>}<span class="pl-k">&gt;</span>Create Password<span class="pl-k">&lt;</span><span class="pl-k">/</span>h4<span class="pl-k">&gt;</span></td>
+      </tr>
+      <tr>
+        <td id="L95" class="blob-num js-line-number" data-line-number="95"></td>
+        <td id="LC95" class="blob-code blob-code-inner js-file-line">                <span class="pl-k">&lt;</span>input type<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">&quot;</span>password<span class="pl-pds">&quot;</span></span> onChange<span class="pl-k">=</span>{updatePassword} style<span class="pl-k">=</span>{<span class="pl-smi">style</span>.<span class="pl-c1">form</span>}<span class="pl-k">&gt;&lt;</span><span class="pl-k">/</span>input<span class="pl-k">&gt;</span></td>
+      </tr>
+      <tr>
+        <td id="L96" class="blob-num js-line-number" data-line-number="96"></td>
+        <td id="LC96" class="blob-code blob-code-inner js-file-line">                <span class="pl-k">&lt;</span>h4 style<span class="pl-k">=</span>{<span class="pl-smi">style</span>.<span class="pl-smi">h4</span>}<span class="pl-k">&gt;</span>Confirm Password<span class="pl-k">&lt;</span><span class="pl-k">/</span>h4<span class="pl-k">&gt;</span></td>
+      </tr>
+      <tr>
+        <td id="L97" class="blob-num js-line-number" data-line-number="97"></td>
+        <td id="LC97" class="blob-code blob-code-inner js-file-line">                <span class="pl-k">&lt;</span>input type<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">&quot;</span>password<span class="pl-pds">&quot;</span></span> onChange<span class="pl-k">=</span>{updateConfirmPassword} style<span class="pl-k">=</span>{<span class="pl-smi">style</span>.<span class="pl-c1">form</span>}<span class="pl-k">&gt;&lt;</span><span class="pl-k">/</span>input<span class="pl-k">&gt;</span></td>
+      </tr>
+      <tr>
+        <td id="L98" class="blob-num js-line-number" data-line-number="98"></td>
+        <td id="LC98" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L99" class="blob-num js-line-number" data-line-number="99"></td>
+        <td id="LC99" class="blob-code blob-code-inner js-file-line">                <span class="pl-k">&lt;</span>div<span class="pl-k">&gt;</span></td>
+      </tr>
+      <tr>
+        <td id="L100" class="blob-num js-line-number" data-line-number="100"></td>
+        <td id="LC100" class="blob-code blob-code-inner js-file-line">                    <span class="pl-k">&lt;</span>button type<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">&quot;</span>submit<span class="pl-pds">&quot;</span></span> onClick<span class="pl-k">=</span>{createUser} style<span class="pl-k">=</span>{<span class="pl-smi">style</span>.<span class="pl-smi">bigbluebutton</span>}<span class="pl-k">&gt;</span>Get Started<span class="pl-k">&lt;</span><span class="pl-k">/</span>button<span class="pl-k">&gt;</span></td>
+      </tr>
+      <tr>
+        <td id="L101" class="blob-num js-line-number" data-line-number="101"></td>
+        <td id="LC101" class="blob-code blob-code-inner js-file-line">                <span class="pl-k">&lt;</span><span class="pl-k">/</span>div<span class="pl-k">&gt;</span></td>
+      </tr>
+      <tr>
+        <td id="L102" class="blob-num js-line-number" data-line-number="102"></td>
+        <td id="LC102" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L103" class="blob-num js-line-number" data-line-number="103"></td>
+        <td id="LC103" class="blob-code blob-code-inner js-file-line">            <span class="pl-k">&lt;</span><span class="pl-k">/</span>form<span class="pl-k">&gt;</span></td>
+      </tr>
+      <tr>
+        <td id="L104" class="blob-num js-line-number" data-line-number="104"></td>
+        <td id="LC104" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">&lt;</span><span class="pl-k">/</span>div<span class="pl-k">&gt;</span></td>
+      </tr>
+      <tr>
+        <td id="L105" class="blob-num js-line-number" data-line-number="105"></td>
+        <td id="LC105" class="blob-code blob-code-inner js-file-line">    )</td>
+      </tr>
+      <tr>
+        <td id="L106" class="blob-num js-line-number" data-line-number="106"></td>
+        <td id="LC106" class="blob-code blob-code-inner js-file-line">}</td>
       </tr>
 </table>
 
@@ -1117,7 +1195,7 @@
       <ul class="BlobToolbar-dropdown dropdown-menu dropdown-menu-se mt-2">
         <li><clipboard-copy role="menuitem" class="dropdown-item" id="js-copy-lines" style="cursor:pointer;" data-original-text="Copy lines">Copy lines</clipboard-copy></li>
         <li><clipboard-copy role="menuitem" class="dropdown-item" id="js-copy-permalink" style="cursor:pointer;" data-original-text="Copy permalink">Copy permalink</clipboard-copy></li>
-        <li><a class="dropdown-item js-update-url-with-hash" id="js-view-git-blame" role="menuitem" href="/koden11/Booking_dot_com/blame/5715187fd52d6a856e12ef16a19ac74bb8e2be7b/client/src/components/userLogin.js">View git blame</a></li>
+        <li><a class="dropdown-item js-update-url-with-hash" id="js-view-git-blame" role="menuitem" href="/koden11/Booking_dot_com/blame/5715187fd52d6a856e12ef16a19ac74bb8e2be7b/client/src/components/userCreate.js">View git blame</a></li>
           <li><a class="dropdown-item" id="js-new-issue" role="menuitem" href="/koden11/Booking_dot_com/issues/new">Open new issue</a></li>
       </ul>
     </details-menu>
@@ -1153,7 +1231,7 @@
 <div class="footer container-lg px-3" role="contentinfo">
   <div class="position-relative d-flex flex-justify-between pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
     <ul class="list-style-none d-flex flex-wrap ">
-      <li class="mr-3">&copy; 2020 <span title="0.20478s from git-generalassemb-ly-primary">GitHub</span>, Inc.</li>
+      <li class="mr-3">&copy; 2020 <span title="0.16693s from git-generalassemb-ly-primary">GitHub</span>, Inc.</li>
         <li class="mr-3"><a href="https://help.github.com/enterprise/2.16">Help</a></li>
           <li class="mr-3"><a href="mailto:git.generalassemb.ly@generalassemb.ly">Support</a></li>
     </ul>
