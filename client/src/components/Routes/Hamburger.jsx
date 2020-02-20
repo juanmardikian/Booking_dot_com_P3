@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Header from '../Shared/Header'
 import Footer from '../Shared/Footer'
 
@@ -73,8 +73,9 @@ export default function Hamburger() {
         }
     }
 
-
-    window.scrollTo(0, 0)
+    useEffect(() => {
+      window.scrollTo(0, 0)
+    }, [])
 
     return (
         <div style={style.parentContainer}>
