@@ -3,6 +3,63 @@ import { useFormik } from 'formik';
 import axios from 'axios';
 const apiUrl = 'http://bookingdotcom.herokuapp.com/api';
 
+const style = {
+    body: {
+        width: "70vw",
+        margin: "0 auto",
+        textAlign: "left"
+    },
+    searchform: {
+        margin: "0 auto",
+        textAlign: "center",
+        width: "70vw",
+        margin: "0 auto",
+        display: "flex",
+        justifyContent: "space-between",
+        backgroundColor: 'rgb(244,178,63)'
+    },
+    location: {
+        width: "66vw",
+        border: "1px solid grey",
+        height: "3vh",
+        display: "flex",
+        justifyContent: "space-between",
+        margin: "10px 10px"
+    },
+    checkinout: {
+        width: "32vw",
+        border: "1px solid grey",
+        margin: "2px 5px",
+        height: "3vh",
+        justifyContent: "space-between"
+    },
+    people: {
+        width: "21vw",
+        border: "1px solid grey",
+        margin: "10px 3px",
+        height: "3vh",
+        textAlign: 'justify'
+    },
+    purpose: {
+        width: "66vw",
+        border: "1px solid grey",
+        height: "3vh",
+        display: "flex",
+        justifyContent: "space-between",
+        margin: "2px 10px"
+    },
+    searchbar: {
+        width: "66vw",
+        height: "5vh",
+        color: "white",
+        margin: "10px 5px 12px",
+        backgroundColor: "rgb(64,158,218)"
+    },
+    textformat: {
+        margin: "2px"
+    }
+}
+
 const Search = props => {
 
     const [cityId, setCityId] = useState(null);
@@ -27,7 +84,7 @@ const Search = props => {
     }
 
     useEffect(() => {
-
+        window.scrollTo(0,0);
         // retrieves city data for searched city
         const getCityData = async () => {
             try {
@@ -116,77 +173,102 @@ const Search = props => {
     })
 
     return (
-        <div>
-            <p>Find your next adventure</p>
-            <div>
+        <div style={style.body}>
+            <h2 style={style.textformat}>Where to next, Margot?</h2>
+            <p style={style.textformat}>Find your next adventure</p>
+            <div style={style.searchform}>
                 <form onSubmit={formik.handleSubmit}>
-                    <span>
-                        <label htmlFor="location">Location</label>
+                    <div>
+                        <label htmlFor="location">
                         <input
                             id='location'
                             name='location'
                             type='text'
+                            placeholder='Location'
                             onChange={formik.handleChange}
                             value={formik.values.location}
+                            style={style.location}
                         />
-                    </span>
-                    <span>
-                        <label htmlFor="checkIn">Check In</label>
+                        </label>
+                    </div>
+
+                    <div>
+                        <label htmlFor="checkIn">
                         <input
                             id='checkIn'
                             name='checkIn'
                             type='text'
+                            placeholder='Check In Date'
                             onChange={formik.handleChange}
                             value={formik.values.checkIn}
+                            style={style.checkinout}
                         />
-                        <label htmlFor="checkOut">Check Out</label>
+                        </label>
+                        <label htmlFor="checkOut">
                         <input
                             id='checkOut'
                             name='checkOut'
                             type='text'
+                            placeholder='Check Out Date'
                             onChange={formik.handleChange}
                             value={formik.values.checkOut}
+                            style={style.checkinout}
                         />
-                    </span>
-                    <span>
-                        <label htmlFor="adults">Adults</label>
+                        </label>
+                    </div>
+
+                    <div>
+                        <label htmlFor="adults">
                         <input
                             id='adukts'
                             name='adults'
                             type='text'
+                            placeholder='Adults'
                             onChange={formik.handleChange}
                             value={formik.values.adults}
+                            style={style.people}
                         />
-                        <label htmlFor="children">Children</label>
+                        </label>
+                        <label htmlFor="children">
                         <input
                             id='children'
                             name='children'
                             type='text'
+                            placeholder='Children'
                             onChange={formik.handleChange}
                             value={formik.values.children}
+                            style={style.people}
                         />
-                        <label htmlFor="rooms">Rooms</label>
+                        </label>
+                        <label htmlFor="rooms">
                         <input
                             id='rooms'
                             name='rooms'
                             type='text'
+                            placeholder='Room'
                             onChange={formik.handleChange}
                             value={formik.values.rooms}
+                            style={style.people}
                         />
-                    </span>
-                    <span>
-                        <label htmlFor="purpose">Purpose</label>
+                        </label>
+                    </div>
+
+                    <div>
+                        <label htmlFor="purpose">
                         <input
                             id='purpose'
                             name='purpose'
                             type='text'
+                            placeholder='Purpose'
                             onChange={formik.handleChange}
                             value={formik.values.purpose}
+                            style={style.purpose}
                         />
-                    </span>
-                    <span>
-                        <button type="submit">Submit</button>
-                    </span>
+                        </label>
+                    </div>
+                    <div>
+                        <button type="submit" style={style.searchbar}>Submit</button>
+                    </div>
                 </form>
             </div>
         </div>
