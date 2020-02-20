@@ -10,7 +10,7 @@ export default function UserCreate(props) {
 
     const createUser = async (event) => {
         try {
-            if (password!=confirmPassword){
+            if (password!==confirmPassword){
                 alert('Passwords do not match');
             }
             event.preventDefault();
@@ -23,7 +23,7 @@ export default function UserCreate(props) {
             const tempUser = response.data.user.email;
             const token = `Bearer ${response.data.token}`
             window.localStorage.setItem(tempUser, token);
-            // redirect to ???
+            // redirect to <UserDetails userId={response.data.user} />
 
         } catch (error) {
             console.log(error);

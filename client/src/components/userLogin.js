@@ -20,7 +20,7 @@ export default function UserLogin(props) {
             const tempUser = response.data.user.userName;
             const token = `Bearer ${response.data.token}`
             window.localStorage.setItem(tempUser, token);
-            // redirect to ???
+            // redirect to <UserDetails userId={response.data.user} />
 
         } catch (error) {
             console.log(error);
