@@ -4,6 +4,7 @@ import NavLinks from './NavLinks'
 import NavIcons from './NavIcons'
 import arrowBack from '../../Images/Header/arrowBack.png'
 import { NavLink } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 WebFont.load({
     google: {
         families: ['Baloo', 'sans-serif']
@@ -45,15 +46,42 @@ const style = {
         letterSpacing: 'normal',
         textAlign: 'center',
         color: 'rgb(3, 159, 226)'
+    },
+    arrowBack: {
+        margin: '15px',
+        width: '26px',
+        height: '26px'
+    },
+    backButton: {
+        backgroundColor: 'rgb(0, 53, 128)',
+        border: 'none'
     }
 }
 
 
 export default function Header(props) {
-    // const { back } = props
-    const back = true
+    const { back } = props
+    let history = useHistory()
     return (
         back ?
+        <div>
+            <div style={style.header}>
+                <div style={style.title}>
+                    <div>
+                        <button style={style.backButton}
+                            type='button'
+                            onClick={() => history.goBack()
+                            }>
+                            <img style={style.arrowBack} alt='' src={arrowBack}/>
+                        </button>
+                    </div>
+                </div>
+                <NavIcons/>
+            </div>
+
+            <NavLinks/>
+        </div>
+        :
         <div>
             <div style={style.header}>
                 <div style={style.title}>
@@ -67,19 +95,7 @@ export default function Header(props) {
 
             <NavLinks/>
         </div>
-        :
-        <div>
-            <div style={style.header}>
-                <div style={style.title}>
-                    <div>
-                        <NavLink exact to="/"><div><img  className='arrowBack' alt='' src={arrowBack}></img></div></NavLink>
-                    </div>
-                </div>
-                <NavIcons/>
-            </div>
 
-            <NavLinks/>
-        </div>
 
     )
 }

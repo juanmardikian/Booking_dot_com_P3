@@ -1,6 +1,5 @@
 import React from 'react'
 import Header from '../Shared/Header'
-//This should be the header with a back button
 import Footer from '../Shared/Footer'
 
 //Images
@@ -23,7 +22,6 @@ import affiliate from '../../Images/affiliate.png'
 import iphone from '../../Images/iphone.png'
 
 export default function Hamburger() {
-
     const style = {
         parentContainer: {
             fontFamily: 'Helvetica',
@@ -76,14 +74,14 @@ export default function Hamburger() {
     }
 
 
-
+    window.scrollTo(0, 0)
 
     return (
         <div style={style.parentContainer}>
-            <Header />
-            //This should be changed to show header with back button
+            <Header back='false'/>
             <div style={style.subHeading}>
                 SETTINGS
+
                 <ul style={style.listStyle}>
                     <li style={style.listItem}>Change Language<img src={usa} style={style.image} /></li>
                     <li style={style.listItem}>Change Currency<img src={usd} style={style.imageUSD} /></li>
@@ -116,7 +114,6 @@ export default function Hamburger() {
                     <li style={style.listItem}>Download the iPhone App<img src={iphone} style={style.image} /></li>
                 </ul>
             </div>
-
             <Footer />
         </div>
     )

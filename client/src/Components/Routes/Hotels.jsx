@@ -5,7 +5,7 @@ import Search from '../Shared/Search'
 
 const Hotels = () => (
     <div>
-        <Header />
+        <Header back='false' />
         <Search />
         <Footer />
     </div>

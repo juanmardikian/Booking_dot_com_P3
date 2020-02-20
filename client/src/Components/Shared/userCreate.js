@@ -1,9 +1,3 @@
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,21 +7,21 @@
 
   <link crossorigin="anonymous" media="all" integrity="sha512-lLo2nlsdl+bHLu6PGvC2j3wfP45RnK4wKQLiPnCDcuXfU38AiD+JCdMywnF3WbJC1jaxe3lAI6AM4uJuMFBLEw==" rel="stylesheet" href="https://assets.git.generalassemb.ly/assets/frameworks-08fc49d3bd2694c870ea23d0906f3610.css" />
   <link crossorigin="anonymous" media="all" integrity="sha512-U1gjum1/xrnL1iWrR3airS/cMkl3J6CB0iJAzZT3AtHfixgNUcvlHMWZXnzEFMOwIR3e3XVX4Xr76K2kDGeogQ==" rel="stylesheet" href="https://assets.git.generalassemb.ly/assets/github-de3ce8b225307ed2619d7efcb89c0423.css" />
-  
-  
-  
-  
-  
+
+
+
+
+
 
   <meta name="viewport" content="width=device-width">
-  
+
   <title>Booking_dot_com/userCreate.js at userLogin · koden11/Booking_dot_com</title>
     <meta name="description" content="SEI-UXDI Collab. Contribute to koden11/Booking_dot_com development by creating an account on GitHub.">
     <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
   <link rel="fluid-icon" href="https://git.generalassemb.ly/fluidicon.png" title="GitHub">
   <meta property="fb:app_id" content="1401488693436528">
 
-    
+
     <meta property="og:image" content="https://avatars.git.generalassemb.ly/u/25136?s=400" /><meta property="og:site_name" content="GitHub Enterprise" /><meta property="og:type" content="object" /><meta property="og:title" content="koden11/Booking_dot_com" /><meta property="og:url" content="https://git.generalassemb.ly/koden11/Booking_dot_com" /><meta property="og:description" content="SEI-UXDI Collab. Contribute to koden11/Booking_dot_com development by creating an account on GitHub." />
 
   <link rel="assets" href="https://assets.git.generalassemb.ly/">
@@ -37,12 +31,12 @@
   <meta name="request-id" content="d3371be1-8885-40ab-a054-6925a8733ac5" data-pjax-transient>
 
 
-  
+
 
   <meta name="selected-link" value="repo_source" data-pjax-transient>
 
-  
-  
+
+
 <meta name="analytics-location" content="/&lt;user-name&gt;/&lt;repo-name&gt;/blob/show" data-pjax-transient="true" />
 
 
@@ -53,7 +47,7 @@
 
 
 
-  
+
 
       <meta name="hostname" content="git.generalassemb.ly">
     <meta name="user-login" content="koden11">
@@ -63,13 +57,13 @@
   <meta name="html-safe-nonce" content="37ed938c1ee8cc768fa299d43151cfc85ae53cad">
 
   <meta http-equiv="x-pjax-version" content="140a6511ccc49c0025c9bb6d007f620a">
-  
+
 
       <link href="https://git.generalassemb.ly/koden11/Booking_dot_com/commits/userLogin.atom" rel="alternate" title="Recent Commits to Booking_dot_com:userLogin" type="application/atom+xml">
 
   <meta name="go-import" content="git.generalassemb.ly/koden11/Booking_dot_com git https://git.generalassemb.ly/koden11/Booking_dot_com.git">
 
-  
+
 
 
     <link rel="canonical" href="https://git.generalassemb.ly/koden11/Booking_dot_com/blob/userLogin/client/src/components/userCreate.js" data-pjax-transient>
@@ -89,18 +83,18 @@
   </head>
 
   <body class="logged-in enterprise env-production emoji-size-boost page-blob">
-    
+
 
   <div class="position-relative js-header-wrapper ">
     <a href="#start-of-content" tabindex="1" class="p-3 bg-blue text-white show-on-focus js-skip-to-content">Skip to content</a>
     <div id="js-pjax-loader-bar" class="pjax-loader-bar"><div class="progress"></div></div>
 
-    
-    
-    
 
 
-        
+
+
+
+
 <header class="Header  f5" role="banner">
   <div class="d-flex flex-justify-between px-3 container-lg">
     <div class="d-flex flex-justify-between ">
@@ -147,9 +141,9 @@
             <img src="https://assets.git.generalassemb.ly/images/search-key-slash.svg" alt="" class="mr-2 header-search-key-slash">
 
             <div class="Box position-absolute overflow-hidden d-none jump-to-suggestions js-jump-to-suggestions-container">
-              
+
 <ul class="d-none js-jump-to-suggestions-template-container">
-  
+
 
 <li class="d-flex flex-justify-start flex-items-center p-0 f5 navigation-item js-navigation-item js-jump-to-suggestion" role="option">
   <a tabindex="-1" class="no-underline d-flex flex-auto flex-items-center jump-to-suggestions-path js-jump-to-suggestion-path js-navigation-open p-2" href="">
@@ -190,7 +184,7 @@
 </ul>
 
 <ul id="jump-to-results" role="listbox" class="p-0 m-0 js-navigation-container jump-to-suggestions-results-container js-jump-to-suggestions-results-container">
-  
+
 
 <li class="d-flex flex-justify-start flex-items-center p-0 f5 navigation-item js-navigation-item js-jump-to-scoped-search d-none" role="option">
   <a tabindex="-1" class="no-underline d-flex flex-auto flex-items-center jump-to-suggestions-path js-jump-to-suggestion-path js-navigation-open p-2" href="">
@@ -222,7 +216,7 @@
   </a>
 </li>
 
-  
+
 
 <li class="d-flex flex-justify-start flex-items-center p-0 f5 navigation-item js-navigation-item js-jump-to-global-search d-none" role="option">
   <a tabindex="-1" class="no-underline d-flex flex-auto flex-items-center jump-to-suggestions-path js-jump-to-suggestion-path js-navigation-open p-2" href="">
@@ -284,11 +278,11 @@
       </nav>
 
       <div class="d-flex">
-        
+
 <ul class="user-nav d-flex flex-items-center list-style-none" id="user-links">
   <li class="dropdown">
     <span class="d-inline-block  px-2">
-      
+
     <a aria-label="You have no unread notifications" class="notification-indicator tooltipped tooltipped-s  js-socket-channel js-notification-indicator" data-hotkey="g n" data-ga-click="Header, go to notifications, icon:read" data-channel="notification-changed:25136" href="/notifications">
         <span class="mail-status "></span>
         <svg class="octicon octicon-bell" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 12v1H0v-1l.73-.58c.77-.77.81-2.55 1.19-4.42C2.69 3.23 6 2 6 2c0-.55.45-1 1-1s1 .45 1 1c0 0 3.39 1.23 4.16 5 .38 1.88.42 3.66 1.19 4.42l.66.58H14zm-7 4c1.11 0 2-.89 2-2H5c0 1.11.89 2 2 2z"/></svg>
@@ -305,7 +299,7 @@
         <span class="dropdown-caret mt-1"></span>
       </summary>
       <details-menu class="dropdown-menu dropdown-menu-sw">
-        
+
 <a role="menuitem" class="dropdown-item" href="/new" data-ga-click="Header, create new repository">
   New repository
 </a>
@@ -359,7 +353,7 @@
           <li><a role="menuitem" class="dropdown-item" href="/settings/profile" data-ga-click="Header, go to settings, icon:settings">Settings</a></li>
           <li>
             <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="logout-form" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="lPQ1gf7+x0CUU5RpyotueMNWQPXEpy2282xbswKg58yqnGdp28vIaXJ1+hK2pz/nb3W5lSqIxwuThiS48zgv9Q==" />
-              
+
               <button type="submit" class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout" role="menuitem">
                 Sign out
               </button>
@@ -381,7 +375,7 @@
   </div>
 </header>
 
-      
+
 
   </div>
 
@@ -396,10 +390,10 @@
   <div role="main" class="application-main " >
         <div itemscope itemtype="http://schema.org/SoftwareSourceCode" class="">
     <div id="js-repo-pjax-container" data-pjax-container >
-      
 
 
-  
+
+
 
 
 
@@ -557,7 +551,7 @@
 </h1>
 
     </div>
-    
+
 <nav class="reponav js-repo-nav js-sidenav-container-pjax container"
      itemscope
      itemtype="http://schema.org/BreadcrumbList"
@@ -614,24 +608,24 @@
 <div class="container new-discussion-timeline experiment-repo-nav  ">
   <div class="repository-content ">
 
-    
-    
 
 
 
-  
+
+
+
     <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/koden11/Booking_dot_com/blob/2a122f3c51fe4ae5f832e78623fcd9f46a5f846f/client/src/components/userCreate.js">Permalink</a>
 
     <!-- blob contrib key: blob_contributors:v21:62b759605da1026c0b898f51b15debb2 -->
 
-    
+
 
     <div class="file-navigation">
-      
+
 <div class="select-menu branch-select-menu js-menu-container js-select-menu float-left js-load-contents"
   data-contents-url="/koden11/Booking_dot_com/ref-list/userLogin/client/src/components/userCreate.js?source_action=show&amp;source_controller=blob">
   <button class="btn btn-sm select-menu-button js-menu-target css-truncate" data-hotkey="w"
-    
+
     type="button" aria-label="Switch branches or tags" aria-expanded="false" aria-haspopup="true">
     <i>Branch:</i>
     <span class="js-select-button css-truncate-target">userLogin</span>
@@ -677,7 +671,7 @@
 
 
     <div class="file ">
-      
+
 <div class="file-header">
 
   <div class="file-actions">
@@ -716,10 +710,10 @@
   </div>
 </div>
 
-      
+
 
   <div itemprop="text" class="blob-wrapper data type-javascript ">
-      
+
 <table class="highlight tab-size js-file-line-container" data-tab-size="8">
       <tr>
         <td id="L1" class="blob-num js-line-number" data-line-number="1"></td>
@@ -1039,7 +1033,7 @@
 
     </div>
 
-  
+
 
   <details class="details-reset details-overlay details-overlay-dark">
     <summary data-hotkey="l" aria-label="Jump to line"></summary>
@@ -1061,7 +1055,7 @@
 
   </div>
 
-        
+
 <div class="footer container-lg px-3" role="contentinfo">
   <div class="position-relative d-flex flex-justify-between pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
     <ul class="list-style-none d-flex flex-wrap ">
@@ -1097,13 +1091,13 @@
   </div>
 
 
-    
+
     <script crossorigin="anonymous" integrity="sha512-qj1Z4g+YDVWKElb6FC42CcUWNq8P0W9aiU0CtKWjzuEMO9tb8sbbJ48dWUkmaOIe7WlLJXkI4YsUCKMxRMxT5A==" type="application/javascript" src="https://assets.git.generalassemb.ly/assets/frameworks-9ee26246cce2c45ef24accded28cdabe.js"></script>
-    
+
     <script crossorigin="anonymous" async="async" integrity="sha512-19QRhVyIa0hQv048YrdR7iJCQKQ69avO/2cxhrHfJhsjZpyGt9fQzrcAgfq9hdluwyu9ljyWGs97gtGiDzOOjw==" type="application/javascript" src="https://assets.git.generalassemb.ly/assets/github-8bc527d6df97db7ace15fb2754754111.js"></script>
-    
-    
-    
+
+
+
   <div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner" hidden
     >
     <svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg>
@@ -1145,4 +1139,3 @@
 
   </body>
 </html>
-
