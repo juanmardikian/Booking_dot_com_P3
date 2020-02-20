@@ -1,6 +1,40 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-const apiUrl = 'http://bookingdotcom.herokuapp.com/api/sign-up'
+import WebFont from 'webfontloader';
+const apiUrl = 'http://bookingdotcom.herokuapp.com/api/sign-up';
+
+WebFont.load({
+    google: {
+        families: ['Baloo', 'sans-serif']
+    }
+})
+
+const style = {
+    body: {
+        color: 'black',
+        fontFamily: 'Baloo' 
+    },
+    form: {
+        height: '4vh',
+        minHeight: '30px',
+        width: '21vw',
+        minWidth: '100px',
+        border: '1px solid black',
+        margin: '0',
+        borderRadius: '4px'
+    },
+    h4: {
+        margin: '4px 0 0 0'
+    },
+    bigbluebutton: {
+        color: 'white',
+        fontSize: '20px',
+        marginTop: '15px',
+        width: '21vw',
+        height: '7vh', 
+        backgroundColor: 'rgb(0,102,186)'
+    }
+}
 
 export default function UserCreate(props) {
 
@@ -51,19 +85,19 @@ export default function UserCreate(props) {
     }
 
     return (
-        <div>
+        <div style={style.body}>
             <h2>Create your account</h2>
             <p>Create an account to use Booking.com services easily.</p>
             <form>
-                <h4>Email</h4>
-                <input type="text" onChange={updateEmail}></input>
-                <h4>Create Password</h4>
-                <input type="password" onChange={updatePassword}></input>
-                <h4>Confirm Password</h4>
-                <input type="password" onChange={updateConfirmPassword}></input>
+                <h4 style={style.h4}>Email</h4>
+                <input type="text" onChange={updateEmail} style={style.form}></input>
+                <h4 style={style.h4}>Create Password</h4>
+                <input type="password" onChange={updatePassword} style={style.form}></input>
+                <h4 style={style.h4}>Confirm Password</h4>
+                <input type="password" onChange={updateConfirmPassword} style={style.form}></input>
 
                 <div>
-                    <input type="submit" onClick={createUser}></input>
+                    <button type="submit" onClick={createUser} style={style.bigbluebutton}>Get Started</button>
                 </div>
 
             </form>

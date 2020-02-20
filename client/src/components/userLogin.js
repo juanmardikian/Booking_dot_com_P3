@@ -1,6 +1,40 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import WebFont from 'webfontloader';
 const apiUrl = 'http://bookingdotcom.herokuapp.com/api/sign-in'
+
+WebFont.load({
+    google: {
+        families: ['Baloo', 'sans-serif']
+    }
+})
+
+const style = {
+    body: {
+        color: 'black',
+        fontFamily: 'Baloo' 
+    },
+    form: {
+        height: '4vh',
+        minHeight: '30px',
+        width: '21vw',
+        minWidth: '100px',
+        border: '1px solid black',
+        margin: '0',
+        borderRadius: '4px'
+    },
+    h4: {
+        margin: '4px 0 0 0'
+    },
+    bigbluebutton: {
+        color: 'white',
+        fontSize: '20px',
+        marginTop: '15px',
+        width: '21vw',
+        height: '7vh', 
+        backgroundColor: 'rgb(0,102,186)'
+    }
+}
 
 export default function UserLogin(props) {
 
@@ -42,16 +76,16 @@ export default function UserLogin(props) {
     }
 
     return (
-        <div>
+        <div style={style.body}>
             <h2>Sign in</h2>
             <p>You can sign in using your Booking.com account to access our services.</p>
             <form>
-                <h4>Email</h4>
-                <input type="text" onChange={updateUsername}></input>
-                <h4>Booking.com Password</h4>
-                <input type="password" onChange={updatePassword}></input>
+                <h4 style={style.h4}>Email</h4>
+                <input type="text" onChange={updateUsername} style={style.form}></input>
+                <h4 style={style.h4}>Booking.com Password</h4>
+                <input type="password" onChange={updatePassword} style={style.form}></input>
                 <div>
-                    <input type="submit" onClick={logIn}></input>
+                    <button type="submit" onClick={logIn} style={style.bigbluebutton}>Sign-In</button>
                 </div>
 
             </form>
