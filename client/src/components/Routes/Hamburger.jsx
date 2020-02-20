@@ -1,23 +1,26 @@
 import React from 'react'
-import Header2 from '../Header/Header2'
-import usa from '../../images/usaFlag.png'
-import usd from '../../images/usd.png'
-import profile from '../../images/SignInCreateProfile.png'
-import bookings from '../../images/bookings.png'
-import viewed from '../../images/viewed.png'
-import stillLooking from '../../images/stillLooking.png'
-import myLists from '../../images/myLists.png'
-import communities from '../../images/communities.png'
-import properties from '../../images/properties.png'
-import hosts from '../../images/hosts.png'
-import reviews from '../../images/reviews.png'
-import customerService from '../../images/customerService.png'
-import safety from '../../images/safety.png'
-import careers from '../../images/careers.png'
-import press from '../../images/press.png'
-import affiliate from '../../images/affiliate.png'
-import iphone from '../../images/iphone.png'
-import Footer from '../Footer/Footer'
+import Header from '../Shared/Header'
+//This should be the header with a back button
+import Footer from '../Shared/Footer'
+
+//Images
+import usa from '../../Images/usaFlag.png'
+import usd from '../../Images/usd.png'
+import profile from '../../Images/SignInCreateProfile.png'
+import bookings from '../../Images/bookings.png'
+import viewed from '../../Images/viewed.png'
+import stillLooking from '../../Images/stillLooking.png'
+import myLists from '../../Images/myLists.png'
+import communities from '../../Images/communities.png'
+import properties from '../../Images/properties.png'
+import hosts from '../../Images/hosts.png'
+import reviews from '../../Images/reviews.png'
+import customerService from '../../Images/customerService.png'
+import safety from '../../Images/safety.png'
+import careers from '../../Images/careers.png'
+import press from '../../Images/press.png'
+import affiliate from '../../Images/affiliate.png'
+import iphone from '../../Images/iphone.png'
 
 export default function Hamburger() {
 
@@ -65,6 +68,10 @@ export default function Hamburger() {
             padding: '10px 0 0 0',
             marginTop: '14px',
             fontWeight: 'normal'
+        },
+        listStyle: {
+            listStyleType: 'none',
+            marginLeft: '-5vw'
         }
     }
 
@@ -73,17 +80,18 @@ export default function Hamburger() {
 
     return (
         <div style={style.parentContainer}>
-            <Header2 />
+            <Header />
+            //This should be changed to show header with back button
             <div style={style.subHeading}>
                 SETTINGS
-                <ul>
+                <ul style={style.listStyle}>
                     <li style={style.listItem}>Change Language<img src={usa} style={style.image} /></li>
                     <li style={style.listItem}>Change Currency<img src={usd} style={style.imageUSD} /></li>
                 </ul>
             </div>
             <div style={style.subHeading}>
                 PROFILE
-                <ul>
+                <ul style={style.listStyle}>
                     <li style={style.listItem}>Sign In or Create Profile<img src={profile} style={style.image} /></li>
                     <li style={style.listItem}>Bookings<img src={bookings} style={style.image} /></li>
                     <li style={style.listItem}>Recently Viewed<img src={viewed} style={style.image} /></li>
@@ -98,7 +106,7 @@ export default function Hamburger() {
 
             <div style={style.subHeading}>
                 USEFUL LINKS
-                <ul>
+                <ul style={style.listStyle}>
                     <li style={style.listItem}>Customer Service Help<img src={customerService} style={style.image} /></li>
                     <li style={style.listItem}>Safety Resource Center <img src={safety} style={style.image} /></li>
                     <li style={style.listItem}>Home<img src={hosts} style={style.image} /></li>

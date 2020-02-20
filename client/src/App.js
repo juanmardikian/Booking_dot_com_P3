@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route } from 'react-router-dom'
 import Hotels from './Components/Routes/Hotels'
+import Hamburger from './Components/Routes/Hamburger';
 
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     // |                          |  YES  OR  NO  |  YES    OR   NO  |  YES      OR        NO  |
     // |--------------------------|---------------|------------------|-------------------------|
     // |Accomidations or "hotels" |  YES          |              NO  |                     NO  |
+    // |Hamburger                 |           NO  |              NO  |                     NO  |
     // |Login                     |           NO  |              NO  |                     NO  |
     // |Dashboard                 |               |              NO  |                     NO  |
     // |Contact                   |               |              NO  |                     NO  |
@@ -24,6 +26,11 @@ function App() {
             <Hotels/>
         </Route>
 
+        <Route exact="exact" path='/menu'>
+            <Hamburger/>
+        </Route>
+
+
 
 
     </div>)
@@ -32,7 +39,6 @@ function App() {
 export default App;
 
 // import Footer from './components/Shared/Footer'
-// import Hamburger from './components/Routes/Hamburger';
 // import Header from './components/Shared/Header'
 // import Searcher from './components/Searcher/Searcher'
 // import Contact from './components/Routes/Contact'
