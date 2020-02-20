@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { NavLink } from 'react-router-dom'
 import Header from '../Shared/Header'
 import Footer from '../Shared/Footer'
 
@@ -70,6 +71,10 @@ export default function Hamburger() {
         listStyle: {
             listStyleType: 'none',
             marginLeft: '-5vw'
+        },
+        link: {
+            textDecoration: 'none',
+            color: 'black'
         }
     }
 
@@ -106,7 +111,7 @@ export default function Hamburger() {
             <div style={style.subHeading}>
                 USEFUL LINKS
                 <ul style={style.listStyle}>
-                    <li style={style.listItem}>Customer Service Help<img src={customerService} style={style.image} /></li>
+                    <li style={style.listItem}><NavLink style={style.link} exact to="/customer">Customer Service Help</NavLink><img src={customerService} style={style.image} /></li>
                     <li style={style.listItem}>Safety Resource Center <img src={safety} style={style.image} /></li>
                     <li style={style.listItem}>Home<img src={hosts} style={style.image} /></li>
                     <li style={style.listItem}>Careers<img src={careers} style={style.image} /></li>

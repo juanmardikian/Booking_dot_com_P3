@@ -4,6 +4,8 @@ import Hotels from './Components/Routes/Hotels'
 import Hamburger from './Components/Routes/Hamburger'
 import CarRental from './Components/Routes/CarRental'
 import Flights from './Components/Routes/Flights'
+import Contact from './Components/Routes/Contact'
+import HelpCenter from './Components/Routes/HelpCenter'
 
 function App() {
 
@@ -37,6 +39,14 @@ function App() {
 
         <Route exact="exact" path='/menu'>
             <Hamburger/>
+        </Route>
+
+        <Route exact="exact" path='/contact'>
+            <Contact/>
+        </Route>
+
+        <Route exact="exact" path='/customer'>
+            <HelpCenter/>
         </Route>
 
 
