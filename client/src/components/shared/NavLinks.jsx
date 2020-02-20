@@ -15,10 +15,13 @@ const style = {
         lineHeight: 'normal',
         letterSpacing: '0.05em',
         textAlign: 'center',
-        padding: '8px'
+        marginBottom: '0',
+        padding: '8px 8px 0 8px'
     },
     links: {
         textDecoration: 'none',
+        fontSize: '11px',
+        marginBottom: "-10px",
         color: 'white'
     }
 }

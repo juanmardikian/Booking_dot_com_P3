@@ -20,13 +20,13 @@ const style = {
         backgroundColor: 'rgb(0, 53, 128)'
     },
     title: {
-        margin: '10px 0 auto 9px'
+        margin: '18px 0 auto 9px'
     },
     booking: {
         width: '68px',
         height: '28px',
         fontFamily: 'Baloo',
-        fontSize: '10px',
+        fontSize: '20px',
         fontWeight: 'normal',
         fontStretch: 'normal',
         fontStyle: 'normal',

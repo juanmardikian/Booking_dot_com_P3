@@ -8,15 +8,17 @@ import hamburger from '../../Images/Header/hamburger.png'
 const style = {
     iconContainer: {
         display: 'flex',
-        marginTop: '8px'
+        marginTop: '2vh'
     },
     icon: {
         width: '26px',
+        margin: "0 1.5vw",
         height: '26px'
     },
     iconH: {
         width: '30px',
-        height: '25px'
+        height: '25px',
+        marginRight: '3vw'
     }
 }
 

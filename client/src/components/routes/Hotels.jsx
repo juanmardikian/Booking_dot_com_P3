@@ -50,12 +50,12 @@ const style = {
     },
     deals: {
         display: 'flex',
-        border: '.2vh #979797 solid',
+        border: '1px #979797 solid',
         width: '50vw'
     },
     place: {
         display: 'flex',
-        border: '.2vh #979797 solid',
+        border: '1px #979797 solid',
         borderLeft: 'none',
         width: '50vw'
     },
@@ -77,7 +77,7 @@ const Hotels = () => (
     <div>
         <Header />
         <Search />
-        <p style={style.p}>Still looking for the perfect accomidation?</p>
+        <p style={style.p}>Still looking for the perfect accommodation?</p>
         <div style={style.imgCont}>
             <div style={style.imgDiv}>
                 <img style={style.img} src={pic1} />
@@ -103,7 +103,7 @@ const Hotels = () => (
         <div style={style.middle}>
             <div style={style.deals}>
                 <div style={style.left}>
-                    <p style={style.middleP}>Early 2020 deals on accomidation</p>
+                    <p style={style.middleP}>Early 2020 deals on accommodation</p>
                     <img style={style.imgM} src={money} />
                 </div>
                 <div style={style.right}>
