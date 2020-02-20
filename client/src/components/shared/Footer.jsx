@@ -3,8 +3,8 @@ import React from 'react'
 
 const style = {
     footer: {
-        backgroundColor: 'rgb(0, 53, 128)',
-        height: '300px'
+        backgroundColor: 'rgb(0,47,117)',
+        height: '40vh'
     },
     subscribe: {
         backgroundColor: '#001b42'
@@ -49,15 +49,16 @@ const style = {
         padding: '10px'
     },
     listYourPropertyButton: {
-        width: '140px',
-        height: '26px',
+        width: '220px',
+        height: '38px',
         fontFamily: 'Baloo',
-        fontSize: '12px',
+        fontSize: '16px',
         textAlign: 'center',
         color: 'rgb(3, 159, 226)',
         backgroundColor: 'azure',
         outlineStyle: 'none',
-        borderRadius: '4px',
+        padding: "4px",
+        borderRadius: '7px',
         border: 'solid 1px rgb(3, 159, 226)'
     },
     footerLinkDiv1: {
@@ -74,14 +75,23 @@ const style = {
     },
     footerLink: {
         color: 'white',
-
+        fontSize: '13px'
     },
     copyright: {
         textAlignVertical: "center",
         textAlign: "center",
         color: 'white',
-        fontSize: '9px'
-     }
+        fontSize: '9px',
+        backgroundColor: 'rgb(0,47,117)'
+    },
+    bottomlinks: {
+        display: "flex",
+        flexDirection: "column",
+        margin: "0 auto",
+        width: "90vw",
+        height: "10vh",
+        alignItems: "center"
+    }
 }
 
 
@@ -103,16 +113,17 @@ export default function Footer() {
             <div style={style.listYourPropertyDiv}>
                 <button type='submit' style={style.listYourPropertyButton}>CONTACT US</button>
             </div>
-            <div >
+
+            <div style={style.bottomlinks}>
                 <div style={style.footerLinksDiv1}>
-                    <a style={style.footerLink} href='#'>Mobile Version</a><a style={style.footerLink} href='#'>Tablet Version</a>
+                    <a style={style.footerLink} href='#'>Desktop Version</a> <a style={style.footerLink} href='#'>Tablet Version</a>
                 </div>
 
                 <div style={style.footerLinksDiv2}>
-                    <a style={style.footerLink} href='#'>Terms & Conditions</a><a style={style.footerLink} href='#'>Privacy & Cookies</a>
+                    <a style={style.footerLink} href='#'>Terms&Conditions</a> <a style={style.footerLink} href='#'>Privacy&Cookies</a>
                 </div>
-                <div style={style.copyright} >Copyright © 1996-2020 Booking.com </div>
             </div>
+            <div style={style.copyright} >Copyright © 1996-2020 Booking.com </div>
 
         </div>
     )

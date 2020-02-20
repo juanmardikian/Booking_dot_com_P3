@@ -48,9 +48,9 @@ const style = {
         color: 'rgb(3, 159, 226)'
     },
     arrowBack: {
-        margin: '15px',
-        width: '26px',
-        height: '26px'
+        margin: '0 0 2px',
+        width: '16px',
+        height: '22px'
     },
     backButton: {
         backgroundColor: 'rgb(0, 53, 128)',
@@ -79,7 +79,7 @@ export default function Header(props) {
                 <NavIcons/>
             </div>
 
-            <NavLinks/>
+            {/* <NavLinks/> */}
         </div>
         :
         <div>

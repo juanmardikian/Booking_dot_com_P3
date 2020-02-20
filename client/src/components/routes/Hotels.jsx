@@ -24,16 +24,20 @@ const style = {
         marginBottom: '-2vh'
     },
     imgM: {
-        height: '13vw',
-        width: '13vw'
+        height: '11vw',
+        width: '11vw',
+        margin: "7px"
     },
     p: {
         width: '100vw',
+        marginLeft: '4px',
         fontWeight: 'bold'
     },
     middleP: {
-        width: '50vw',
-        textAlign: 'center'
+        width: '100vw',
+        fontWeight: 'bold',
+        marginLeft: '5px',
+        textAlign: 'left'
     },
     imgDiv: {
         padding: '1vh 1vw 0 1vw',
@@ -47,6 +51,7 @@ const style = {
     },
     middle: {
         display: 'flex',
+        flexDirection: "column"
     },
     deals: {
         display: 'flex',
@@ -57,20 +62,24 @@ const style = {
         display: 'flex',
         border: '1px #979797 solid',
         borderLeft: 'none',
-        width: '50vw'
+        width: '100vw'
     },
     left: {
-        width: '25vw'
+        width: '17vw'
     },
     right: {
-        width: '25vw',
+        width: '75vw',
         marginTop: '5vh'
     },
     button: {
         width: '20vw',
         height: '5vw',
+        color: "white",
         backgroundColor: 'rgb(3, 159, 226)',
         borderRadius: '4px',
+    },
+    dealtext: {
+        margin: "8px 0 6px 0"
     }
 }
 const Hotels = () => (
@@ -86,42 +95,47 @@ const Hotels = () => (
             </div>
             <div style={style.imgDiv}>
                 <img style={style.img} src={pic2} />
-                <h4>Barcelona</h4>
-                <p style={style.imgP}>2,930 properties including 2,031 homes</p>
+                <h4>Madrid</h4>
+                <p style={style.imgP}>3,562 properties including 3,12 homes</p>
             </div>
             <div style={style.imgDiv}>
                 <img style={style.img} src={pic3} />
-                <h4>Barcelona</h4>
-                <p style={style.imgP}>2,930 properties including 2,031 homes</p>
+                <h4>Lisbon</h4>
+                <p style={style.imgP}>2,768 properties including 1,345 homes</p>
             </div>
             <div style={style.imgDiv}>
                 <img style={style.img} src={pic4} />
-                <h4>Barcelona</h4>
-                <p style={style.imgP}>2,930 properties including 2,031 homes</p>
+                <h4>Rome</h4>
+                <p style={style.imgP}>3,456 properties including 2,130 homes</p>
             </div>
         </div>
+
         <div style={style.middle}>
-            <div style={style.deals}>
+
+            <div style={style.place}>
                 <div style={style.left}>
                     <p style={style.middleP}>Early 2020 deals on accommodation</p>
                     <img style={style.imgM} src={money} />
                 </div>
                 <div style={style.right}>
-                    <p>Start now with 20% off!</p>
+                    <p style={style.dealtext}>Start now with 20% off!</p>
                     <button style={style.button}>View Deals</button>
                 </div>
             </div>
+
             <div style={style.place}>
                 <div style={style.left}>
                     <p style={style.middleP}>List your place on Booking.com</p>
                     <img style={style.imgM} src={empire} />
                 </div>
                 <div style={style.right}>
-                    <p>Start now with 20% off!</p>
-                    <button style={style.button}>View Deals</button>
+                    <p style={style.dealtext}>Earn easy money while you travel!</p>
+                    <button style={style.button}>Learn More</button>
                 </div>
             </div>
         </div>
+
+        <p style={style.middleP}>Connect with other travellers</p>
         <div style={style.imgCont}>
             <div style={style.imgDiv}>
                 <img style={style.img} src={bottom1} />

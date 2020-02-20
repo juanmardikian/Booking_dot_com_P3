@@ -27,17 +27,17 @@ export default function HelpCenter() {
         <div>
             <Header back='true'/>
 
-            <div style={{ ...style.parentContainer, height: '50px' }} >
+            <div style={{ ...style.parentContainer, height: '70px', fontWeight: '800', fontSize: '24px' }} >
 
                 <p >Help Center</p>
 
             </div>
-            <div style={{ ...style.parentContainer, height: '150px', flexDirection: 'column', textAlign: 'center', fontWeight: 'normal' }}>
-                <img src={Icon} style={{ width: '80px' }}></img> <p> We couldn't load any bookings. Have a question?</p>
-                <p style={{ padding: '10px', fontWeight: 'bolder', color: 'rgb(3, 159, 226)' }}>Ask a question</p>
+            <div style={{ ...style.parentContainer, height: '180px', flexDirection: 'column', textAlign: 'center', fontWeight: 'normal' }}>
+                <img src={Icon} style={{ width: '80px', padding: '0', margin: '1px'}}></img> <p> We couldn't load any bookings. Have a question?</p>
+                <p style={{ padding: '2px', fontWeight: 'bolder', color: 'rgb(3, 159, 226)', margin: '0' }}>Ask a question</p>
             </div>
             <div style={{ ...style.parentContainer, height: '70px' }} >
-                <img src={contactPhone} style={{ width: '30px' }}></img><Link to='/contact'><button type='submit' style={{
+                <img src={contactPhone} style={{ width: '30px', marginRight: '10px' }}></img><Link to='/contact'><button type='submit' style={{
                     width: ' 140px', height: '26px', fontFamily: 'Baloo',
                     fontSize: '16px',
                     textAlign: 'center',
@@ -56,7 +56,7 @@ export default function HelpCenter() {
 
 
 
-            <Footer />
+            {/* <Footer /> */}
         </div >
     )
 }

@@ -15,6 +15,10 @@ export default function Contact() {
             backgroundColor: 'white',
             height: '60px',
             border: 'solid 1px rgba(0, 0, 0, 0.25)'
+        },
+        callus: {
+            margin: "0",
+            color: "red"
         }
     }
 
@@ -24,8 +28,8 @@ export default function Contact() {
         <div>
             <Header back='true' />
             <div style={style.parentContainer}>
-                <p style={{ display: 'flex', justifyContent: 'center', paddingTop: '18px' }}>24/7 Customer Service</p>
-                <p style={{ display: 'flex', justifyContent: 'center', padding: '0' }}>Call us at anytime</p>
+                <p style={{ display: 'flex', justifyContent: 'center', paddingTop: '18px', margin: '1px' }}>24/7 Customer Service</p>
+                <p style={{ display: 'flex', justifyContent: 'center', padding: '0', margin: "0" }}>Call us at any time</p>
            </div>
            <div style={{backgroundColor: 'white'}}>
            <img src={contact} style={{width:'100%'}}/>
