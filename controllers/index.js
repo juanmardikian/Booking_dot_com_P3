@@ -217,6 +217,9 @@ const getTrip = async (req, res) => {
     const trip = await Trip.findOne({
       where: { id: id }
     })
+    if (res.locals.user.id != trip.userId) {
+      return res.status(401).send('You do not have authorization to view this');
+    }
     if (trip) {
       return res.status(200).json({ trip });
     }
@@ -229,10 +232,14 @@ const getTrip = async (req, res) => {
 
 const getUser = async (req, res) => {
   try {
+    // console.log("userId: ", res.locals.user.id);
     const { id } = req.params;
     const user = await User.findOne({
       where: { id: id }
     })
+    if (res.locals.user.id != id) {
+      return res.status(401).send('You do not have authorization to view this');
+    }
     if (user) {
       return res.status(200).json({ user });
     }

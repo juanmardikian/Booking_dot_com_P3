@@ -9,11 +9,11 @@ router.get('/locations', controllers.getLocations);
 router.get('/locations/:cityname', controllers.getLocationId);
 router.get('/location/:id', controllers.getLocation);
 
-router.get('/user/:id', controllers.getUser);
+router.get('/user/:id', restrict, controllers.getUser);
 router.delete('/user/:id', controllers.deleteUser);
 router.put('/user/:id', controllers.updateUser);
 
-router.get('/trip/:id', controllers.getTrip);
+router.get('/trip/:id', restrict, controllers.getTrip);
 router.post('/trip', controllers.createTrip);
 router.put('/trip/:id', controllers.updateTrip);
 router.delete('/trip/:id', controllers.deleteTrip);
@@ -29,10 +29,5 @@ router.post('/sign-up', controllers.signUp);
 router.post('/sign-in', controllers.signIn);
 router.post('/change-password', controllers.changePassword);
 
-// add restrict to changePassword and updateUser
-// router.post('/trip', restrict, controllers.createTrip)
-// router.put('/trip/:id', restrict, controllers.updateTrip)
-// router.delete('/trip/:id', restrict, controllers.deleteTrip)
-// router.get('/trip/:id', restrict, controllers.getTrip)
 
 module.exports = router
