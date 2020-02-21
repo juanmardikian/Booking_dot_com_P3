@@ -10,6 +10,7 @@ import Profile from './Components/Routes/Profile'
 import UserLogin from './Components/Routes/userLogin'
 import { withRouter } from 'react-router'
 import CreateUser from './Components/Routes/userCreate'
+import DeleteUser from './Components/Routes/userDelete'
 
 function App(props) {
 
@@ -63,6 +64,7 @@ function App(props) {
                 <CreateUser />
             </Route>
 
+            <Route exact path='/deleteaccount/:userid' render={(props) => <DeleteUser {...props} />} />
 
         </div>)
 }

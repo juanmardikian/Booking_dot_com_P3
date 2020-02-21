@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useHistory } from 'react-router-dom'
+import { useHistory, Link } from 'react-router-dom'
 import WebFont from 'webfontloader';
 const apiUrl = 'http://bookingdotcom.herokuapp.com/api/user'
 
@@ -14,6 +14,10 @@ const style = {
     body: {
         marginLeft: '10px',
         fontFamily: 'Baloo'
+    },
+    deletelink: {
+        textDecoration: 'none',
+        color: "black"
     }
 }
 
@@ -42,6 +46,7 @@ export default function UserDetails (props) {
             <p>Home Country: {userInfo.homeCountry}</p>
             <p>Recently Viewed: {userInfo.recentViewed || 'none'}</p>
             <p>Upcoming Trips: {userInfo.upcomingTrips || 'No Upcoming Trips'}</p>
+            <h5>Don't like Booking.com? <Link to={`/deleteaccount/${props.userId}`} style={style.deletelink}>Delete your account</Link></h5>
         </div>
     )
 }
