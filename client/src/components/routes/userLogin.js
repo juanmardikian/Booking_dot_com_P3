@@ -68,7 +68,7 @@ export default function UserLogin(props) {
             const tempUser = response.data.user.userName;
             const token = `Bearer ${response.data.token}`
             window.localStorage.setItem(tempUser, token);
-            if (response.status === 200) {
+            if (response.status === 201) {
                 // console.log(history())
                 return redirectToProfile(response.data.user.id);
             }
