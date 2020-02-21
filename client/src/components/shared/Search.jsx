@@ -88,7 +88,7 @@ const Search = props => {
         // retrieves city data for searched city
         const getCityData = async () => {
             try {
-                let response = await axios.get(`${apiUrl}/location/${cityId}`)
+                let response = await axios.get(`${APIUrl}/location/${cityId}`)
                 setCityData(response.data.location);
                 // console.log(response.data.location);
             } catch (error) {
@@ -98,7 +98,7 @@ const Search = props => {
         // gets all hotels for city searched
         const getHotels = async () => {
             try {
-                let response = await axios.get(`${apiUrl}/location/${cityId}/hotels`);
+                let response = await axios.get(`${APIUrl}/location/${cityId}/hotels`);
                 setHotelData(response.data.hotels);
             } catch (error) {
                 console.log(error);
@@ -107,7 +107,7 @@ const Search = props => {
 
         const getVolunteerOps = async () => {
             try {
-                let response = await axios.get(`${apiUrl}/location/${cityId}/volunteers`);
+                let response = await axios.get(`${APIUrl}/location/${cityId}/volunteers`);
                 setVolunteerData(response.data.volunteers);
             } catch (error) {
                 console.log(error);
@@ -116,7 +116,7 @@ const Search = props => {
 
         const getFlights = async () => {
             try {
-                let response = await axios.get(`${apiUrl}/location/${cityId}/flights`);
+                let response = await axios.get(`${APIUrl}/location/${cityId}/flights`);
                 setFlightData(response.data.flights);
             } catch (error) {
                 console.log(error);
@@ -125,7 +125,7 @@ const Search = props => {
 
         const getCarRentals = async () => {
             try {
-                let response = await axios.get(`${apiUrl}/location/${cityId}/cars`);
+                let response = await axios.get(`${APIUrl}/location/${cityId}/cars`);
                 setCarRentalData(response.data.cars);
             } catch (error) {
                 console.log(error);
@@ -135,7 +135,7 @@ const Search = props => {
         const getCars = async () => {
             try {
                 // console.log(carRentalData)
-                let response = await axios.get(`${apiUrl}/location/${cityId}/cars/${carRentalData[0].id}`)
+                let response = await axios.get(`${APIUrl}/location/${cityId}/cars/${carRentalData[0].id}`)
                 console.log(response.data);
                 setCarData(response.data);
 
