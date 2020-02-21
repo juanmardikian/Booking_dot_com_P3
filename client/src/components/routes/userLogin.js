@@ -6,7 +6,8 @@ import UserDetails from './userDetails';
 import Header from '../Shared/Header';
 import Footer from '../Shared/Footer';
 import { useHistory, Link } from 'react-router-dom'
-const apiUrl = 'http://bookingdotcom.herokuapp.com/api/sign-in';
+import APIUrl from '../Shared/APIUrl'
+// const apiUrl = 'http://bookingdotcom.herokuapp.com/api';
 
 
 WebFont.load({
@@ -59,7 +60,7 @@ export default function UserLogin(props) {
             event.preventDefault();
             // console.log(username,password);
             let response = await axios({
-                url: `${apiUrl}`,
+                url: `${APIUrl}/sign-in`,
                 method: 'POST',
                 data: { username: username, password: password }
             })

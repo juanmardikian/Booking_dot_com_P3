@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useHistory, Link } from 'react-router-dom'
 import WebFont from 'webfontloader';
-const apiUrl = 'http://bookingdotcom.herokuapp.com/api/user'
+// const apiUrl = 'http://bookingdotcom.herokuapp.com/api'
+import APIUrl from '../Shared/APIUrl';
 
 WebFont.load({
     google: {
@@ -34,7 +35,7 @@ export default function UserDetails (props) {
 
     useEffect(()=>{
        const getUserInfo = async () => {
-           let response = await axios(`${apiUrl}/${props.userId}`);
+           let response = await axios(`${APIUrl}/user/${props.userId}`);
            console.log(response.data.user);
            setUserInfo(response.data.user);
        }

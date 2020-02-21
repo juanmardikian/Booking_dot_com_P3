@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useFormik } from 'formik';
 import axios from 'axios';
-const apiUrl = 'http://bookingdotcom.herokuapp.com/api';
+// const apiUrl = 'http://bookingdotcom.herokuapp.com/api';
+import APIUrl from '../Shared/APIUrl';
 
 const style = {
     body: {
@@ -72,7 +73,7 @@ const Search = props => {
     // retrieveData returns a cityId for searched city
     const retrieveData = async (cityName) => {
         try {
-            let response = await axios.get(`${apiUrl}/locations/${cityName}`);
+            let response = await axios.get(`${APIUrl}/locations/${cityName}`);
             console.log(response.data.cityId);
             setCityId(response.data.cityId);
             return response.data;

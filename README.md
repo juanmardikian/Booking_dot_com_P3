@@ -139,15 +139,16 @@ Breakdown the initial logic defined in the previous sections into stateful and s
 ​
 | Component                | Estimated Time | Actual Time |
 |--------------------------|----------------|-------------|
-| Contact Us Functionality | 10 hrs         | 0           |
-| Homepage Views           | 12 hrs         | 0           |
-| Help Center View16 hrs   | 12 hrs         | 0           |
-| Hamburger Menu           | 18 hrs         | 0           |
-| Nav Footer               | 8 hrs          | 0           |
-| Full CSS                 | 24 hrs         | 0           |
-| Full Backend CRUD        | 30 hrs         | 0           |
+| Contact Us Functionality | 10 hrs         | 8           |
+| Homepage Views           | 12 hrs         | 12          |
+| Help Center View         | 12 hrs         | 16          |
+| Hamburger Menu           | 18 hrs         | 12          |
+| Nav Footer               | 8 hrs          | 6           |
+| Full CSS                 | 24 hrs         | 36          |
+| Full Backend CRUD        | 30 hrs         | 40          |
 | Volunteer View           | 12 hrs         | 0           |
-|                          | 126 Hours      | 0           |
+| Front End CRUD           | 6 hrs          | 6           |
+|                          | 132 Hours      | 136         |
 
 ## Additional Libraries
 | Back-End         |Front-End  		|
