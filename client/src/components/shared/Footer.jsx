@@ -4,26 +4,27 @@ import React from 'react'
 const style = {
     footer: {
         backgroundColor: 'rgb(0,47,117)',
-        height: '40vh'
+        height: '52vh'
     },
     subscribe: {
         backgroundColor: '#001b42'
     },
     subscribeText: {
-        height: '18px',
+        fontSize: '18px',
         fontFamily: 'Helvetica',
         color: 'white',
         textAlign: 'center',
-        padding: '8px'
+        paddingTop: '6px',
+        margin: '8px 0 0 0'
     },
     searchForm: {
         display: 'flex',
-        justifyContent: 'space-between',
-        padding: '18px'
+        justifyContent: 'center',
+        padding: '6px 12px'
     },
     enterEmail: {
         padding: '8px',
-        width: '220px',
+        width: '85vw',
         fontFamily: 'Helvetica',
         fontStyle: 'italic'
     },
@@ -36,7 +37,8 @@ const style = {
         textAlign: 'center',
         color: 'white',
         backgroundColor: 'rgb(3, 159, 226)',
-        padding: '4px',
+        padding: '5px',
+        marginLeft: "6vh",
         outlineStyle: 'none',
         borderRadius: '4px',
         border: 'solid 2px rgb(3, 159, 226)'
@@ -91,6 +93,9 @@ const style = {
         width: "90vw",
         height: "10vh",
         alignItems: "center"
+    },
+    bottomform: {
+        height: "15vh"
     }
 }
 
@@ -101,10 +106,16 @@ export default function Footer() {
         <div style={style.footer}>
             <div style={style.subscribe}>
                 <h3 style={style.subscribeText}>Subscribe for discounts of up to 50%</h3>
+                <div style={style.bottomform}>
                 <form style={style.searchForm}>
-                    <input style={style.enterEmail} autoFocus value='' placeholder="your@email.here" />
-                    <button type='submit' style={style.subscribeButton}>Subscribe</button>
+                    <div>
+                        <input style={style.enterEmail} autoFocus value='' placeholder="your@email.here" />
+                    </div>
                 </form>
+                    <div>
+                        <button type='submit' style={style.subscribeButton}>Subscribe</button>
+                    </div>
+                </div>
 
             </div>
             <div style={style.listYourPropertyDiv}>
