@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Header from '../Shared/Header'
 import Footer from '../Shared/Footer'
 import contact from '../../Images/contact.png'
@@ -22,6 +22,9 @@ export default function Contact() {
         }
     }
 
+    useEffect(() => {
+      window.scrollTo(0, 0)
+    }, [])
 
 
     return (
