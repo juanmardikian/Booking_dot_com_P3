@@ -4,7 +4,8 @@ import WebFont from 'webfontloader';
 import Header from '../Shared/Header';
 import Footer from '../Shared/Footer';
 import { useHistory } from 'react-router-dom'
-const apiUrl = 'http://bookingdotcom.herokuapp.com/api/sign-up';
+// const apiUrl = 'http://bookingdotcom.herokuapp.com/api';
+import APIUrl from '../Shared/APIUrl'
 
 WebFont.load({
     google: {
@@ -55,7 +56,7 @@ export default function UserCreate(props) {
             }
             event.preventDefault();
             let response = await axios({
-                url: `${apiUrl}`,
+                url: `${APIUrl}/sign-up`,
                 method: 'POST',
                 data: { email: email, password: password, username: email }
             })
