@@ -1,10 +1,28 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useHistory } from 'react-router-dom'
+import WebFont from 'webfontloader';
 const apiUrl = 'http://bookingdotcom.herokuapp.com/api/user'
+
+WebFont.load({
+    google: {
+        families: ['Baloo', 'sans-serif']
+    }
+})
+
+const style = {
+    body: {
+        marginLeft: '10px',
+        fontFamily: 'Baloo'
+    }
+}
 
 export default function UserDetails (props) {
 
-    const [userInfo,setUserInfo] = setState('');
+    const [userInfo,setUserInfo] = useState('');
+    let history = useHistory();
+
+    console.log(props.userId);
 
     useEffect(()=>{
        const getUserInfo = async () => {
@@ -12,17 +30,18 @@ export default function UserDetails (props) {
            console.log(response.data.user);
            setUserInfo(response.data.user);
        }
-       getUserInfo();
+           getUserInfo();
+       
     },[])
 
     return userInfo && (
-        <div>
+        <div style={style.body}>
             <p>Welcome {userInfo.firstName} {userInfo.middleInit} {userInfo.lastName}</p>
             <p>Username: {userInfo.userName}</p>
             <p>Email: {userInfo.email}</p>
             <p>Home Country: {userInfo.homeCountry}</p>
-            <p>Recently Viewed:</p>
-            <p>Upcoming Trips:</p>
+            <p>Recently Viewed: {userInfo.recentViewed || 'none'}</p>
+            <p>Upcoming Trips: {userInfo.upcomingTrips || 'No Upcoming Trips'}</p>
         </div>
     )
 }

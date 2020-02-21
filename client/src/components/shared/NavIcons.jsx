@@ -22,11 +22,11 @@ const style = {
     }
 }
 
-export default function NavIcons() {
+export default function NavIcons(props) {
     return (
         <div style={style.iconContainer}>
             <NavLink exact to="/contact"> <div><img style={style.icon} alt='' src={iconPhone}></img></div></NavLink>
-            <NavLink exact to="/profile"><div><img style={style.icon} alt='' src={iconProfile}></img></div></NavLink>
+            <NavLink exact to="/login"><div><img style={style.icon} alt='' src={iconProfile}></img></div></NavLink>
             <NavLink exact to="/flights">  <div><img style={style.icon} alt='' src={iconSearch}></img></div></NavLink>
             <NavLink exact to="/menu"><div><img style={style.iconH} alt='' src={hamburger}></img></div></NavLink>
         </div>

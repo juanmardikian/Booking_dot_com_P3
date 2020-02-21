@@ -26,21 +26,21 @@ const style = {
     }
 }
 
-const NavLinks = () => (
+const NavLinks = (props) => (
     <div style={style.linksCont}>
-        <NavLink exact="exact" to="/" style={style.links}>
+        <NavLink exact to="/" style={style.links}>
             <h4>Accommodations</h4>
         </NavLink>
-        <NavLink exact="exact" to="/flights" style={style.links}>
+        <NavLink exact to="/flights" style={style.links}>
             <h4>Flights</h4>
         </NavLink>
-        <NavLink exact="exact" to="/packages" style={style.links}>
+        <NavLink exact to="/packages" style={style.links}>
             <h4>Packages</h4>
         </NavLink>
-        <NavLink exact="exact" to="/car" style={style.links}>
+        <NavLink exact to="/car" style={style.links}>
             <h4>Rental Car</h4>
         </NavLink>
-        <NavLink exact="exact" to="/tour" style={style.links}>
+        <NavLink exact to="/tour" style={style.links}>
             <h4>Tours & Activities</h4>
         </NavLink>
     </div>)

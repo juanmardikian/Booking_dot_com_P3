@@ -1,7 +1,13 @@
 import React, { useState } from 'react';
+// import { Redirect } from 'react-router-dom';
 import axios from 'axios';
 import WebFont from 'webfontloader';
-const apiUrl = 'http://bookingdotcom.herokuapp.com/api/sign-in'
+import UserDetails from './userDetails';
+import Header from '../Shared/Header';
+import Footer from '../Shared/Footer';
+import { useHistory, Link } from 'react-router-dom'
+const apiUrl = 'http://bookingdotcom.herokuapp.com/api/sign-in';
+
 
 WebFont.load({
     google: {
@@ -33,6 +39,13 @@ const style = {
         width: '21vw',
         height: '7vh',
         backgroundColor: 'rgb(0,102,186)'
+    },
+    submitform: {
+        textAlign: 'center'
+    },
+    link: {
+        color: "black",
+        textDecoration: "none"
     }
 }
 
@@ -40,7 +53,7 @@ export default function UserLogin(props) {
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-
+    let history = useHistory();
     const logIn = async (event) => {
         try {
             event.preventDefault();
@@ -54,13 +67,21 @@ export default function UserLogin(props) {
             const tempUser = response.data.user.userName;
             const token = `Bearer ${response.data.token}`
             window.localStorage.setItem(tempUser, token);
-            // redirect to <UserDetails userId={response.data.user} />
+            if (response.status === 200) {
+                // console.log(history())
+                return redirectToProfile(response.data.user.id);
+            }
+
 
         } catch (error) {
             console.log(error);
             console.log('Invalid username or password');
             // display invalid username or password
         }
+    }
+
+    function redirectToProfile(userId){
+        history.push(`/profile/${userId}`)
     }
 
     const updateUsername = (event) => {
@@ -77,9 +98,11 @@ export default function UserLogin(props) {
 
     return (
         <div style={style.body}>
-            <h2>Sign in</h2>
-            <p>You can sign in using your Booking.com account to access our services.</p>
-            <form>
+            <Header />
+            <h2 style={style.submitform}>Sign in</h2>
+            <p style={style.submitform}>You can sign in using your Booking.com account to access our services.</p>
+            <div style={style.submitform}>
+            <form >
                 <h4 style={style.h4}>Email</h4>
                 <input type="text" onChange={updateUsername} style={style.form}></input>
                 <h4 style={style.h4}>Booking.com Password</h4>
@@ -87,8 +110,13 @@ export default function UserLogin(props) {
                 <div>
                     <button type="submit" onClick={logIn} style={style.bigbluebutton}>Sign-In</button>
                 </div>
+                <div>
+                    <Link to="/createuser" style={style.link}><p>Create an account.</p></Link>
+                </div>
 
             </form>
+            </div>
+            <Footer />
         </div>
     )
 }

@@ -13,7 +13,6 @@ const style = {
         margin: "0 auto",
         textAlign: "center",
         width: "70vw",
-        margin: "0 auto",
         display: "flex",
         justifyContent: "space-between",
         backgroundColor: 'rgb(244,178,63)'

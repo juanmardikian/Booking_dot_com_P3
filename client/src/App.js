@@ -6,8 +6,12 @@ import CarRental from './Components/Routes/CarRental'
 import Flights from './Components/Routes/Flights'
 import Contact from './Components/Routes/Contact'
 import HelpCenter from './Components/Routes/HelpCenter'
+import Profile from './Components/Routes/Profile'
+import UserLogin from './Components/Routes/userLogin'
+import { withRouter } from 'react-router'
+import CreateUser from './Components/Routes/userCreate'
 
-function App() {
+function App(props) {
 
     // |ROUTE COMPONENTS          | ROUTE CREATED |  COMPONENT BUILT |  Conditional Rendering  |
     // |                          |  YES  OR  NO  |  YES    OR   NO  |  YES      OR        NO  |
@@ -25,38 +29,45 @@ function App() {
         <div className="App">
 
 
-        <Route exact="exact" path='/'>
-            <Hotels/>
-        </Route>
+            <Route exact path='/'>
+                <Hotels />
+            </Route>
 
-        <Route exact="exact" path='/car'>
-            <CarRental/>
-        </Route>
+            <Route exact path='/car'>
+                <CarRental />
+            </Route>
 
-        <Route exact="exact" path='/flights'>
-            <Flights/>
-        </Route>
+            <Route exact path='/flights'>
+                <Flights />
+            </Route>
 
-        <Route exact="exact" path='/menu'>
-            <Hamburger/>
-        </Route>
+            <Route exact path='/menu'>
+                <Hamburger />
+            </Route>
 
-        <Route exact="exact" path='/contact'>
-            <Contact/>
-        </Route>
+            <Route exact path='/contact'>
+                <Contact />
+            </Route>
 
-        <Route exact="exact" path='/customer'>
-            <HelpCenter/>
-        </Route>
+            <Route exact path='/customer'>
+                <HelpCenter />
+            </Route>
+
+            <Route exact path='/profile/:userid' render={(props) => <Profile {...props} />} />
+
+            <Route exact path='/login'>
+                <UserLogin />
+            </Route>
+
+            <Route exact path='/createuser'>
+                <CreateUser />
+            </Route>
 
 
-
-
-
-    </div>)
+        </div>)
 }
 
-export default App;
+export default withRouter(App);
 
 // import Footer from './components/Shared/Footer'
 // import Header from './components/Shared/Header'
