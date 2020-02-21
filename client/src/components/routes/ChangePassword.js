@@ -4,7 +4,7 @@ import WebFont from 'webfontloader';
 import Header from '../Shared/Header';
 import Footer from '../Shared/Footer';
 import { useHistory } from 'react-router-dom'
-const apiUrl = 'http://bookingdotcom.herokuapp.com/api/user';
+const apiUrl = 'http://bookingdotcom.herokuapp.com/api/change-password';
 
 WebFont.load({
     google: {
@@ -18,7 +18,7 @@ const style = {
         fontFamily: 'Baloo',
         textAlign: 'center'
     },
-        form: {
+    form: {
         height: '4vh',
         minHeight: '30px',
         width: '21vw',
@@ -29,20 +29,23 @@ const style = {
     },
     h4: {
         margin: '4px 0 0 0'
-    },
-    deletelink: {
-        textDecoration: 'none',
-        color: "black"
     }
 }
 
 
-export default function DeleteUser(props) {
+export default function ChangePassword(props) {
     console.log(props.match.params.userid);
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [confirmPassword,setConfirmPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
 
     let history = useHistory();
+
+    const updateEmail = (event) => {
+        let temp = event.target.value;
+        console.log(temp);
+        setEmail(temp);
+    }
 
     const updatePassword = (event) => {
         let temp = event.target.value;
@@ -56,21 +59,21 @@ export default function DeleteUser(props) {
         setConfirmPassword(temp);
     }
 
-    const deleteUser = async (event) => {
+    const changePassword = async (event) => {
         try {
-            if (password!==confirmPassword){
+            if (password !== confirmPassword) {
                 alert('Passwords do not match');
             }
             event.preventDefault();
             let response = await axios({
-                url: `${apiUrl}/${props.match.params.userid}`,
-                method: 'DELETE',
-                data: { id: props.match.params.userid }
+                url: `${apiUrl}`,
+                method: 'POST',
+                data: { username: email, password: password }
             })
             console.log(response);
-            if (response.status === 204) {
+            if (response.status === 200) {
                 // console.log(history())
-                return history.push('/');
+                return history.push(`/profile/${props.match.params.userid}`);
             }
         } catch (error) {
             console.log(error);
@@ -83,16 +86,18 @@ export default function DeleteUser(props) {
         <div>
             <Header />
             <div style={style.body}>
-                <p>Are you sure you want to delete your account?</p>
+                <p>Please type in your new password</p>
 
                 <form>
-                    <h4 style={style.h4}>Your Password</h4>
+                    <h4 style={style.h4}>Email</h4>
+                    <input type="text" onChange={updateEmail} style={style.form}></input>
+                    <h4 style={style.h4}>New Password</h4>
                     <input type="password" onChange={updatePassword} style={style.form}></input>
                     <h4 style={style.h4}>Confirm Password</h4>
                     <input type="password" onChange={updateConfirmPassword} style={style.form}></input>
 
                     <div>
-                        <button type="submit" onClick={deleteUser} style={style.bigbluebutton}>Delete Account</button>
+                        <button type="submit" onClick={changePassword} style={style.bigbluebutton}>Change Password</button>
                     </div>
 
                 </form>

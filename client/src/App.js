@@ -11,6 +11,7 @@ import UserLogin from './Components/Routes/userLogin'
 import { withRouter } from 'react-router'
 import CreateUser from './Components/Routes/userCreate'
 import DeleteUser from './Components/Routes/userDelete'
+import ChangePassword from './Components/Routes/ChangePassword'
 
 function App(props) {
 
@@ -65,6 +66,8 @@ function App(props) {
             </Route>
 
             <Route exact path='/deleteaccount/:userid' render={(props) => <DeleteUser {...props} />} />
+
+            <Route exact path='/changepassword/:userid' render={(props) => <ChangePassword {...props}/>} />
 
         </div>)
 }
