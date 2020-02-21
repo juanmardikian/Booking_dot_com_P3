@@ -3,7 +3,7 @@ import WebFont from 'webfontloader'
 import NavLinks from './NavLinks'
 import NavIcons from './NavIcons'
 import arrowBack from '../../Images/Header/arrowBack.png'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 import { useHistory } from 'react-router-dom'
 WebFont.load({
     google: {
@@ -55,6 +55,9 @@ const style = {
     backButton: {
         backgroundColor: 'rgb(0, 53, 128)',
         border: 'none'
+    },
+    titleLink: {
+        textDecoration: 'none'
     }
 }
 
@@ -85,10 +88,12 @@ export default function Header(props) {
         <div>
             <div style={style.header}>
                 <div style={style.title}>
-                    <div>
+                    <Link to='/' style={style.titleLink}>
+                    <div >
                         <span style={style.booking}>Booking</span>
                         <span style={style.com}>.com</span>
                     </div>
+                    </Link>
                 </div>
                 <NavIcons/>
             </div>

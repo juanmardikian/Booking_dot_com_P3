@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import WebFont from 'webfontloader';
+import Header from '../Shared/Header';
+import Footer from '../Shared/Footer';
+import { useHistory } from 'react-router-dom'
 const apiUrl = 'http://bookingdotcom.herokuapp.com/api/sign-up';
 
 WebFont.load({
@@ -12,7 +15,8 @@ WebFont.load({
 const style = {
     body: {
         color: 'black',
-        fontFamily: 'Baloo'
+        fontFamily: 'Baloo',
+        textAlign: 'center'
     },
     form: {
         height: '4vh',
@@ -42,6 +46,8 @@ export default function UserCreate(props) {
     const [password, setPassword] = useState('');
     const [confirmPassword,setConfirmPassword] = useState('');
 
+    let history = useHistory();
+
     const createUser = async (event) => {
         try {
             if (password!==confirmPassword){
@@ -57,13 +63,20 @@ export default function UserCreate(props) {
             const tempUser = response.data.user.email;
             const token = `Bearer ${response.data.token}`
             window.localStorage.setItem(tempUser, token);
-            // redirect to <UserDetails userId={response.data.user} />
+            if (response.status === 201) {
+                // console.log(history())
+                return redirectToProfile(response.data.user.id);
+            }
 
         } catch (error) {
             console.log(error);
             console.log('Invalid email or password');
             // display invalid username or password
         }
+    }
+
+    function redirectToProfile(userId){
+        history.push(`/profile/${userId}`)
     }
 
     const updateEmail = (event) => {
@@ -85,7 +98,9 @@ export default function UserCreate(props) {
     }
 
     return (
-        <div style={style.body}>
+        <div >
+            <Header />
+            <div style={style.body}>
             <h2>Create your account</h2>
             <p>Create an account to use Booking.com services easily.</p>
             <form>
@@ -101,6 +116,8 @@ export default function UserCreate(props) {
                 </div>
 
             </form>
+            </div>
+            <Footer />
         </div>
     )
 }

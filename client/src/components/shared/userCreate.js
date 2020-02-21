@@ -36,7 +36,7 @@ const style = {
     }
 }
 
-export default function UserCreate(props) {
+export default function CreateUser(props) {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');

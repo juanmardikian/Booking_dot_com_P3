@@ -13,7 +13,6 @@ const style = {
         margin: "0 auto",
         textAlign: "center",
         width: "70vw",
-        margin: "0 auto",
         display: "flex",
         justifyContent: "space-between",
         backgroundColor: 'rgb(244,178,63)'
@@ -174,7 +173,7 @@ const Search = props => {
 
     return (
         <div style={style.body}>
-            <h2 style={style.textformat}>Where to next, Margot?</h2>
+            <h2 style={style.textformat}>Where to next?</h2>
             <p style={style.textformat}>Find your next adventure</p>
             <div style={style.searchform}>
                 <form onSubmit={formik.handleSubmit}>
