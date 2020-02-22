@@ -12,8 +12,8 @@ const style = {
     },
     searchform: {
         width: "70vw",
-        height: "35vh",
-        minHeight: "165px",
+        height: "34vh",
+        minHeight: "150px",
         display: "flex",
         justifyContent: "center",
         backgroundColor: "rgb(244,178,63)"
@@ -23,53 +23,84 @@ const style = {
         height: "6vh",
         minHeight: "25px",
         display: "flex",
-        margin: "1vh 1vw",
+        margin: ".5vh 1vw",
         padding: "0",
         justifyContent: "space-between"
     },
     location: {
-        width: "66vw",
+        width: "68vw",
         border: "1px solid grey",
-        marginTop: '2vh',
-        height: "3vh",
+        margin: "1vh 1vw",
+        marginTop: '1vh',
+        height: "90%",
         minHeight: "20px",
         display: "flex",
-        margin: "1vh 2vw",
+        
         justifyContent: "center",
         padding: "0"
     },
-    checkinout: {
-        width: "30vw",
+    checkin: {
+        width: "32vw",
         border: "1px solid grey",
-        margin: "1vh 2vw",
-        height: "3vh",
+        margin: "1vh 0 1vh 1vw",
+        height: "90%",
         minHeight: "20px",
         display: "flex",
         padding: "0",
         justifyContent: "center"
     },
-    people: {
-        width: "18.5vw",
+    checkout: {
+        width: "32vw",
         border: "1px solid grey",
-        margin: "1vh 2vw",
-        height: "3vh",
+        margin: "1vh 1vw 1vh 0",
+        height: "90%",
+        minHeight: "20px",
+        display: "flex",
+        padding: "0",
+        justifyContent: "center"
+    },
+    adults: {
+        width: "21vw",
+        border: "1px solid grey",
+        margin: "1vh 0 1vh 1vw",
+        height: "90%",
+        minHeight: "20px",
+        display: "flex",
+        padding: "0",
+        justifyContent: "center"
+    },
+    children: {
+        width: "21vw",
+        border: "1px solid grey",
+        margin: "1vh 0",
+        height: "90%",
+        minHeight: "20px",
+        display: "flex",
+        padding: "0",
+        justifyContent: "center"
+    },
+    rooms: {
+        width: "21vw",
+        border: "1px solid grey",
+        margin: "1vh 1vw 1vh 0",
+        height: "90%",
         minHeight: "20px",
         display: "flex",
         padding: "0",
         justifyContent: "center"
     },
     purpose: {
-        width: "66vw",
+        width: "68vw",
         border: "1px solid grey",
-        height: "3vh",
+        height: "90%",
         minHeight: "20px",
         display: "flex",
         justifyContent: "center",
         padding: "0",
-        margin: "1vh 2vw"
+        margin: "1vh 1vw"
     },
     searchbar: {
-        width: "67.5vw",
+        width: "68vw",
         height: "5vh",
         minHeight: "30px",
         color: "white",
@@ -77,7 +108,7 @@ const style = {
         justifyContent: "center",
         boder: "1 solid grey",
         padding: "0",
-        margin: "1vh 2vw",
+        margin: "1vh 1vw",
         backgroundColor: "rgb(64,158,218)"
     },
     textformat: {
@@ -230,7 +261,7 @@ const Search = props => {
                             placeholder='Check In Date'
                             onChange={formik.handleChange}
                             value={formik.values.checkIn}
-                            style={style.checkinout}
+                            style={style.checkin}
 
                         />
                         </label>
@@ -242,7 +273,7 @@ const Search = props => {
                             placeholder='Check Out Date'
                             onChange={formik.handleChange}
                             value={formik.values.checkOut}
-                            style={style.checkinout}
+                            style={style.checkout}
                         />
                         </label>
                     </div>
@@ -256,7 +287,7 @@ const Search = props => {
                             placeholder='Adults'
                             onChange={formik.handleChange}
                             value={formik.values.adults}
-                            style={style.people}
+                            style={style.adults}
                         />
                         </label>
                         <label htmlFor="children">
@@ -267,7 +298,7 @@ const Search = props => {
                             placeholder='Children'
                             onChange={formik.handleChange}
                             value={formik.values.children}
-                            style={style.people}
+                            style={style.children}
                         />
                         </label>
                         <label htmlFor="rooms">
@@ -278,7 +309,7 @@ const Search = props => {
                             placeholder='Room'
                             onChange={formik.handleChange}
                             value={formik.values.rooms}
-                            style={style.people}
+                            style={style.rooms}
                         />
                         </label>
                     </div>

@@ -26,7 +26,7 @@ const style = {
     imgM: {
         height: '11vw',
         width: '11vw',
-        margin: "7px"
+        margin: "0 10px 10px 10px"
     },
     p: {
         width: '100vw',
@@ -37,7 +37,8 @@ const style = {
         width: '100vw',
         fontWeight: 'bold',
         marginLeft: '5px',
-        textAlign: 'left'
+        textAlign: 'left',
+        fontSize: '16px'
     },
     imgDiv: {
         padding: '1vh 1vw 0 1vw',
@@ -47,7 +48,8 @@ const style = {
         alignItems: 'flex-start'
     },
     imgP: {
-        marginTop: '-2vh'
+        marginTop: '-2vh',
+        fontSize: "13px"
     },
     middle: {
         display: 'flex',
@@ -72,14 +74,18 @@ const style = {
         marginTop: '5vh'
     },
     button: {
-        width: '20vw',
-        height: '5vw',
+        width: '25vw',
+        height: '8vh',
         color: "white",
         backgroundColor: 'rgb(3, 159, 226)',
         borderRadius: '4px',
     },
     dealtext: {
-        margin: "8px 0 6px 0"
+        margin: "18px 0 6px 0",
+        fontSize: "14px"
+    },
+    h4: {
+        fontSize: "14px"
     }
 }
 const Hotels = () => (
@@ -90,22 +96,22 @@ const Hotels = () => (
         <div style={style.imgCont}>
             <div style={style.imgDiv}>
                 <img style={style.img} src={pic1} />
-                <h4>Barcelona</h4>
+                <h4 style={style.h4}>Barcelona</h4>
                 <p style={style.imgP}>2,930 properties including 2,031 homes</p>
             </div>
             <div style={style.imgDiv}>
                 <img style={style.img} src={pic2} />
-                <h4>Madrid</h4>
+                <h4 style={style.h4}>Madrid</h4>
                 <p style={style.imgP}>3,562 properties including 3,12 homes</p>
             </div>
             <div style={style.imgDiv}>
                 <img style={style.img} src={pic3} />
-                <h4>Lisbon</h4>
+                <h4 style={style.h4}>Lisbon</h4>
                 <p style={style.imgP}>2,768 properties including 1,345 homes</p>
             </div>
             <div style={style.imgDiv}>
                 <img style={style.img} src={pic4} />
-                <h4>Rome</h4>
+                <h4 style={style.h4}>Rome</h4>
                 <p style={style.imgP}>3,456 properties including 2,130 homes</p>
             </div>
         </div>
