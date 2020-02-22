@@ -10,61 +10,74 @@ const style = {
         margin: "0 auto",
         textAlign: "left"
     },
-    searchDiv: {
+    searchform: {
         width: "70vw",
+        height: "35vh",
+        minHeight: "165px",
         display: "flex",
-
         justifyContent: "center",
-        backgroundColor: 'rgb(244,178,63)'
+        backgroundColor: "rgb(244,178,63)"
     },
     searchcontainer: {
         width: "70vw",
-        height: "4vh",
+        height: "6vh",
+        minHeight: "25px",
         display: "flex",
-        margin: "10px",
+        margin: "1vh 1vw",
+        padding: "0",
         justifyContent: "space-between"
     },
     location: {
-        width: "67vw",
-
+        width: "66vw",
         border: "1px solid grey",
         marginTop: '2vh',
         height: "3vh",
+        minHeight: "20px",
         display: "flex",
+        margin: "1vh 2vw",
         justifyContent: "center",
-        margin: "5px 10px 5px"
+        padding: "0"
     },
     checkinout: {
-        width: "31.5vw",
+        width: "30vw",
         border: "1px solid grey",
-        margin: "5px 10px",
+        margin: "1vh 2vw",
         height: "3vh",
+        minHeight: "20px",
         display: "flex",
+        padding: "0",
         justifyContent: "center"
-
     },
     people: {
-        width: "20vw",
+        width: "18.5vw",
         border: "1px solid grey",
-        margin: "5px 10px",
+        margin: "1vh 2vw",
         height: "3vh",
+        minHeight: "20px",
         display: "flex",
+        padding: "0",
         justifyContent: "center"
     },
     purpose: {
-        width: "67vw",
+        width: "66vw",
         border: "1px solid grey",
         height: "3vh",
+        minHeight: "20px",
         display: "flex",
         justifyContent: "center",
-        margin: "2px 10px"
+        padding: "0",
+        margin: "1vh 2vw"
     },
     searchbar: {
-        width: "67vw",
+        width: "67.5vw",
         height: "5vh",
+        minHeight: "30px",
         color: "white",
+        display: "flex",
+        justifyContent: "center",
         boder: "1 solid grey",
-        margin: "5px 10px 12px",
+        padding: "0",
+        margin: "1vh 2vw",
         backgroundColor: "rgb(64,158,218)"
     },
     textformat: {
@@ -75,6 +88,7 @@ const style = {
         display: 'flex',
         justifyContent: "center"
     }
+
 }
 
 const Search = props => {
@@ -192,6 +206,7 @@ const Search = props => {
             <p style={style.textformat}>Find your next adventure</p>
             <div style={style.searchform}>
                 <form onSubmit={formik.handleSubmit}>
+
                     <div style={style.searchcontainer}>
                         <label htmlFor="location">
                         <input
@@ -215,7 +230,7 @@ const Search = props => {
                             placeholder='Check In Date'
                             onChange={formik.handleChange}
                             value={formik.values.checkIn}
-                            style={{...style.checkinout, marginRight: '4.7vw'}}
+                            style={style.checkinout}
 
                         />
                         </label>
@@ -241,7 +256,7 @@ const Search = props => {
                             placeholder='Adults'
                             onChange={formik.handleChange}
                             value={formik.values.adults}
-                            style={{...style.people, marginRight: '2.15vw'}}
+                            style={style.people}
                         />
                         </label>
                         <label htmlFor="children">
@@ -252,7 +267,7 @@ const Search = props => {
                             placeholder='Children'
                             onChange={formik.handleChange}
                             value={formik.values.children}
-                            style={{...style.people, marginRight: '2.15vw'}}
+                            style={style.people}
                         />
                         </label>
                         <label htmlFor="rooms">
@@ -281,8 +296,7 @@ const Search = props => {
                         />
                         </label>
                     </div> 
-                    <div>
-
+                    <div style={style.searchcontainer}>
                         <button type="submit" style={style.searchbar}>Submit</button>
                     </div>
                 </form>
