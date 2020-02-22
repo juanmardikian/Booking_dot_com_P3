@@ -15,44 +15,54 @@ const style = {
         textAlign: "center",
         width: "70vw",
         display: "flex",
-        justifyContent: "space-between",
+        justifyContent: "center",
         backgroundColor: 'rgb(244,178,63)'
     },
-    location: {
-        width: "66vw",
-        border: "1px solid grey",
-        height: "3vh",
+    searchcontainer: {
+        width: "70vw",
+        height: "4vh",
         display: "flex",
-        justifyContent: "space-between",
-        margin: "10px 10px"
-    },
-    checkinout: {
-        width: "32vw",
-        border: "1px solid grey",
-        margin: "2px 5px",
-        height: "3vh",
+        margin: "10px",
         justifyContent: "space-between"
     },
-    people: {
-        width: "21vw",
-        border: "1px solid grey",
-        margin: "10px 3px",
-        height: "3vh",
-        textAlign: 'justify'
-    },
-    purpose: {
-        width: "66vw",
+    location: {
+        width: "67vw",
         border: "1px solid grey",
         height: "3vh",
         display: "flex",
-        justifyContent: "space-between",
+        justifyContent: "center",
+        margin: "5px 10px 5px"
+    },
+    checkinout: {
+        width: "31.5vw",
+        border: "1px solid grey",
+        margin: "5px 10px",
+        height: "3vh",
+        display: "flex",
+        justifyContent: "center"
+    },
+    people: {
+        width: "20vw",
+        border: "1px solid grey",
+        margin: "5px 10px",
+        height: "3vh",
+        display: "flex",
+        justifyContent: "center"
+    },
+    purpose: {
+        width: "67vw",
+        border: "1px solid grey",
+        height: "3vh",
+        display: "flex",
+        justifyContent: "center",
         margin: "2px 10px"
     },
     searchbar: {
-        width: "66vw",
+        width: "67vw",
         height: "5vh",
         color: "white",
-        margin: "10px 5px 12px",
+        boder: "1 solid grey",
+        margin: "5px 10px 12px",
         backgroundColor: "rgb(64,158,218)"
     },
     textformat: {
@@ -178,7 +188,8 @@ const Search = props => {
             <p style={style.textformat}>Find your next adventure</p>
             <div style={style.searchform}>
                 <form onSubmit={formik.handleSubmit}>
-                    <div>
+
+                    <div style={style.searchcontainer}>
                         <label htmlFor="location">
                         <input
                             id='location'
@@ -192,7 +203,7 @@ const Search = props => {
                         </label>
                     </div>
 
-                    <div>
+                    <div style={style.searchcontainer}>
                         <label htmlFor="checkIn">
                         <input
                             id='checkIn'
@@ -217,7 +228,7 @@ const Search = props => {
                         </label>
                     </div>
 
-                    <div>
+                    <div style={style.searchcontainer}>
                         <label htmlFor="adults">
                         <input
                             id='adukts'
@@ -253,7 +264,7 @@ const Search = props => {
                         </label>
                     </div>
 
-                    <div>
+                    <div style={style.searchcontainer}>
                         <label htmlFor="purpose">
                         <input
                             id='purpose'
@@ -265,7 +276,7 @@ const Search = props => {
                             style={style.purpose}
                         />
                         </label>
-                    </div>
+                    </div> 
                     <div>
                         <button type="submit" style={style.searchbar}>Submit</button>
                     </div>
