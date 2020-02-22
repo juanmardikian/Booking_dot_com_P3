@@ -16,7 +16,7 @@ WebFont.load({
 const style = {
     body: {
         color: 'black',
-        fontFamily: 'Baloo',
+        fontFamily: 'Helvetica',
         textAlign: 'center'
     },
     form: {

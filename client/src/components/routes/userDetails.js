@@ -14,7 +14,7 @@ WebFont.load({
 const style = {
     body: {
         marginLeft: '10px',
-        fontFamily: 'Baloo'
+        fontFamily: 'Helvetica'
     },
     deletelink: {
         textDecoration: 'none',
@@ -23,25 +23,29 @@ const style = {
     p: {
         margin: "0",
         padding: "0"
+    },
+    ptop: {
+        margin: "10px 0 0 0",
+        padding: "0"
     }
 }
 
-export default function UserDetails (props) {
+export default function UserDetails(props) {
 
-    const [userInfo,setUserInfo] = useState('');
+    const [userInfo, setUserInfo] = useState('');
     let history = useHistory();
 
     console.log(props.userId);
 
-    useEffect(()=>{
-       const getUserInfo = async () => {
-           let response = await axios(`${APIUrl}/user/${props.userId}`);
-           console.log(response.data.user);
-           setUserInfo(response.data.user);
-       }
-           getUserInfo();
-       
-    },[])
+    useEffect(() => {
+        const getUserInfo = async () => {
+            let response = await axios(`${APIUrl}/user/${props.userId}`);
+            console.log(response.data.user);
+            setUserInfo(response.data.user);
+        }
+        getUserInfo();
+
+    }, [])
 
     return userInfo && (
         <div style={style.body}>
@@ -51,7 +55,8 @@ export default function UserDetails (props) {
             <p style={style.p}>Home Country: {userInfo.homeCountry}</p>
             <p style={style.p}>Recently Viewed: {userInfo.recentViewed || 'none'}</p>
             <p style={style.p}>Upcoming Trips: {userInfo.upcomingTrips || 'No Upcoming Trips'}</p>
-            <h5 style={style.p}><Link to={`/changepassword/${props.userId}`} style={style.deletelink}>Change your password</Link></h5>
+            <h5 style={style.ptop}><Link to={`/changepassword/${props.userId}`} style={style.deletelink}>Change your password</Link></h5>
+            <h5 style={style.p}>Update your details</h5>
             <h5 style={style.p}>Don't like Booking.com? <Link to={`/deleteaccount/${props.userId}`} style={style.deletelink}>Delete your account</Link></h5>
         </div>
     )

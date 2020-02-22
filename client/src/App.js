@@ -8,7 +8,7 @@ import Contact from './Components/Routes/Contact'
 import HelpCenter from './Components/Routes/HelpCenter'
 import Profile from './Components/Routes/Profile'
 import UserLogin from './Components/Routes/userLogin'
-import { withRouter } from 'react-router'
+import { withRouter, Redirect } from 'react-router'
 import CreateUser from './Components/Routes/userCreate'
 import DeleteUser from './Components/Routes/userDelete'
 import ChangePassword from './Components/Routes/ChangePassword'
@@ -67,7 +67,15 @@ function App(props) {
 
             <Route exact path='/deleteaccount/:userid' render={(props) => <DeleteUser {...props} />} />
 
-            <Route exact path='/changepassword/:userid' render={(props) => <ChangePassword {...props}/>} />
+            <Route exact path='/changepassword/:userid' render={(props) => <ChangePassword {...props} />} />
+
+            <Route exact path='/packages' render={() => (
+                <Redirect to='/' />
+            )} />
+            
+            <Route exact path='/tour' render={() => (
+                <Redirect to='/' />
+            )} />
 
         </div>)
 }

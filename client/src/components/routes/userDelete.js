@@ -16,7 +16,7 @@ WebFont.load({
 const style = {
     body: {
         marginLeft: '10px',
-        fontFamily: 'Baloo',
+        fontFamily: 'Helvetica',
         textAlign: 'center'
     },
         form: {

@@ -19,7 +19,7 @@ WebFont.load({
 const style = {
     body: {
         color: 'black',
-        fontFamily: 'Baloo'
+        fontFamily: 'Helvetica'
     },
     form: {
         height: '4vh',
