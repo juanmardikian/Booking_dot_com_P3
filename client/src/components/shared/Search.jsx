@@ -10,11 +10,10 @@ const style = {
         margin: "0 auto",
         textAlign: "left"
     },
-    searchform: {
-        margin: "0 auto",
-        textAlign: "center",
+    searchDiv: {
         width: "70vw",
         display: "flex",
+
         justifyContent: "center",
         backgroundColor: 'rgb(244,178,63)'
     },
@@ -27,7 +26,9 @@ const style = {
     },
     location: {
         width: "67vw",
+
         border: "1px solid grey",
+        marginTop: '2vh',
         height: "3vh",
         display: "flex",
         justifyContent: "center",
@@ -40,6 +41,7 @@ const style = {
         height: "3vh",
         display: "flex",
         justifyContent: "center"
+
     },
     people: {
         width: "20vw",
@@ -67,6 +69,11 @@ const style = {
     },
     textformat: {
         margin: "2px"
+    },
+    formRow: {
+        width: "60vw",
+        display: 'flex',
+        justifyContent: "center"
     }
 }
 
@@ -161,8 +168,6 @@ const Search = props => {
             getFlights();
             getCarRentals();
         }
-
-
     }, [cityId]);
 
     // formik for forms
@@ -178,7 +183,6 @@ const Search = props => {
         },
         onSubmit: values => {
             retrieveData(values.location);
-            // console.log(cityId);
         }
     })
 
@@ -188,7 +192,6 @@ const Search = props => {
             <p style={style.textformat}>Find your next adventure</p>
             <div style={style.searchform}>
                 <form onSubmit={formik.handleSubmit}>
-
                     <div style={style.searchcontainer}>
                         <label htmlFor="location">
                         <input
@@ -212,7 +215,8 @@ const Search = props => {
                             placeholder='Check In Date'
                             onChange={formik.handleChange}
                             value={formik.values.checkIn}
-                            style={style.checkinout}
+                            style={{...style.checkinout, marginRight: '4.7vw'}}
+
                         />
                         </label>
                         <label htmlFor="checkOut">
@@ -237,7 +241,7 @@ const Search = props => {
                             placeholder='Adults'
                             onChange={formik.handleChange}
                             value={formik.values.adults}
-                            style={style.people}
+                            style={{...style.people, marginRight: '2.15vw'}}
                         />
                         </label>
                         <label htmlFor="children">
@@ -248,7 +252,7 @@ const Search = props => {
                             placeholder='Children'
                             onChange={formik.handleChange}
                             value={formik.values.children}
-                            style={style.people}
+                            style={{...style.people, marginRight: '2.15vw'}}
                         />
                         </label>
                         <label htmlFor="rooms">
@@ -278,6 +282,7 @@ const Search = props => {
                         </label>
                     </div> 
                     <div>
+
                         <button type="submit" style={style.searchbar}>Submit</button>
                     </div>
                 </form>
